@@ -76,7 +76,7 @@ const PHASE_INFO = [
     key: "explain",
     label: "Explain",
     prompt:
-      "Put the idea into words. Connect the model to mathematical language.",
+      "Put the idea into words. Connect the model to key terms for this subject.",
   },
   {
     key: "elaborate",
@@ -97,7 +97,7 @@ function ReviewBanner({ lesson, compact = false }) {
       <TriangleAlert size={14} aria-hidden="true" /> Editorial review
     </span>
   ) : (
-    <aside
+    <div
       className="review-banner"
       role="note"
       aria-label="Editorial review notice"
@@ -107,7 +107,7 @@ function ReviewBanner({ lesson, compact = false }) {
         <strong>Editorial review needed</strong>
         <p>{lesson.review.message}</p>
       </div>
-    </aside>
+    </div>
   );
 }
 
