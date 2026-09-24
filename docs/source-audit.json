@@ -1,0 +1,524 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Raw-source discrepancy inventory; NOT approved content or a publishable pack",
+  "releaseGate": "BLOCKED",
+  "packs": {
+    "b7-mathematics-t1": {
+      "lessons": 24,
+      "weeksTeaching": 12,
+      "lessonNotes": 24,
+      "indicators": 24,
+      "indicatorLessonLinks": 24,
+      "repeatedIndicators": {},
+      "classworkMax": 140,
+      "phaseTotals": {
+        "60": 24
+      },
+      "phaseSchedules": {
+        "8/16/14/12/10": 24
+      },
+      "tests": {
+        "UT1": {
+          "declared": 20,
+          "itemSum": 20,
+          "itemCount": 11,
+          "trackerMax": 20
+        },
+        "UT2": {
+          "declared": 30,
+          "itemSum": 29,
+          "itemCount": 14,
+          "trackerMax": 30
+        },
+        "UT3": {
+          "declared": 20,
+          "itemSum": 20,
+          "itemCount": 10,
+          "trackerMax": 20
+        },
+        "UT4": {
+          "declared": 30,
+          "itemSum": 37,
+          "itemCount": 14,
+          "trackerMax": 30
+        }
+      },
+      "exam": {
+        "declared": 100,
+        "itemSum": 50,
+        "multipleChoiceMarks": 20,
+        "structuredMarks": 30,
+        "trackerMax": 100
+      }
+    },
+    "b7-science-t1": {
+      "lessons": 24,
+      "weeksTeaching": 12,
+      "lessonNotes": 24,
+      "indicators": 17,
+      "indicatorLessonLinks": 24,
+      "repeatedIndicators": {
+        "B7.2.2.1.1": [
+          13,
+          14
+        ],
+        "B7.2.2.1.2": [
+          15,
+          16
+        ],
+        "B7.2.3.1.1": [
+          17,
+          18
+        ],
+        "B7.2.3.1.2": [
+          19,
+          20
+        ],
+        "B7.3.2.1.1": [
+          7,
+          8
+        ],
+        "B7.3.2.1.2": [
+          9,
+          10
+        ],
+        "B7.4.1.3.1": [
+          23,
+          24
+        ]
+      },
+      "classworkMax": 170,
+      "phaseTotals": {
+        "60": 24
+      },
+      "phaseSchedules": {
+        "8/18/12/12/10": 24
+      },
+      "tests": {
+        "UT1": {
+          "declared": 20,
+          "itemSum": 24,
+          "itemCount": 14,
+          "trackerMax": 20
+        },
+        "UT2": {
+          "declared": 20,
+          "itemSum": 20,
+          "itemCount": 13,
+          "trackerMax": 20
+        },
+        "UT3": {
+          "declared": 30,
+          "itemSum": 30,
+          "itemCount": 14,
+          "trackerMax": 30
+        },
+        "UT4": {
+          "declared": 20,
+          "itemSum": 24,
+          "itemCount": 14,
+          "trackerMax": 20
+        }
+      },
+      "exam": {
+        "declared": 50,
+        "itemSum": 70,
+        "multipleChoiceMarks": 20,
+        "structuredMarks": 50,
+        "trackerMax": 100
+      }
+    },
+    "b8-mathematics-t1": {
+      "lessons": 24,
+      "weeksTeaching": 12,
+      "lessonNotes": 24,
+      "indicators": 21,
+      "indicatorLessonLinks": 24,
+      "repeatedIndicators": {
+        "B8.1.1.1.5": [
+          5,
+          6
+        ],
+        "B8.2.1.1.2": [
+          21,
+          22
+        ],
+        "B8.2.1.1.3": [
+          23,
+          24
+        ]
+      },
+      "classworkMax": 140,
+      "phaseTotals": {
+        "60": 24
+      },
+      "phaseSchedules": {
+        "8/16/14/12/10": 24
+      },
+      "tests": {
+        "UT1": {
+          "declared": 20,
+          "itemSum": 20,
+          "itemCount": 13,
+          "trackerMax": 20
+        },
+        "UT2": {
+          "declared": 30,
+          "itemSum": 34,
+          "itemCount": 17,
+          "trackerMax": 20
+        },
+        "UT3": {
+          "declared": 20,
+          "itemSum": 22,
+          "itemCount": 13,
+          "trackerMax": 30
+        },
+        "UT4": {
+          "declared": 30,
+          "itemSum": 31,
+          "itemCount": 14,
+          "trackerMax": 30
+        }
+      },
+      "exam": {
+        "declared": 100,
+        "itemSum": 79,
+        "multipleChoiceMarks": 20,
+        "structuredMarks": 59,
+        "trackerMax": 100
+      }
+    },
+    "b8-science-t1": {
+      "lessons": 26,
+      "weeksTeaching": 13,
+      "lessonNotes": 26,
+      "indicators": 22,
+      "indicatorLessonLinks": 26,
+      "repeatedIndicators": {
+        "B8.1.1.1.1": [
+          1,
+          2
+        ],
+        "B8.1.1.1.2": [
+          3,
+          4
+        ],
+        "B8.3.1.1.3": [
+          11,
+          12
+        ],
+        "B8.4.1.3.1": [
+          17,
+          18
+        ]
+      },
+      "classworkMax": 140,
+      "phaseTotals": {
+        "60": 26
+      },
+      "phaseSchedules": {
+        "8/16/14/12/10": 26
+      },
+      "tests": {
+        "UT1": {
+          "declared": 20,
+          "itemSum": 28,
+          "itemCount": 12,
+          "trackerMax": 20
+        },
+        "UT2": {
+          "declared": 20,
+          "itemSum": 29,
+          "itemCount": 11,
+          "trackerMax": 20
+        },
+        "UT3": {
+          "declared": 30,
+          "itemSum": 32,
+          "itemCount": 12,
+          "trackerMax": 30
+        },
+        "UT4": {
+          "declared": 30,
+          "itemSum": 43,
+          "itemCount": 15,
+          "trackerMax": 30
+        }
+      },
+      "exam": {
+        "declared": 100,
+        "itemSum": 78,
+        "multipleChoiceMarks": 20,
+        "structuredMarks": 58,
+        "trackerMax": 100
+      }
+    }
+  },
+  "findings": [
+    {
+      "pack": "b7-mathematics-t1",
+      "code": "CURRICULUM_EDITION",
+      "location": "notes",
+      "detail": "Cites February 2020; supplied NaCCA curriculum PDFs say September 2020"
+    },
+    {
+      "pack": "b7-mathematics-t1",
+      "code": "EXAM_MARKS",
+      "location": "plan C2",
+      "detail": "Items total 50, paper says 100"
+    },
+    {
+      "pack": "b7-mathematics-t1",
+      "code": "EXAM_TRACKER_MAX",
+      "location": "plan C2 / tracker Class Record",
+      "detail": "Items total 50, tracker expects 100"
+    },
+    {
+      "pack": "b7-mathematics-t1",
+      "code": "SCHEME_CALENDAR",
+      "location": "B7 CORRECTED!C16 / plan D2 W15",
+      "detail": "Week 15 is examination in the corrected scheme but vacation in the lesson plan"
+    },
+    {
+      "pack": "b7-mathematics-t1",
+      "code": "SUBJECT_IDENTITY",
+      "location": "notes",
+      "detail": "Subject | Science; expected Mathematics"
+    },
+    {
+      "pack": "b7-mathematics-t1",
+      "code": "UNIT_MARKS",
+      "location": "plan C1.2 / tracker Class Record",
+      "detail": "UT2: items total 29, paper says 30"
+    },
+    {
+      "pack": "b7-mathematics-t1",
+      "code": "UNIT_MARKS",
+      "location": "plan C1.4 / tracker Class Record",
+      "detail": "UT4: items total 37, paper says 30"
+    },
+    {
+      "pack": "b7-science-t1",
+      "code": "COVERAGE_SUMMARY",
+      "location": "plan D1.1",
+      "detail": "Says 14 indicators; D1 lists 17"
+    },
+    {
+      "pack": "b7-science-t1",
+      "code": "CURRICULUM_EDITION",
+      "location": "notes",
+      "detail": "Cites February 2020; supplied NaCCA curriculum PDFs say September 2020"
+    },
+    {
+      "pack": "b7-science-t1",
+      "code": "CURRICULUM_EDITION",
+      "location": "plan",
+      "detail": "Cites February 2020; supplied NaCCA curriculum PDFs say September 2020"
+    },
+    {
+      "pack": "b7-science-t1",
+      "code": "EXAM_MARKS",
+      "location": "plan C2",
+      "detail": "Items total 70, paper says 50"
+    },
+    {
+      "pack": "b7-science-t1",
+      "code": "EXAM_TRACKER_MAX",
+      "location": "plan C2 / tracker Class Record",
+      "detail": "Items total 70, tracker expects 100"
+    },
+    {
+      "pack": "b7-science-t1",
+      "code": "UNIT_MARKS",
+      "location": "plan C1.1 / tracker Class Record",
+      "detail": "UT1: items total 24, paper says 20"
+    },
+    {
+      "pack": "b7-science-t1",
+      "code": "UNIT_MARKS",
+      "location": "plan C1.4 / tracker Class Record",
+      "detail": "UT4: items total 24, paper says 20"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "ASSESSMENT_CALENDAR",
+      "location": "plan A6 / C1.4",
+      "detail": "A6 schedules a Fractions test but the actual Unit Test 4 has another topic"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "CLASS_IDENTITY",
+      "location": "notes",
+      "detail": "Class | Basic 7; expected Basic 8"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "CLASS_IDENTITY",
+      "location": "plan",
+      "detail": "Basic 8 is described as JHS 1"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "COVER_IDENTITY",
+      "location": "notes",
+      "detail": "Cover does not identify Basic 8 Mathematics"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "COVER_IDENTITY",
+      "location": "plan",
+      "detail": "Cover does not identify Basic 8 Mathematics"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "CURRICULUM_EDITION",
+      "location": "notes",
+      "detail": "Cites February 2020; supplied NaCCA curriculum PDFs say September 2020"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "CURRICULUM_EDITION",
+      "location": "plan",
+      "detail": "Cites February 2020; supplied NaCCA curriculum PDFs say September 2020"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "EXAM_MARKS",
+      "location": "plan C2",
+      "detail": "Items total 79, paper says 100"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "EXAM_TRACKER_MAX",
+      "location": "plan C2 / tracker Class Record",
+      "detail": "Items total 79, tracker expects 100"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "SCHEME_INDICATORS",
+      "location": "B8 CORRECTED!E13/G13 / plan A1.1 W12",
+      "detail": "Corrected scheme teaches angles in Week 12; plan and tracker teach gradient instead"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "UNIT_MARKS",
+      "location": "plan C1.2 / tracker Class Record",
+      "detail": "UT2: items total 34, paper says 30"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "UNIT_MARKS",
+      "location": "plan C1.3 / tracker Class Record",
+      "detail": "UT3: items total 22, paper says 20"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "UNIT_MARKS",
+      "location": "plan C1.4 / tracker Class Record",
+      "detail": "UT4: items total 31, paper says 30"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "UNIT_TRACKER_MAX",
+      "location": "plan C1.2 / tracker Class Record",
+      "detail": "UT2: paper says 30, tracker expects 20"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "UNIT_TRACKER_MAX",
+      "location": "plan C1.3 / tracker Class Record",
+      "detail": "UT3: paper says 20, tracker expects 30"
+    },
+    {
+      "pack": "b8-mathematics-t1",
+      "code": "WEEKLY_RECORD_LEVEL",
+      "location": "plan D2",
+      "detail": "Contains B7 indicators in a B8 weekly record"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "ASSESSMENT_CALENDAR",
+      "location": "plan A6 / C1.4",
+      "detail": "A6 schedules a Fractions test but the actual Unit Test 4 has another topic"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "CLASS_IDENTITY",
+      "location": "notes",
+      "detail": "Class | Basic 7; expected Basic 8"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "CLASS_IDENTITY",
+      "location": "plan",
+      "detail": "Basic 8 is described as JHS 1"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "COVER_IDENTITY",
+      "location": "plan",
+      "detail": "Cover does not identify Basic 8 Science"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "CURRICULUM_EDITION",
+      "location": "notes",
+      "detail": "Cites February 2020; supplied NaCCA curriculum PDFs say September 2020"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "CURRICULUM_EDITION",
+      "location": "plan",
+      "detail": "Cites February 2020; supplied NaCCA curriculum PDFs say September 2020"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "EXAM_MARKS",
+      "location": "plan C2",
+      "detail": "Items total 78, paper says 100"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "EXAM_TRACKER_MAX",
+      "location": "plan C2 / tracker Class Record",
+      "detail": "Items total 78, tracker expects 100"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "NOTES_LABEL",
+      "location": "notes",
+      "detail": "Some headings say 'of N' where N != 26"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "UNIT_MARKS",
+      "location": "plan C1.1 / tracker Class Record",
+      "detail": "UT1: items total 28, paper says 20"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "UNIT_MARKS",
+      "location": "plan C1.2 / tracker Class Record",
+      "detail": "UT2: items total 29, paper says 20"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "UNIT_MARKS",
+      "location": "plan C1.3 / tracker Class Record",
+      "detail": "UT3: items total 32, paper says 30"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "UNIT_MARKS",
+      "location": "plan C1.4 / tracker Class Record",
+      "detail": "UT4: items total 43, paper says 30"
+    },
+    {
+      "pack": "b8-science-t1",
+      "code": "WEEKLY_RECORD_LEVEL",
+      "location": "plan D2",
+      "detail": "Contains B7 indicators in a B8 weekly record"
+    }
+  ]
+}

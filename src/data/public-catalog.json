@@ -1,0 +1,1026 @@
+{
+  "packId": "b7-math-t1-preview",
+  "status": "public-preview-not-approved-for-grading",
+  "level": "Basic 7",
+  "subject": "Mathematics",
+  "term": 1,
+  "source": {
+    "curriculum": "NaCCA Mathematics Common Core Programme (B7–B9), September 2020",
+    "lessonPlan": "Basic_7_Mathematics_Term1_Lesson_Plan_and_Teaching_Guide.docx",
+    "notice": "Learner-safe metadata excerpt only; full lessons and assessments remain under review."
+  },
+  "units": [
+    {
+      "id": "numeration",
+      "name": "Numeration Systems",
+      "colour": "blue"
+    },
+    {
+      "id": "operations",
+      "name": "Number Operations",
+      "colour": "teal"
+    },
+    {
+      "id": "powers",
+      "name": "Powers",
+      "colour": "violet"
+    },
+    {
+      "id": "fractions",
+      "name": "Fractions",
+      "colour": "orange"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "b7-math-t1-l01",
+      "number": 1,
+      "week": 1,
+      "unitId": "numeration",
+      "title": "Modelling Numbers Beyond One Billion",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Numeration Systems",
+      "contentStandard": {
+        "code": "B7.1.1.1",
+        "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
+      },
+      "indicator": {
+        "code": "B7.1.1.1.1",
+        "text": "Model number quantities more than 1,000,000,000 using graph sheets, isometric papers and multi-base blocks."
+      },
+      "learningGoal": "Learners model and read whole numbers greater than one billion using multi-base blocks, graph sheets and place-value charts.",
+      "vocabulary": [
+        "billion",
+        "million",
+        "place value",
+        "period",
+        "digit",
+        "multi-base block",
+        "numeral",
+        "expanded form",
+        "model"
+      ],
+      "priorLessons": [],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": "place-value"
+    },
+    {
+      "id": "b7-math-t1-l02",
+      "number": 2,
+      "week": 1,
+      "unitId": "numeration",
+      "title": "Comparing and Ordering Huge Numbers",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Numeration Systems",
+      "contentStandard": {
+        "code": "B7.1.1.1",
+        "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
+      },
+      "indicator": {
+        "code": "B7.1.1.1.2",
+        "text": "Compare and order whole numbers more than 1,000,000,000 and represent the comparison using “>, <, or =”."
+      },
+      "learningGoal": "Learners compare and order whole numbers greater than one billion and record the comparison using >, < or =.",
+      "vocabulary": [
+        "compare",
+        "order",
+        "greater than",
+        "less than",
+        "equal to",
+        "ascending",
+        "descending",
+        "digit",
+        "most significant"
+      ],
+      "priorLessons": [
+        1
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l03",
+      "number": 3,
+      "week": 2,
+      "unitId": "numeration",
+      "title": "Rounding Whole Numbers",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Numeration Systems",
+      "contentStandard": {
+        "code": "B7.1.1.1",
+        "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
+      },
+      "indicator": {
+        "code": "B7.1.1.1.3",
+        "text": "Round (off, up, down) whole numbers more than 1,000,000,000 to the nearest hundred-thousand, ten-thousands, thousands, hundreds and tens."
+      },
+      "learningGoal": "Learners round whole numbers greater than one billion to the nearest ten, hundred, thousand, ten-thousand and hundred-thousand.",
+      "vocabulary": [
+        "round",
+        "round off",
+        "round up",
+        "round down",
+        "nearest",
+        "estimate",
+        "halfway",
+        "boundary",
+        "approximate"
+      ],
+      "priorLessons": [
+        1,
+        2
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l04",
+      "number": 4,
+      "week": 2,
+      "unitId": "numeration",
+      "title": "Rounding Decimals",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Numeration Systems",
+      "contentStandard": {
+        "code": "B7.1.1.1",
+        "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
+      },
+      "indicator": {
+        "code": "B7.1.1.1.4",
+        "text": "Round decimals to the nearest tenth, hundredth, thousandths, etc."
+      },
+      "learningGoal": "Learners round decimal numbers to the nearest tenth, hundredth and thousandth.",
+      "vocabulary": [
+        "decimal",
+        "decimal place",
+        "tenth",
+        "hundredth",
+        "thousandth",
+        "round",
+        "truncate",
+        "recurring",
+        "terminating"
+      ],
+      "priorLessons": [
+        3
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l05",
+      "number": 5,
+      "week": 3,
+      "unitId": "numeration",
+      "title": "Decimal Places and Significant Figures",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Numeration Systems",
+      "contentStandard": {
+        "code": "B7.1.1.1",
+        "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
+      },
+      "indicator": {
+        "code": "B7.1.1.1.5",
+        "text": "Express decimal numerals to given significant and decimal places."
+      },
+      "learningGoal": "Learners express decimal numbers to a given number of decimal places and to a given number of significant figures.",
+      "vocabulary": [
+        "decimal place",
+        "significant figure",
+        "leading zero",
+        "non-zero digit",
+        "precision",
+        "round",
+        "estimate"
+      ],
+      "priorLessons": [
+        3,
+        4
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l06",
+      "number": 6,
+      "week": 3,
+      "unitId": "operations",
+      "title": "Multiplying and Dividing by Powers of Ten",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Number Operations",
+      "contentStandard": {
+        "code": "B7.1.2.1",
+        "text": "Apply mental mathematics strategies and number properties used to solve problems."
+      },
+      "indicator": {
+        "code": "B7.1.2.1.1",
+        "text": "Multiply and divide given numbers by powers of 10 including decimals and benchmark fractions."
+      },
+      "learningGoal": "Learners multiply and divide whole numbers, decimals and benchmark fractions by 10, 100, 1000 and other powers of ten.",
+      "vocabulary": [
+        "power of ten",
+        "index",
+        "exponent",
+        "digit shift",
+        "placeholder",
+        "decimal point",
+        "benchmark fraction",
+        "product",
+        "quotient"
+      ],
+      "priorLessons": [
+        1,
+        4
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l07",
+      "number": 7,
+      "week": 4,
+      "unitId": "operations",
+      "title": "Mental Mathematics Strategies",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Number Operations",
+      "contentStandard": {
+        "code": "B7.1.2.1",
+        "text": "Apply mental mathematics strategies and number properties used to solve problems."
+      },
+      "indicator": {
+        "code": "B7.1.2.1.2",
+        "text": "Apply mental mathematics strategies and number properties used to perform calculations."
+      },
+      "learningGoal": "Learners apply mental mathematics strategies and number properties to perform calculations without written methods.",
+      "vocabulary": [
+        "mental strategy",
+        "partition",
+        "compensate",
+        "compatible numbers",
+        "doubling",
+        "halving",
+        "distributive",
+        "commutative",
+        "associative"
+      ],
+      "priorLessons": [
+        6
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l08",
+      "number": 8,
+      "week": 4,
+      "unitId": "operations",
+      "title": "Mental Strategies for Word Problems",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Number Operations",
+      "contentStandard": {
+        "code": "B7.1.2.1",
+        "text": "Apply mental mathematics strategies and number properties used to solve problems."
+      },
+      "indicator": {
+        "code": "B7.1.2.1.3",
+        "text": "Apply mental mathematics strategies to solve word problems."
+      },
+      "learningGoal": "Learners apply mental mathematics strategies to solve word problems.",
+      "vocabulary": [
+        "word problem",
+        "operation",
+        "estimate",
+        "reasonable",
+        "context",
+        "round",
+        "check",
+        "unknown"
+      ],
+      "priorLessons": [
+        7
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l09",
+      "number": 9,
+      "week": 5,
+      "unitId": "operations",
+      "title": "Adding and Subtracting Four-Digit Numbers",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Number Operations",
+      "contentStandard": {
+        "code": "B7.1.2.2",
+        "text": "Demonstrate an understanding of addition, subtraction, multiplication and division of (i) whole numbers, and (ii) decimal numbers, to solve problems."
+      },
+      "indicator": {
+        "code": "B7.1.2.2.1",
+        "text": "Add and subtract up to four-digit numbers."
+      },
+      "learningGoal": "Learners add and subtract numbers up to four digits, including decimals, using partitioning and place value.",
+      "vocabulary": [
+        "partition",
+        "expanded form",
+        "place value",
+        "carry",
+        "borrow",
+        "exchange",
+        "regroup",
+        "column method",
+        "estimate"
+      ],
+      "priorLessons": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l10",
+      "number": 10,
+      "week": 5,
+      "unitId": "operations",
+      "title": "Multiplying and Dividing Multi-Digit Numbers",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Number Operations",
+      "contentStandard": {
+        "code": "B7.1.2.2",
+        "text": "Demonstrate an understanding of addition, subtraction, multiplication and division of (i) whole numbers, and (ii) decimal numbers, to solve problems."
+      },
+      "indicator": {
+        "code": "B7.1.2.2.2",
+        "text": "Multiply or divide multi-digit numbers by 1- and 2-digit numbers."
+      },
+      "learningGoal": "Learners multiply and divide multi-digit numbers by one- and two-digit numbers using partitioning, place value and the distributive property.",
+      "vocabulary": [
+        "multi-digit",
+        "partition",
+        "distributive property",
+        "partial product",
+        "lattice method",
+        "divisibility test",
+        "quotient",
+        "remainder",
+        "estimate"
+      ],
+      "priorLessons": [
+        9
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l11",
+      "number": 11,
+      "week": 6,
+      "unitId": "operations",
+      "title": "Story Problems with Decimals",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Number Operations",
+      "contentStandard": {
+        "code": "B7.1.2.2",
+        "text": "Demonstrate an understanding of addition, subtraction, multiplication and division of (i) whole numbers, and (ii) decimal numbers, to solve problems."
+      },
+      "indicator": {
+        "code": "B7.1.2.2.3",
+        "text": "Create and solve story problems involving decimals on the four basic operations."
+      },
+      "learningGoal": "Learners create and solve story problems involving decimals using all four operations.",
+      "vocabulary": [
+        "story problem",
+        "operation",
+        "decimal",
+        "context",
+        "reasonable",
+        "estimate",
+        "check",
+        "two-step"
+      ],
+      "priorLessons": [
+        8,
+        9,
+        10
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l12",
+      "number": 12,
+      "week": 6,
+      "unitId": "powers",
+      "title": "Repeated Factors — The Idea of Powers",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Number Operations",
+      "contentStandard": {
+        "code": "B7.1.2.3",
+        "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
+      },
+      "indicator": {
+        "code": "B7.1.2.3.1",
+        "text": "Illustrate with examples the meaning of repeated factors using counting objects such as bottle tops or bundle sticks."
+      },
+      "learningGoal": "Learners illustrate the meaning of repeated factors using concrete objects and write the shorthand index form.",
+      "vocabulary": [
+        "factor",
+        "repeated factor",
+        "power",
+        "index",
+        "exponent",
+        "base",
+        "squared",
+        "cubed",
+        "product"
+      ],
+      "priorLessons": [
+        10
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": "index-explorer"
+    },
+    {
+      "id": "b7-math-t1-l13",
+      "number": 13,
+      "week": 7,
+      "unitId": "powers",
+      "title": "Writing Numbers as Products and Powers",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Number Operations",
+      "contentStandard": {
+        "code": "B7.1.2.3",
+        "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
+      },
+      "indicator": {
+        "code": "B7.1.2.3.2",
+        "text": "Express a given number as a product of a given number or numbers, as well as, in the form of a power or two such numbers as product of powers."
+      },
+      "learningGoal": "Learners express a number as a product of factors, and write that product in index form including as a product of powers.",
+      "vocabulary": [
+        "factor",
+        "product",
+        "prime",
+        "composite",
+        "factor pair",
+        "index form",
+        "base",
+        "power",
+        "product of powers"
+      ],
+      "priorLessons": [
+        12
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l14",
+      "number": 14,
+      "week": 7,
+      "unitId": "powers",
+      "title": "The Zero Index",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Number Operations",
+      "contentStandard": {
+        "code": "B7.1.2.3",
+        "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
+      },
+      "indicator": {
+        "code": "B7.1.2.3.3",
+        "text": "Show that the value of any natural number with zero as its exponent or index is 1 and use it to solve problems."
+      },
+      "learningGoal": "Learners show that any natural number raised to the power zero equals 1, and use this to solve problems.",
+      "vocabulary": [
+        "zero index",
+        "exponent",
+        "power",
+        "pattern",
+        "divide by the base",
+        "consistent",
+        "convention"
+      ],
+      "priorLessons": [
+        6,
+        12,
+        13
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": "zero-index"
+    },
+    {
+      "id": "b7-math-t1-l15",
+      "number": 15,
+      "week": 8,
+      "unitId": "powers",
+      "title": "Evaluating Numbers in Index Form",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Number Operations",
+      "contentStandard": {
+        "code": "B7.1.2.3",
+        "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
+      },
+      "indicator": {
+        "code": "B7.1.2.3.4",
+        "text": "Find the value of a number written in index form."
+      },
+      "learningGoal": "Learners find the value of a number written in index form, including products of powers and zero indices.",
+      "vocabulary": [
+        "index form",
+        "evaluate",
+        "base",
+        "index",
+        "exponent",
+        "product of powers",
+        "order of operations",
+        "square",
+        "cube"
+      ],
+      "priorLessons": [
+        12,
+        13,
+        14
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l16",
+      "number": 16,
+      "week": 8,
+      "unitId": "powers",
+      "title": "Prime Factors and the Highest Common Factor",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Number Operations",
+      "contentStandard": {
+        "code": "B7.1.2.3",
+        "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
+      },
+      "indicator": {
+        "code": "B7.1.2.3.5",
+        "text": "Apply the concept of powers of numbers (product of prime) to find Highest Common Factor (HCF)."
+      },
+      "learningGoal": "Learners use prime factorisation to find the Highest Common Factor of two or more numbers.",
+      "vocabulary": [
+        "prime factor",
+        "prime factorisation",
+        "highest common factor",
+        "HCF",
+        "common factor",
+        "product of primes",
+        "index form",
+        "Venn"
+      ],
+      "priorLessons": [
+        13
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l17",
+      "number": 17,
+      "week": 9,
+      "unitId": "fractions",
+      "title": "Benchmark Fractions, Decimals and Percentages",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Fractions",
+      "contentStandard": {
+        "code": "B7.1.3.1",
+        "text": "Simplify, compare and order a mixture of positive fractions (i.e. common, percent and decimal) by changing all to equivalent (i) fractions, (ii) decimals, or (iii) percentages."
+      },
+      "indicator": {
+        "code": "B7.1.3.1.1",
+        "text": "Determine and recall the percentages and decimals of given benchmark fractions (i.e. tenths, fifths, fourths, thirds and halves) and use these to compare quantities."
+      },
+      "learningGoal": "Learners recall the decimal and percentage equivalents of benchmark fractions and use them to compare quantities.",
+      "vocabulary": [
+        "benchmark fraction",
+        "equivalent",
+        "common fraction",
+        "decimal fraction",
+        "percentage",
+        "tenth",
+        "fifth",
+        "quarter",
+        "third",
+        "half",
+        "convert"
+      ],
+      "priorLessons": [
+        4
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": "fractions"
+    },
+    {
+      "id": "b7-math-t1-l18",
+      "number": 18,
+      "week": 9,
+      "unitId": "fractions",
+      "title": "Comparing and Ordering Fractions",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Fractions",
+      "contentStandard": {
+        "code": "B7.1.3.1",
+        "text": "Simplify, compare and order a mixture of positive fractions (i.e. common, percent and decimal) by changing all to equivalent (i) fractions, (ii) decimals, or (iii) percentages."
+      },
+      "indicator": {
+        "code": "B7.1.3.1.2",
+        "text": "Compare and order fractions (i.e. common, percent and decimal fractions up to thousandths) limit to the benchmark fractions."
+      },
+      "learningGoal": "Learners compare and order common, decimal and percentage fractions, limited to the benchmarks, by converting them all to the same form.",
+      "vocabulary": [
+        "compare",
+        "order",
+        "ascending",
+        "descending",
+        "common denominator",
+        "equivalent",
+        "benchmark",
+        "convert",
+        "thousandth"
+      ],
+      "priorLessons": [
+        17
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l19",
+      "number": 19,
+      "week": 10,
+      "unitId": "fractions",
+      "title": "Adding and Subtracting Unlike and Mixed Fractions",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Fractions",
+      "contentStandard": {
+        "code": "B7.1.3.2",
+        "text": "Demonstrate an understanding of the process of addition and/or subtraction of fractions and apply this in solving problems."
+      },
+      "indicator": {
+        "code": "B7.1.3.2.1",
+        "text": "Explain the process of addition and subtraction of two or three unlike and mixed fractions."
+      },
+      "learningGoal": "Learners explain and carry out addition and subtraction of two or three unlike and mixed fractions.",
+      "vocabulary": [
+        "unlike fraction",
+        "mixed number",
+        "improper fraction",
+        "common denominator",
+        "lowest common multiple",
+        "equivalent",
+        "simplify",
+        "rename"
+      ],
+      "priorLessons": [
+        17,
+        18
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l20",
+      "number": 20,
+      "week": 10,
+      "unitId": "fractions",
+      "title": "Solving Problems with Fraction Addition and Subtraction",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Fractions",
+      "contentStandard": {
+        "code": "B7.1.3.2",
+        "text": "Demonstrate an understanding of the process of addition and/or subtraction of fractions and apply this in solving problems."
+      },
+      "indicator": {
+        "code": "B7.1.3.2.2",
+        "text": "Solve problems involving addition or subtraction of fractions."
+      },
+      "learningGoal": "Learners solve word problems involving the addition and subtraction of fractions.",
+      "vocabulary": [
+        "word problem",
+        "operation",
+        "remaining",
+        "altogether",
+        "difference",
+        "estimate",
+        "check",
+        "unit"
+      ],
+      "priorLessons": [
+        19
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l21",
+      "number": 21,
+      "week": 11,
+      "unitId": "fractions",
+      "title": "Multiplying Fractions",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Fractions",
+      "contentStandard": {
+        "code": "B7.1.3.3",
+        "text": "Demonstrate an understanding of the process of multiplying and dividing positive fractions and apply this in solving problems."
+      },
+      "indicator": {
+        "code": "B7.1.3.3.1",
+        "text": "Explain the process of multiplying a fraction (i.e. common, percent and decimal fractions up to thousandths) by a whole number and by a fraction."
+      },
+      "learningGoal": "Learners explain and carry out multiplication of a fraction by a whole number and by another fraction.",
+      "vocabulary": [
+        "multiply",
+        "numerator",
+        "denominator",
+        "of",
+        "product",
+        "simplify",
+        "cancel",
+        "area model",
+        "improper fraction"
+      ],
+      "priorLessons": [
+        10,
+        19
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l22",
+      "number": 22,
+      "week": 11,
+      "unitId": "fractions",
+      "title": "Finding a Fraction of a Quantity",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Fractions",
+      "contentStandard": {
+        "code": "B7.1.3.3",
+        "text": "Demonstrate an understanding of the process of multiplying and dividing positive fractions and apply this in solving problems."
+      },
+      "indicator": {
+        "code": "B7.1.3.3.2",
+        "text": "Find a fraction of given quantity (i.e. money or given quantity of objects)."
+      },
+      "learningGoal": "Learners find a fraction of a given quantity of money or objects.",
+      "vocabulary": [
+        "fraction of",
+        "quantity",
+        "share",
+        "denominator",
+        "numerator",
+        "unit fraction",
+        "divide then multiply",
+        "remainder"
+      ],
+      "priorLessons": [
+        21
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l23",
+      "number": 23,
+      "week": 12,
+      "unitId": "fractions",
+      "title": "Dividing Fractions",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Fractions",
+      "contentStandard": {
+        "code": "B7.1.3.3",
+        "text": "Demonstrate an understanding of the process of multiplying and dividing positive fractions and apply this in solving problems."
+      },
+      "indicator": {
+        "code": "B7.1.3.3.3",
+        "text": "Explain the process of dividing a fraction (i.e. common, percent and decimal fractions up to thousandths) by a 1-digit whole number and by a fraction."
+      },
+      "learningGoal": "Learners explain and carry out division of a fraction by a one-digit whole number and by another fraction.",
+      "vocabulary": [
+        "divide",
+        "reciprocal",
+        "invert",
+        "divisor",
+        "dividend",
+        "quotient",
+        "how many times",
+        "numerator",
+        "denominator"
+      ],
+      "priorLessons": [
+        21,
+        22
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    },
+    {
+      "id": "b7-math-t1-l24",
+      "number": 24,
+      "week": 12,
+      "unitId": "fractions",
+      "title": "Dividing Quantities and Fractions by Fractions",
+      "durationMin": 60,
+      "strand": "Number",
+      "subStrand": "Fractions",
+      "contentStandard": {
+        "code": "B7.1.3.3",
+        "text": "Demonstrate an understanding of the process of multiplying and dividing positive fractions and apply this in solving problems."
+      },
+      "indicator": {
+        "code": "B7.1.3.3.4",
+        "text": "Determine the result of dividing a quantity (i.e. money or objects) or a fraction by a fraction."
+      },
+      "learningGoal": "Learners determine the result of dividing a quantity of money or objects, or a fraction, by a fraction.",
+      "vocabulary": [
+        "divide",
+        "quantity",
+        "reciprocal",
+        "quotient",
+        "share",
+        "portion",
+        "unit",
+        "context",
+        "interpret"
+      ],
+      "priorLessons": [
+        23
+      ],
+      "phaseMinutes": {
+        "engage": 8,
+        "explore": 16,
+        "explain": 14,
+        "elaborate": 12,
+        "evaluate": 10
+      },
+      "widgetId": null
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+# Phase 0 — source reconciliation and release decisions
+
+**Status: restricted public preview authorized; full school release remains BLOCKED.** The user approved publication of *learner-safe excerpts* from the supplied lesson plans and NaCCA curriculum with attribution on 2026-09-23. This is **not** permission to distribute complete source documents, tests, answer keys or teacher-only notes. Authentication is deferred at the user's direction; the preview has no accounts, marks or learner records. The reproducible raw-source inventory is [source-audit.json](source-audit.json); `--strict` intentionally exits unsuccessfully while source discrepancies remain.
+
+## Decision queue
+
+| ID | Decision and evidence | Required sign-off / result |
+|---|---|---|
+| C1 | Which B7 Mathematics unit-test mapping governs? The plan Part C tests Powers in UT3; the tracker maps Powers to UT2 and Fractions to UT3/UT4 (PDD S-01). | Curriculum author selects a test calendar and supplies approved item→indicator mappings. Do **not** silently remap scores. |
+| C2 | What are the approved item marks, total marks and answer keys for **every** test and exam? The four plans' UT question totals are respectively `20/29/20/37`, `24/20/30/24`, `20/34/22/31`, and `28/29/32/43` (B7 Maths, B7 Science, B8 Maths, B8 Science). All four trackers expect a 100-mark exam, but printed exam item totals are `50/70/79/78`. The B8 Maths tracker also gives UT2/UT3 maxima `20/30`, versus `30/20` in the plan. | Subject authors approve revised questions/rubrics/mark allocations, then an editor checks each item and tracker. Record the reason and source for each change; no automatic scaling to 100. PDD S-02–S-05 additionally list known B7 Maths key errors. |
+| C3 | Which week and indicator schedule is canonical? `B7 CORRECTED!C16` and the B7 scheme PDF p. 40 call W15 **examination**, while the B7 Mathematics plan D2 calls it **vacation**. `B8 CORRECTED!E13/G13` teaches **angles** in W12 (Mismatch Register M26), while the B8 Mathematics plan A1.1 and tracker teach **gradient**. | Curriculum authority chooses one version for each conflict, with a documented rationale and updates to affected lessons, assessments and records. “CORRECTED” in a filename is not by itself an approval. |
+| C4 | What may be published? The user authorized **learner-safe excerpts from supplied lesson plans and the NaCCA curriculum with attribution** for this public preview (2026-09-23). Tests, answer keys and teacher-only notes are excluded. | **Narrow preview permission recorded.** Full source documents, Alpha Examinations schemes, complete lesson packs, images and other levels still require separate rights and editorial review. The preview attributes the NaCCA Mathematics CCP (B7–B9, Sept 2020) and the Basic 7 Maths Term 1 plan. No general license is inferred. |
+| C5 | Is the pilot a Term 1 replay or does it need Term 2 lessons? The mathematics workbook has Term 2 *schemes* but the repository has no Term 2 *lesson pack*. The Little Gems timetable contains separate real class periods; period splitting is not optional if a pilot requires it. | School/teacher selects pilot term, class schedule and required offline/period split behaviour; content author supplies approved lessons if Term 2 is chosen. |
+| C6 | What is the authorized school/learner data model? The PDD's rule sketch lets any in-school teacher access other classes' marks; its learner claim fields disagree; the whole-class mark document cannot be learner-readable. CDN content also cannot enforce lesson release as a secrecy control. | Product owner and school privacy lead specify assignments, learner's own-score projection, release semantics, offline shared-device cache policy and auditable sign-offs. Implement and pass role×resource emulator tests before live learner data. |
+| C7 | Are the Word documents' headers and GES note fields approved for use? B8 plans retain a B7 cover and B7 indicators in D2; B8 notes say Basic 7 in the class field; B8 Science labels L25/26 “of 24”. The B7 Mathematics notes say Subject: Science. | Subject editor corrects and re-approves GES exports, citations, weekly record and assessment-calendar copy; retain originals with a versioned correction log. |
+
+## Scope of the authorized public preview
+
+- **Basic 7 Mathematics, Term 1 only:** 24 lesson titles, weeks, indicator and standard text, performance goals, vocabulary, prior-lesson links and 5E **durations only**, plus four separately curated, ungraded interactive models. Extract only allowlisted fields with `python tools/build_public_catalog.py`.
+- Public concept maps are built from those fields; the projector display shows only general learning prompts, public metadata and an optional timer. It does **not** show the teacher activities, learner activities, assessment questions, keys or personal information from the source files.
+- No authentication or student records for this preview, per user instruction. Authentication is tracked in [TODO-Benched-For-Later.md](../TODO-Benched-For-Later.md).
+- Raw DOCX/XLSX audit findings remain open. The preview is **not** an approved assessment, gradebook, GES note export, full lesson pack or a representation that the 44 discrepancies are fixed.
+
+## Full school release gate (not satisfied by the public preview)
+
+1. Approved decision record for C1–C7 as applicable, including rights and curriculum edition.
+2. Human-checked corrections and structured data imported with provenance and an author/editor sign-off.
+3. **Strict normalized-pack validators** for codes, schedule coverage, item/section/component maxima, keys, 5E duration, references, audience filtering and map links. The raw-source baseline is not this validator.
+4. Firebase Emulator tests proving assignment-aware reads/writes, learner isolation, no teacher-key leakage and server-only audit; separate dev/staging/production projects.
+5. Teacher pilot of exported notes and an offline lesson. None of these exit conditions is met merely by a green “Raw source audit” CI job.

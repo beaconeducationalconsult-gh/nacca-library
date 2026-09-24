@@ -1,0 +1,14 @@
+# Local Python audit artifacts
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Future web app/tooling artifacts
+node_modules/
+dist/
+build/
+coverage/
+*.log
+.env*
+!.env.example

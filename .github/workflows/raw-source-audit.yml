@@ -1,0 +1,31 @@
+name: Source and public-preview checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test the OOXML audit and its findings
+        run: python -m unittest discover -s tests -v
+      - name: Detect unreviewed source changes
+        run: python tools/source_audit.py --check docs/source-audit.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install and test the public app
+        run: |
+          npm ci
+          npm run format:check
+          npm test
+          npm run build
+      # Raw audit --check verifies only a documented known-bad baseline.
+      # The public catalogue tests enforce a narrower content allowlist.
+      # Neither check approves full lessons, assessments or school data.
