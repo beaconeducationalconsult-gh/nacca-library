@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2: Binary Compounds, Reactions & pH | NaCCA CCP STEM Lab</title>
+  <style>
+    :root{--primary:#1e3a8a;--primary-light:#3b82f6;--secondary:#059669;--accent:#d97706;--bg:#f8fafc;--card-bg:#fff;--text:#1e293b;--text-muted:#64748b;--border:#e2e8f0;--shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--radius:12px;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;}
+    header{background:linear-gradient(135deg,#7c2d12,#1e3a8a);color:#fff;padding:2rem;text-align:center;}
+    header h1{font-size:1.9rem;letter-spacing:-.5px;} header p{opacity:.92;margin-top:4px;}
+    .badge{display:inline-block;background:rgba(255,255,255,.2);padding:3px 12px;border-radius:20px;font-size:.75rem;font-weight:600;margin-top:8px;text-transform:uppercase;}
+    .topnav{display:flex;justify-content:center;gap:10px;background:#fff;padding:10px;border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50;flex-wrap:wrap;}
+    .topnav a{text-decoration:none;padding:8px 16px;border:1px solid var(--border);border-radius:8px;background:#f1f5f9;color:var(--text);font-weight:600;font-size:.88rem;}
+    .topnav a.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+    .topnav a:hover{background:#e2e8f0;}
+    .wrap{max-width:1280px;margin:20px auto;padding:0 16px;}
+    .card{background:var(--card-bg);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:18px;}
+    .card-title{font-size:1.2rem;font-weight:700;margin-bottom:12px;border-bottom:2px solid #f1f5f9;padding-bottom:8px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+    .meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;}
+    .meta{background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:.86rem;}
+    .meta strong{display:block;font-size:.72rem;text-transform:uppercase;color:var(--text-muted);letter-spacing:.4px;margin-bottom:2px;}
+    ul.check{list-style:none;padding:0;} ul.check li{padding:6px 0 6px 28px;position:relative;font-size:.92rem;border-bottom:1px dashed #f1f5f9;}
+    ul.check li::before{content:"✔";position:absolute;left:6px;color:var(--primary-light);font-weight:800;}
+    .cols2{display:grid;grid-template-columns:1fr 1fr;gap:16px;} @media(max-width:900px){.cols2{grid-template-columns:1fr;}}
+    .sim-grid{display:grid;grid-template-columns:1fr 380px;gap:20px;} @media(max-width:1024px){.sim-grid{grid-template-columns:1fr;}}
+    .control-group{margin-bottom:16px;} .control-group label{display:block;font-weight:600;font-size:.85rem;margin-bottom:6px;}
+    .btn-group{display:flex;flex-wrap:wrap;gap:8px;}
+    .btn{padding:8px 14px;border:1px solid var(--border);background:#f8fafc;border-radius:6px;font-size:.85rem;cursor:pointer;font-weight:500;}
+    .btn:hover{background:#e2e8f0;} .btn.selected{background:var(--primary-light);color:#fff;border-color:var(--primary-light);}
+    .btn-action{background:var(--secondary);color:#fff;border:none;font-weight:600;padding:10px 16px;border-radius:6px;cursor:pointer;width:100%;margin-top:8px;}
+    .info-box{background:#eff6ff;border-left:4px solid var(--primary-light);padding:12px;border-radius:4px;margin-top:14px;font-size:.88rem;}
+    .info-box h4{margin-bottom:4px;color:var(--primary);}
+    .ph-spectrum{height:22px;border-radius:4px;background:linear-gradient(to right,#dc2626 0%,#ea580c 15%,#eab308 30%,#84cc16 45%,#22c55e 50%,#06b6d4 65%,#3b82f6 80%,#7c3aed 90%,#4c1d95 100%);margin:10px 0;position:relative;border:1px solid rgba(0,0,0,.1);}
+    .ph-pointer{position:absolute;top:-6px;width:4px;height:34px;background:#111;border-radius:2px;transform:translateX(-50%);transition:left .3s ease;}
+    .status-pill{display:inline-block;padding:4px 10px;border-radius:12px;font-size:.8rem;font-weight:700;text-transform:uppercase;}
+    .status-acid{background:#fee2e2;color:#991b1b;} .status-neutral{background:#dcfce7;color:#166534;} .status-base{background:#dbeafe;color:#1e40af;}
+    .tag{display:inline-block;background:#eff6ff;color:#1e40af;border:1px solid #bfdbfe;border-radius:20px;padding:2px 10px;font-size:.75rem;font-weight:700;margin:2px;}
+    table{width:100%;border-collapse:collapse;font-size:.88rem;margin-top:8px;} th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top;} th{background:#f1f5f9;}
+    canvas#chemCanvas{display:block;width:100%;height:180px;background:#f8fafc;border-radius:8px;border:1px solid var(--border);}
+    .quiz-q{background:#f8fafc;border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px;}
+    .quiz-q p{font-weight:700;margin-bottom:8px;} .quiz-q label{display:block;font-size:.88rem;padding:4px 0;cursor:pointer;}
+    footer{text-align:center;color:var(--text-muted);font-size:.82rem;padding:24px;}
+  </style>
+</head>
+<body>
+<header>
+  <h1>🧪 Lesson 2: Binary Compounds, Chemical Reactions &amp; the pH Scale</h1>
+  <p>Integrated Science (Basic 7–9) • Diversity of Matter — Materials • NaCCA Common Core Programme</p>
+  <span class="badge">Standalone Lesson Module • Virtual Chemistry Bench Included</span>
+</header>
+<nav class="topnav">
+  <a href="index.html">🏠 Suite Home</a>
+  <a href="lesson1-plant-cell.html">🌿 Lesson 1: Plant Cell</a>
+  <a href="lesson2-binary-compounds-ph.html" class="active">🧪 Lesson 2: Compounds &amp; pH</a>
+  <a href="lesson3-math-scaling.html">📐 Lesson 3: Math Scaling</a>
+</nav>
+<div class="wrap">
+  <div class="card">
+    <div class="card-title"><span>📋 Curriculum Alignment (GES / NaCCA CCP)</span><span><span class="tag">B7.1.1.1</span><span class="tag">B8.1.1.1</span><span class="tag">B9.1.1.1</span></span></div>
+    <div class="meta-grid">
+      <div class="meta"><strong>Subject / Class</strong>Integrated Science • Basic 7–9 (JHS 1–3)</div>
+      <div class="meta"><strong>Strand</strong>Diversity of Matter</div>
+      <div class="meta"><strong>Sub-Strand</strong>Materials — Binary Compounds, Acids, Bases, Salts</div>
+      <div class="meta"><strong>Content Standard</strong>Show understanding of binary compounds, chemical reactions and the pH scale</div>
+      <div class="meta"><strong>Indicators</strong>Write formulae by criss-cross; classify acids/bases/salts; test with indicators; interpret pH 0–14</div>
+      <div class="meta"><strong>Duration</strong>80 minutes (Double Period)</div>
+      <div class="meta"><strong>Core Competencies</strong>Critical Thinking • Problem Solving • Digital Literacy • Collaboration</div>
+      <div class="meta"><strong>Keywords</strong>Binary compound, ionic, covalent, acid, base, salt, pH, litmus, neutralisation</div>
+    </div>
+  </div>
+  <div class="cols2">
+    <div class="card">
+      <div class="card-title"><span>🎯 Learning Objectives</span></div>
+      <ul class="check">
+        <li>Define a <b>binary compound</b> and give 4 examples (NaCl, HCl, MgO, H<sub>2</sub>O).</li>
+        <li>Write formulae using the <b>criss-cross (valency swap)</b> method.</li>
+        <li>Distinguish <b>ionic</b> (electron transfer) from <b>covalent</b> (electron sharing) bonding.</li>
+        <li>Classify household substances as acidic, neutral or alkaline using indicators.</li>
+        <li>Read the <b>pH scale 0–14</b> and state the pH meaning of colours.</li>
+        <li>Write the neutralisation equation: <b>HCl + NaOH → NaCl + H<sub>2</sub>O</b>.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title"><span>👩🏾‍🏫 Pedagogy — Methods, Philosophies &amp; Principles</span></div>
+      <table>
+        <tr><th>Dimension</th><th>This Lesson Uses</th></tr>
+        <tr><td><b>Philosophy</b></td><td>Inquiry-based &amp; social constructivism — learners test, argue, and conclude like young chemists.</td></tr>
+        <tr><td><b>Methods</b></td><td>Virtual experiment; POE (predict-observe-explain); demonstration; peer teaching of criss-cross method.</td></tr>
+        <tr><td><b>Principles</b></td><td>Safe-before-real (simulate acids before handling); local-to-global (sobolo &amp; wood-ash lye → universal indicators).</td></tr>
+        <tr><td><b>Classroom Management</b></td><td>Bench-team roles (tester, recorder, reporter); safety chant before any real chemicals.</td></tr>
+        <tr><td><b>Digital Technology</b></td><td>This virtual bench replaces/augments scarce reagents; every learner "tests" 9 substances in minutes.</td></tr>
+        <tr><td><b>GESI</b></td><td>Girls lead bench teams on rotation; local-language names for substances affirmed.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span>⚗️ Interactive Simulation: Chemical Testing Bench &amp; Reaction Vessel</span><span id="solTitle" style="font-weight:600;color:var(--primary);">Pure Distilled Water</span></div>
+    <div class="sim-grid">
+      <div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px;">
+          <div style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center;">
+            <h5 style="margin-bottom:8px;color:var(--text-muted);">Reagent Solution in Beaker</h5>
+            <div style="display:flex;justify-content:center;align-items:flex-end;height:180px;">
+              <div style="width:140px;height:160px;border:4px solid #94a3b8;border-top:none;border-radius:0 0 16px 16px;position:relative;overflow:hidden;background:#fafafa;">
+                <div id="beakerLiquid" style="position:absolute;bottom:0;width:100%;height:75%;background:rgba(59,130,246,.2);transition:all .5s;">
+                  <div style="position:absolute;top:10px;left:10px;font-size:.7rem;color:#333;" id="ionDisplay">H⁺ ≈ OH⁻</div>
+                </div>
+                <div id="litmusStrip" style="position:absolute;top:10px;left:55px;width:24px;height:130px;background:#cbd5e1;border-radius:2px;border:1px solid #64748b;transition:all .4s;">
+                  <div style="font-size:.65rem;writing-mode:vertical-rl;transform:rotate(180deg);padding-top:6px;font-weight:bold;color:#333;">LITMUS</div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top:10px;font-weight:600;" id="litmusResultText">Litmus: Neutral Purple</div>
+          </div>
+          <div style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center;">
+            <h5 style="margin-bottom:8px;color:var(--text-muted);">Compound / Molecular Formation</h5>
+            <canvas id="chemCanvas" width="300" height="180"></canvas>
+            <div id="reactionEquation" style="font-weight:700;color:var(--primary);margin-top:8px;font-size:.95rem;">H₂O (Covalent Compound)</div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-weight:700;font-size:.9rem;">pH Scale (0 = Strongly Acidic, 7 = Neutral, 14 = Strongly Alkaline)</span>
+            <span id="currentPhDisplay" style="font-weight:800;font-size:1.1rem;color:var(--primary);">pH: 7.0</span>
+          </div>
+          <div class="ph-spectrum"><div class="ph-pointer" id="phPointer" style="left:50%;"></div></div>
+          <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--text-muted);font-weight:600;flex-wrap:wrap;gap:4px;">
+            <span style="color:#dc2626;">0 (Battery Acid)</span><span style="color:#ea580c;">3 (Lemon/Vinegar)</span>
+            <span style="color:#22c55e;">7 (Pure Water)</span><span style="color:#3b82f6;">9 (Baking Soda)</span>
+            <span style="color:#7c3aed;">12 (Soap/Wood Ash)</span><span style="color:#4c1d95;">14 (Caustic Soda)</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="control-group">
+          <label>Laboratory Bench Shelf <span class="status-pill status-neutral" id="solutionTypePill">Neutral</span></label>
+          <div class="btn-group" id="substanceBtns">
+            <button class="btn" onclick="testSubstance('lemon')">🍋 Lemon Juice</button>
+            <button class="btn" onclick="testSubstance('vinegar')">🍶 Vinegar</button>
+            <button class="btn" onclick="testSubstance('hcl')">🧪 Dilute HCl</button>
+            <button class="btn selected" onclick="testSubstance('water')">💧 Pure Water</button>
+            <button class="btn" onclick="testSubstance('salt')">🧂 Salt Solution</button>
+            <button class="btn" onclick="testSubstance('baking_soda')">🍞 Baking Soda</button>
+            <button class="btn" onclick="testSubstance('wood_ash')">🌿 Wood-Ash Lye</button>
+            <button class="btn" onclick="testSubstance('soap')">🧼 Soap Water</button>
+            <button class="btn" onclick="testSubstance('naoh')">⚠️ Caustic Soda</button>
+          </div>
+        </div>
+        <div class="control-group" style="background:#f8fafc;padding:12px;border-radius:8px;border:1px solid var(--border);">
+          <label>Neutralisation Experiment:</label>
+          <p style="font-size:.8rem;color:var(--text-muted);margin-bottom:8px;">Add HCl (acid) to NaOH (base) → Table Salt + Water.</p>
+          <button class="btn-action" style="background:#3b82f6;" onclick="runNeutralization()">⚡ HCl + NaOH → NaCl + H₂O</button>
+        </div>
+        <div class="control-group">
+          <label>Indicator Type:</label>
+          <div class="btn-group">
+            <button class="btn selected" id="btnIndLitmus" onclick="setIndicator('litmus')">Litmus Paper</button>
+            <button class="btn" id="btnIndUniversal" onclick="setIndicator('universal')">Universal Indicator</button>
+            <button class="btn" id="btnIndSobolo" onclick="setIndicator('sobolo')">Sobolo / Red Cabbage</button>
+          </div>
+        </div>
+        <div class="info-box"><h4 id="chemInfoTitle">Pure Distilled Water (H₂O)</h4><p id="chemInfoDesc" style="color:#334155;">Neutral molecule: equal H⁺ and OH⁻ (pH 7.0).</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cols2">
+    <div class="card">
+      <div class="card-title"><span>🧭 Guided Lesson Activities (80 min)</span></div>
+      <table>
+        <tr><th>Phase</th><th>Activity</th></tr>
+        <tr><td><b>Starter (10)</b></td><td>Taste-safe talk: lemon (sour) vs. soap (bitter/slippery). Predict their pH positions.</td></tr>
+        <tr><td><b>Main 1 (20)</b></td><td>Teach <b>criss-cross</b>: Na<sup>+</sup> + Cl<sup>−</sup> → NaCl; Mg<sup>2+</sup> + O<sup>2−</sup> → MgO; Al<sup>3+</sup> + O<sup>2−</sup> → Al<sub>2</sub>O<sub>3</sub>.</td></tr>
+        <tr><td><b>Main 2 (30)</b></td><td>Bench teams test all 9 substances × 3 indicators in the simulator; record colours + pH in results table.</td></tr>
+        <tr><td><b>Plenary (10)</b></td><td>Run neutralisation live; class writes &amp; balances the equation.</td></tr>
+        <tr><td><b>Assess (10)</b></td><td>Exit quiz below.</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-title"><span>📝 Results Table (copy into notebooks)</span></div>
+      <table><tr><th>Substance</th><th>Litmus</th><th>Universal</th><th>Sobolo</th><th>pH</th><th>A / N / B</th></tr>
+        <tr><td>Lemon</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Vinegar</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Salt sol.</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Wood-ash</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Soap</td><td></td><td></td><td></td><td></td><td></td></tr>
+      </table>
+      <div class="info-box"><h4>Criss-Cross Rule</h4><p>Swap the valency numbers as subscripts, then simplify: Al<sup>3+</sup> + O<sup>2−</sup> → Al<sub>2</sub>O<sub>3</sub>.</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title"><span>✅ Exit Quiz</span><span id="quizScore" style="font-size:.9rem;color:var(--primary);font-weight:700;"></span></div>
+    <div class="quiz-q"><p>1. A binary compound is made of…</p>
+      <label><input type="radio" name="q1" value="a"> Exactly two elements</label>
+      <label><input type="radio" name="q1" value="b"> Exactly two atoms</label>
+      <label><input type="radio" name="q1" value="c"> Two mixtures</label></div>
+    <div class="quiz-q"><p>2. Blue litmus turns red in…</p>
+      <label><input type="radio" name="q2" value="a"> Alkalis</label>
+      <label><input type="radio" name="q2" value="b"> Acids</label>
+      <label><input type="radio" name="q2" value="c"> Neutral salt</label></div>
+    <div class="quiz-q"><p>3. Correct formula by criss-cross for aluminium (3+) and oxygen (2−)?</p>
+      <label><input type="radio" name="q3" value="a"> AlO</label>
+      <label><input type="radio" name="q3" value="b"> Al₃O₂</label>
+      <label><input type="radio" name="q3" value="c"> Al₂O₃</label></div>
+    <div class="quiz-q"><p>4. A solution with pH 11 is…</p>
+      <label><input type="radio" name="q4" value="a"> Strongly acidic</label>
+      <label><input type="radio" name="q4" value="b"> Neutral</label>
+      <label><input type="radio" name="q4" value="c"> Alkaline</label></div>
+    <div class="quiz-q"><p>5. HCl + NaOH → ?</p>
+      <label><input type="radio" name="q5" value="a"> NaCl + H₂O</label>
+      <label><input type="radio" name="q5" value="b"> NaH + ClOH</label>
+      <label><input type="radio" name="q5" value="c"> H₂ + NaClO</label></div>
+    <button class="btn-action" style="max-width:320px;" onclick="markQuiz()">Mark My Answers</button>
+  </div>
+</div>
+<footer>NaCCA CCP STEM Virtual Laboratory • Lesson 2 standalone module • Ghana Integrated Science B7–B9</footer>
+<script>
+const chemCanvas=document.getElementById('chemCanvas'),cctx=chemCanvas.getContext('2d');
+let currentSubstanceKey='water',currentIndicator='litmus';
+const substances={
+  water:{name:"Pure Distilled Water (H₂O)",ph:7.0,type:"neutral",ions:"H⁺ ≈ OH⁻",litmusColor:"#a855f7",soboloColor:"#a855f7",universalColor:"#22c55e",litmusDesc:"Litmus: Neutral (purple)",formula:"H₂O",bond:"Covalent (Electron Sharing)",desc:"Neutral compound. Equal H⁺ and OH⁻ (pH 7.0)."},
+  lemon:{name:"Lemon Juice (Citric Acid)",ph:2.2,type:"acid",ions:"High H⁺",litmusColor:"#ef4444",soboloColor:"#dc2626",universalColor:"#ea580c",litmusDesc:"Litmus: Blue turns RED",formula:"C₆H₈O₇",bond:"Organic Acid",desc:"Natural acid, sour taste, pH ≈ 2.2."},
+  vinegar:{name:"Vinegar (Acetic Acid)",ph:2.9,type:"acid",ions:"H⁺ + CH₃COO⁻",litmusColor:"#f87171",soboloColor:"#e11d48",universalColor:"#f97316",litmusDesc:"Litmus: Blue turns Red",formula:"CH₃COOH",bond:"Covalent Acid",desc:"Culinary acid for seasoning and preserving."},
+  hcl:{name:"Dilute Hydrochloric Acid (HCl)",ph:1.0,type:"acid",ions:"Very High H⁺ + Cl⁻",litmusColor:"#dc2626",soboloColor:"#b91c1c",universalColor:"#dc2626",litmusDesc:"Litmus: Blue turns Dark Red",formula:"HCl (Binary)",bond:"Polar Covalent / Ionic in solution",desc:"Strong lab binary acid from H + Cl (pH 1.0)."},
+  salt:{name:"Table Salt Solution (NaCl)",ph:7.0,type:"neutral",ions:"Na⁺ & Cl⁻",litmusColor:"#94a3b8",soboloColor:"#9333ea",universalColor:"#22c55e",litmusDesc:"Litmus: No change",formula:"NaCl (Binary Ionic)",bond:"Ionic (Na⁺ + Cl⁻)",desc:"Na transfers 1 electron to Cl — ionic bond."},
+  baking_soda:{name:"Baking Soda (NaHCO₃)",ph:8.4,type:"base",ions:"Mild OH⁻ excess",litmusColor:"#60a5fa",soboloColor:"#0284c7",universalColor:"#06b6d4",litmusDesc:"Litmus: Red turns Blue",formula:"NaHCO₃",bond:"Ionic Salt (Basic)",desc:"Weak household base for baking."},
+  wood_ash:{name:"Wood Ash Lye (Potash)",ph:11.5,type:"base",ions:"High OH⁻ & K⁺",litmusColor:"#2563eb",soboloColor:"#059669",universalColor:"#7c3aed",litmusDesc:"Litmus: Red turns Deep BLUE",formula:"KOH / K₂CO₃",bond:"Ionic Potash Base",desc:"Traditional lye for Alata Samina (black soap)."},
+  soap:{name:"Soap Solution",ph:9.8,type:"base",ions:"Excess OH⁻",litmusColor:"#3b82f6",soboloColor:"#0284c7",universalColor:"#3b82f6",litmusDesc:"Litmus: Red turns Blue",formula:"R-COO⁻Na⁺",bond:"Fatty Acid Salt",desc:"Slippery, bitter, turns red litmus blue."},
+  naoh:{name:"Caustic Soda (NaOH)",ph:13.5,type:"base",ions:"Very High OH⁻ + Na⁺",litmusColor:"#1d4ed8",soboloColor:"#047857",universalColor:"#4c1d95",litmusDesc:"Litmus: Intense Violet-Blue",formula:"NaOH",bond:"Ionic (Na⁺ + OH⁻)",desc:"Caustic industrial base — handle with care."}
+};
+function testSubstance(key){currentSubstanceKey=key;document.querySelectorAll('#substanceBtns .btn').forEach(b=>b.classList.remove('selected'));event.currentTarget.classList.add('selected');applyChemistryState();}
+function setIndicator(t){currentIndicator=t;document.getElementById('btnIndLitmus').classList.toggle('selected',t==='litmus');document.getElementById('btnIndUniversal').classList.toggle('selected',t==='universal');document.getElementById('btnIndSobolo').classList.toggle('selected',t==='sobolo');applyChemistryState();}
+function applyChemistryState(){
+  const s=substances[currentSubstanceKey];
+  document.getElementById('solTitle').innerText=s.name;
+  document.getElementById('currentPhDisplay').innerText=`pH: ${s.ph.toFixed(1)}`;
+  document.getElementById('ionDisplay').innerText=s.ions;
+  const pill=document.getElementById('solutionTypePill');
+  if(s.type==='acid'){pill.className='status-pill status-acid';pill.innerText='Acidic (pH < 7)';}
+  else if(s.type==='base'){pill.className='status-pill status-base';pill.innerText='Alkaline (pH > 7)';}
+  else{pill.className='status-pill status-neutral';pill.innerText='Neutral (pH 7)';}
+  document.getElementById('phPointer').style.left=(s.ph/14*100)+'%';
+  let c=s.litmusColor;if(currentIndicator==='universal')c=s.universalColor;if(currentIndicator==='sobolo')c=s.soboloColor;
+  document.getElementById('litmusStrip').style.background=c;
+  document.getElementById('beakerLiquid').style.background=c+"33";
+  document.getElementById('litmusResultText').innerText=`Indicator: ${currentIndicator.toUpperCase()} → ${s.litmusDesc}`;
+  document.getElementById('chemInfoTitle').innerText=s.name;
+  document.getElementById('chemInfoDesc').innerText=s.desc;
+  document.getElementById('reactionEquation').innerText=`${s.formula} • ${s.bond}`;
+  drawChemCanvas();
+}
+function runNeutralization(){
+  currentSubstanceKey='salt';
+  document.querySelectorAll('#substanceBtns .btn').forEach(b=>b.classList.remove('selected'));
+  applyChemistryState();
+  document.getElementById('chemInfoTitle').innerText="Neutralisation Accomplished!";
+  document.getElementById('chemInfoDesc').innerText="H⁺ (acid) + OH⁻ (base) → H₂O; spectator ions Na⁺ + Cl⁻ → NaCl salt.";
+  document.getElementById('reactionEquation').innerText="HCl + NaOH → NaCl + H₂O";
+}
+function drawChemCanvas(){
+  cctx.clearRect(0,0,chemCanvas.width,chemCanvas.height);
+  const s=substances[currentSubstanceKey];
+  if(currentSubstanceKey==='salt')drawIonicBond(80,90,220,90);
+  else if(currentSubstanceKey==='water')drawWaterMolecule(150,100);
+  else if(currentSubstanceKey==='hcl')drawHClMolecule(150,90);
+  else{cctx.save();cctx.textAlign='center';cctx.font='bold 14px sans-serif';
+    if(s.type==='acid'){cctx.fillStyle='#dc2626';cctx.fillText('Abundant H⁺ / H₃O⁺ Ions',150,70);}
+    else{cctx.fillStyle='#2563eb';cctx.fillText('Abundant OH⁻ Ions',150,70);}
+    cctx.font='12px sans-serif';cctx.fillStyle='#475569';cctx.fillText(s.type==='acid'?'Dissociates in aqueous solution':'Alkaline proton acceptors',150,95);cctx.restore();}
+}
+function drawIonicBond(x1,y1,x2,y2){
+  cctx.save();
+  cctx.beginPath();cctx.arc(x1,y1,32,0,Math.PI*2);cctx.fillStyle='#60a5fa';cctx.fill();cctx.strokeStyle='#1d4ed8';cctx.lineWidth=2;cctx.stroke();
+  cctx.fillStyle='#fff';cctx.font='bold 15px sans-serif';cctx.textAlign='center';cctx.fillText('Na⁺',x1,y1+5);cctx.font='10px sans-serif';cctx.fillText('(Lost 1 e⁻)',x1,y1+20);
+  cctx.beginPath();cctx.strokeStyle='#eab308';cctx.lineWidth=3;cctx.setLineDash([4,4]);cctx.moveTo(x1+34,y1);cctx.lineTo(x2-40,y2);cctx.stroke();cctx.setLineDash([]);
+  cctx.beginPath();cctx.arc(x2,y2,40,0,Math.PI*2);cctx.fillStyle='#22c55e';cctx.fill();cctx.strokeStyle='#15803d';cctx.lineWidth=2;cctx.stroke();
+  cctx.fillStyle='#fff';cctx.font='bold 16px sans-serif';cctx.fillText('Cl⁻',x2,y2+5);cctx.font='10px sans-serif';cctx.fillText('(Gained 1 e⁻)',x2,y2+22);
+  cctx.fillStyle='#1e293b';cctx.font='600 11px sans-serif';cctx.fillText('Ionic Electrostatic Attraction',150,155);cctx.restore();
+}
+function drawWaterMolecule(cx,cy){
+  cctx.save();cctx.textAlign='center';
+  cctx.beginPath();cctx.arc(cx,cy-10,36,0,Math.PI*2);cctx.fillStyle='#ef4444';cctx.fill();cctx.strokeStyle='#991b1b';cctx.lineWidth=2;cctx.stroke();
+  cctx.fillStyle='#fff';cctx.font='bold 15px sans-serif';cctx.fillText('O',cx,cy-4);
+  cctx.beginPath();cctx.arc(cx-45,cy+30,20,0,Math.PI*2);cctx.fillStyle='#94a3b8';cctx.fill();cctx.strokeStyle='#475569';cctx.stroke();
+  cctx.fillStyle='#fff';cctx.font='bold 12px sans-serif';cctx.fillText('H',cx-45,cy+34);
+  cctx.beginPath();cctx.arc(cx+45,cy+30,20,0,Math.PI*2);cctx.fillStyle='#94a3b8';cctx.fill();cctx.strokeStyle='#475569';cctx.stroke();
+  cctx.fillStyle='#fff';cctx.fillText('H',cx+45,cy+34);
+  cctx.fillStyle='#1e293b';cctx.font='600 11px sans-serif';cctx.fillText('Covalent Bond ≈ 104.5° (Shared Pairs)',cx,cy+68);cctx.restore();
+}
+function drawHClMolecule(cx,cy){
+  cctx.save();cctx.textAlign='center';
+  cctx.beginPath();cctx.arc(cx+25,cy,38,0,Math.PI*2);cctx.fillStyle='#10b981';cctx.fill();cctx.strokeStyle='#047857';cctx.stroke();
+  cctx.fillStyle='#fff';cctx.font='bold 16px sans-serif';cctx.fillText('Cl',cx+25,cy+5);
+  cctx.beginPath();cctx.arc(cx-28,cy,20,0,Math.PI*2);cctx.fillStyle='#94a3b8';cctx.fill();cctx.strokeStyle='#475569';cctx.stroke();
+  cctx.fillStyle='#fff';cctx.font='bold 13px sans-serif';cctx.fillText('H',cx-28,cy+5);
+  cctx.fillStyle='#1e293b';cctx.font='600 11px sans-serif';cctx.fillText('Binary Hydrogen Chloride (H–Cl)',cx,cy+60);cctx.restore();
+}
+function markQuiz(){
+  const a={q1:'a',q2:'b',q3:'c',q4:'c',q5:'a'};let s=0;const t=Object.keys(a).length;
+  for(const q in a){const sel=document.querySelector(`input[name="${q}"]:checked`);if(sel&&sel.value===a[q])s++;}
+  document.getElementById('quizScore').innerText=`Score: ${s} / ${t}`+(s===t?" 🎉 Excellent!":s>=3?" 👍 Good!":" 📖 Revise & retry!");
+}
+window.onload=applyChemistryState;
+</script>
+</body>
+</html>
