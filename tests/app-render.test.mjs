@@ -38,8 +38,27 @@ test("four courses, review flags, maps, models and display render without a back
     ]) {
       window.location.search = query;
       const html = renderToString(React.createElement(App));
-      assert.ok(html.includes(expected), `route ${query || "/"} should render ${expected}`);
-      assert.ok(!html.includes("markQuiz"), `route ${query} leaked a source example quiz`);
+      assert.ok(
+        html.includes(expected),
+        `route ${query || "/"} should render ${expected}`,
+      );
+      assert.ok(
+        !html.includes("markQuiz"),
+        `route ${query} leaked a source example quiz`,
+      );
+      if (
+        query.includes("science") &&
+        query.includes("lesson=") &&
+        !query.includes("view=map")
+      ) {
+        assert.ok(!html.includes("Connect the model to mathematical language"));
+        assert.ok(
+          html.includes("Connect the model to key terms for this subject"),
+        );
+      }
+      if (query.includes("b7-science-t1&lesson=10")) {
+        assert.ok(html.includes("This recap covers Earth"));
+      }
     }
   } finally {
     await vite.close();
