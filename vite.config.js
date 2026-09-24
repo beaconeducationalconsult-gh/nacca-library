@@ -21,7 +21,7 @@ export default defineConfig({
         name: "MapLearn — explore your term",
         short_name: "MapLearn",
         description:
-          "An interactive, learner-safe Basic 7 Mathematics term explorer.",
+          "A learner-safe Basic 7 and 8 Mathematics and Science term explorer.",
         theme_color: "#112a4a",
         background_color: "#f7f8f4",
         display: "standalone",

@@ -1,1026 +1,4405 @@
 {
-  "packId": "b7-math-t1-preview",
+  "catalogId": "b7-b8-math-science-t1-preview",
   "status": "public-preview-not-approved-for-grading",
-  "level": "Basic 7",
-  "subject": "Mathematics",
-  "term": 1,
-  "source": {
-    "curriculum": "NaCCA Mathematics Common Core Programme (B7–B9), September 2020",
-    "lessonPlan": "Basic_7_Mathematics_Term1_Lesson_Plan_and_Teaching_Guide.docx",
-    "notice": "Learner-safe metadata excerpt only; full lessons and assessments remain under review."
-  },
-  "units": [
+  "courses": [
     {
-      "id": "numeration",
-      "name": "Numeration Systems",
-      "colour": "blue"
+      "id": "b7-math-t1",
+      "level": "Basic 7",
+      "subject": "Mathematics",
+      "term": 1,
+      "source": {
+        "curriculum": "NaCCA Mathematics Common Core Programme (B7–B9), September 2020",
+        "lessonPlan": "Basic_7_Mathematics_Term1_Lesson_Plan_and_Teaching_Guide.docx",
+        "notice": "Learner-safe overview only; full lessons and assessments remain under review."
+      },
+      "units": [
+        {
+          "id": "numeration",
+          "name": "Numeration Systems",
+          "colour": "blue"
+        },
+        {
+          "id": "operations",
+          "name": "Number Operations",
+          "colour": "teal"
+        },
+        {
+          "id": "powers",
+          "name": "Powers",
+          "colour": "violet"
+        },
+        {
+          "id": "fractions",
+          "name": "Fractions",
+          "colour": "orange"
+        }
+      ],
+      "lessons": [
+        {
+          "id": "b7-math-t1-l01",
+          "number": 1,
+          "week": 1,
+          "unitId": "numeration",
+          "title": "Modelling Numbers Beyond One Billion",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Numeration Systems",
+          "contentStandard": {
+            "code": "B7.1.1.1",
+            "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
+          },
+          "indicator": {
+            "code": "B7.1.1.1.1",
+            "text": "Model number quantities more than 1,000,000,000 using graph sheets, isometric papers and multi-base blocks."
+          },
+          "learningGoal": "Learners model and read whole numbers greater than one billion using multi-base blocks, graph sheets and place-value charts.",
+          "vocabulary": [
+            "billion",
+            "million",
+            "place value",
+            "period",
+            "digit",
+            "multi-base block",
+            "numeral",
+            "expanded form",
+            "model"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": "place-value",
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l02",
+          "number": 2,
+          "week": 1,
+          "unitId": "numeration",
+          "title": "Comparing and Ordering Huge Numbers",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Numeration Systems",
+          "contentStandard": {
+            "code": "B7.1.1.1",
+            "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
+          },
+          "indicator": {
+            "code": "B7.1.1.1.2",
+            "text": "Compare and order whole numbers more than 1,000,000,000 and represent the comparison using “>, <, or =”."
+          },
+          "learningGoal": "Learners compare and order whole numbers greater than one billion and record the comparison using >, < or =.",
+          "vocabulary": [
+            "compare",
+            "order",
+            "greater than",
+            "less than",
+            "equal to",
+            "ascending",
+            "descending",
+            "digit",
+            "most significant"
+          ],
+          "priorLessons": [
+            1
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l03",
+          "number": 3,
+          "week": 2,
+          "unitId": "numeration",
+          "title": "Rounding Whole Numbers",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Numeration Systems",
+          "contentStandard": {
+            "code": "B7.1.1.1",
+            "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
+          },
+          "indicator": {
+            "code": "B7.1.1.1.3",
+            "text": "Round (off, up, down) whole numbers more than 1,000,000,000 to the nearest hundred-thousand, ten-thousands, thousands, hundreds and tens."
+          },
+          "learningGoal": "Learners round whole numbers greater than one billion to the nearest ten, hundred, thousand, ten-thousand and hundred-thousand.",
+          "vocabulary": [
+            "round",
+            "round off",
+            "round up",
+            "round down",
+            "nearest",
+            "estimate",
+            "halfway",
+            "boundary",
+            "approximate"
+          ],
+          "priorLessons": [
+            1,
+            2
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l04",
+          "number": 4,
+          "week": 2,
+          "unitId": "numeration",
+          "title": "Rounding Decimals",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Numeration Systems",
+          "contentStandard": {
+            "code": "B7.1.1.1",
+            "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
+          },
+          "indicator": {
+            "code": "B7.1.1.1.4",
+            "text": "Round decimals to the nearest tenth, hundredth, thousandths, etc."
+          },
+          "learningGoal": "Learners round decimal numbers to the nearest tenth, hundredth and thousandth.",
+          "vocabulary": [
+            "decimal",
+            "decimal place",
+            "tenth",
+            "hundredth",
+            "thousandth",
+            "round",
+            "truncate",
+            "recurring",
+            "terminating"
+          ],
+          "priorLessons": [
+            3
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l05",
+          "number": 5,
+          "week": 3,
+          "unitId": "numeration",
+          "title": "Decimal Places and Significant Figures",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Numeration Systems",
+          "contentStandard": {
+            "code": "B7.1.1.1",
+            "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
+          },
+          "indicator": {
+            "code": "B7.1.1.1.5",
+            "text": "Express decimal numerals to given significant and decimal places."
+          },
+          "learningGoal": "Learners express decimal numbers to a given number of decimal places and to a given number of significant figures.",
+          "vocabulary": [
+            "decimal place",
+            "significant figure",
+            "leading zero",
+            "non-zero digit",
+            "precision",
+            "round",
+            "estimate"
+          ],
+          "priorLessons": [
+            3,
+            4
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l06",
+          "number": 6,
+          "week": 3,
+          "unitId": "operations",
+          "title": "Multiplying and Dividing by Powers of Ten",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number Operations",
+          "contentStandard": {
+            "code": "B7.1.2.1",
+            "text": "Apply mental mathematics strategies and number properties used to solve problems."
+          },
+          "indicator": {
+            "code": "B7.1.2.1.1",
+            "text": "Multiply and divide given numbers by powers of 10 including decimals and benchmark fractions."
+          },
+          "learningGoal": "Learners multiply and divide whole numbers, decimals and benchmark fractions by 10, 100, 1000 and other powers of ten.",
+          "vocabulary": [
+            "power of ten",
+            "index",
+            "exponent",
+            "digit shift",
+            "placeholder",
+            "decimal point",
+            "benchmark fraction",
+            "product",
+            "quotient"
+          ],
+          "priorLessons": [
+            1,
+            4
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l07",
+          "number": 7,
+          "week": 4,
+          "unitId": "operations",
+          "title": "Mental Mathematics Strategies",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number Operations",
+          "contentStandard": {
+            "code": "B7.1.2.1",
+            "text": "Apply mental mathematics strategies and number properties used to solve problems."
+          },
+          "indicator": {
+            "code": "B7.1.2.1.2",
+            "text": "Apply mental mathematics strategies and number properties used to perform calculations."
+          },
+          "learningGoal": "Learners apply mental mathematics strategies and number properties to perform calculations without written methods.",
+          "vocabulary": [
+            "mental strategy",
+            "partition",
+            "compensate",
+            "compatible numbers",
+            "doubling",
+            "halving",
+            "distributive",
+            "commutative",
+            "associative"
+          ],
+          "priorLessons": [
+            6
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l08",
+          "number": 8,
+          "week": 4,
+          "unitId": "operations",
+          "title": "Mental Strategies for Word Problems",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number Operations",
+          "contentStandard": {
+            "code": "B7.1.2.1",
+            "text": "Apply mental mathematics strategies and number properties used to solve problems."
+          },
+          "indicator": {
+            "code": "B7.1.2.1.3",
+            "text": "Apply mental mathematics strategies to solve word problems."
+          },
+          "learningGoal": "Learners apply mental mathematics strategies to solve word problems.",
+          "vocabulary": [
+            "word problem",
+            "operation",
+            "estimate",
+            "reasonable",
+            "context",
+            "round",
+            "check",
+            "unknown"
+          ],
+          "priorLessons": [
+            7
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l09",
+          "number": 9,
+          "week": 5,
+          "unitId": "operations",
+          "title": "Adding and Subtracting Four-Digit Numbers",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number Operations",
+          "contentStandard": {
+            "code": "B7.1.2.2",
+            "text": "Demonstrate an understanding of addition, subtraction, multiplication and division of (i) whole numbers, and (ii) decimal numbers, to solve problems."
+          },
+          "indicator": {
+            "code": "B7.1.2.2.1",
+            "text": "Add and subtract up to four-digit numbers."
+          },
+          "learningGoal": "Learners add and subtract numbers up to four digits, including decimals, using partitioning and place value.",
+          "vocabulary": [
+            "partition",
+            "expanded form",
+            "place value",
+            "carry",
+            "borrow",
+            "exchange",
+            "regroup",
+            "column method",
+            "estimate"
+          ],
+          "priorLessons": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l10",
+          "number": 10,
+          "week": 5,
+          "unitId": "operations",
+          "title": "Multiplying and Dividing Multi-Digit Numbers",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number Operations",
+          "contentStandard": {
+            "code": "B7.1.2.2",
+            "text": "Demonstrate an understanding of addition, subtraction, multiplication and division of (i) whole numbers, and (ii) decimal numbers, to solve problems."
+          },
+          "indicator": {
+            "code": "B7.1.2.2.2",
+            "text": "Multiply or divide multi-digit numbers by 1- and 2-digit numbers."
+          },
+          "learningGoal": "Learners multiply and divide multi-digit numbers by one- and two-digit numbers using partitioning, place value and the distributive property.",
+          "vocabulary": [
+            "multi-digit",
+            "partition",
+            "distributive property",
+            "partial product",
+            "lattice method",
+            "divisibility test",
+            "quotient",
+            "remainder",
+            "estimate"
+          ],
+          "priorLessons": [
+            9
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l11",
+          "number": 11,
+          "week": 6,
+          "unitId": "operations",
+          "title": "Story Problems with Decimals",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number Operations",
+          "contentStandard": {
+            "code": "B7.1.2.2",
+            "text": "Demonstrate an understanding of addition, subtraction, multiplication and division of (i) whole numbers, and (ii) decimal numbers, to solve problems."
+          },
+          "indicator": {
+            "code": "B7.1.2.2.3",
+            "text": "Create and solve story problems involving decimals on the four basic operations."
+          },
+          "learningGoal": "Learners create and solve story problems involving decimals using all four operations.",
+          "vocabulary": [
+            "story problem",
+            "operation",
+            "decimal",
+            "context",
+            "reasonable",
+            "estimate",
+            "check",
+            "two-step"
+          ],
+          "priorLessons": [
+            8,
+            9,
+            10
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l12",
+          "number": 12,
+          "week": 6,
+          "unitId": "powers",
+          "title": "Repeated Factors — The Idea of Powers",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number Operations",
+          "contentStandard": {
+            "code": "B7.1.2.3",
+            "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
+          },
+          "indicator": {
+            "code": "B7.1.2.3.1",
+            "text": "Illustrate with examples the meaning of repeated factors using counting objects such as bottle tops or bundle sticks."
+          },
+          "learningGoal": "Learners illustrate the meaning of repeated factors using concrete objects and write the shorthand index form.",
+          "vocabulary": [
+            "factor",
+            "repeated factor",
+            "power",
+            "index",
+            "exponent",
+            "base",
+            "squared",
+            "cubed",
+            "product"
+          ],
+          "priorLessons": [
+            10
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": "index-explorer",
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l13",
+          "number": 13,
+          "week": 7,
+          "unitId": "powers",
+          "title": "Writing Numbers as Products and Powers",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number Operations",
+          "contentStandard": {
+            "code": "B7.1.2.3",
+            "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
+          },
+          "indicator": {
+            "code": "B7.1.2.3.2",
+            "text": "Express a given number as a product of a given number or numbers, as well as, in the form of a power or two such numbers as product of powers."
+          },
+          "learningGoal": "Learners express a number as a product of factors, and write that product in index form including as a product of powers.",
+          "vocabulary": [
+            "factor",
+            "product",
+            "prime",
+            "composite",
+            "factor pair",
+            "index form",
+            "base",
+            "power",
+            "product of powers"
+          ],
+          "priorLessons": [
+            12
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l14",
+          "number": 14,
+          "week": 7,
+          "unitId": "powers",
+          "title": "The Zero Index",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number Operations",
+          "contentStandard": {
+            "code": "B7.1.2.3",
+            "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
+          },
+          "indicator": {
+            "code": "B7.1.2.3.3",
+            "text": "Show that the value of any natural number with zero as its exponent or index is 1 and use it to solve problems."
+          },
+          "learningGoal": "Learners show that any natural number raised to the power zero equals 1, and use this to solve problems.",
+          "vocabulary": [
+            "zero index",
+            "exponent",
+            "power",
+            "pattern",
+            "divide by the base",
+            "consistent",
+            "convention"
+          ],
+          "priorLessons": [
+            6,
+            12,
+            13
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": "zero-index",
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l15",
+          "number": 15,
+          "week": 8,
+          "unitId": "powers",
+          "title": "Evaluating Numbers in Index Form",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number Operations",
+          "contentStandard": {
+            "code": "B7.1.2.3",
+            "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
+          },
+          "indicator": {
+            "code": "B7.1.2.3.4",
+            "text": "Find the value of a number written in index form."
+          },
+          "learningGoal": "Learners find the value of a number written in index form, including products of powers and zero indices.",
+          "vocabulary": [
+            "index form",
+            "evaluate",
+            "base",
+            "index",
+            "exponent",
+            "product of powers",
+            "order of operations",
+            "square",
+            "cube"
+          ],
+          "priorLessons": [
+            12,
+            13,
+            14
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l16",
+          "number": 16,
+          "week": 8,
+          "unitId": "powers",
+          "title": "Prime Factors and the Highest Common Factor",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number Operations",
+          "contentStandard": {
+            "code": "B7.1.2.3",
+            "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
+          },
+          "indicator": {
+            "code": "B7.1.2.3.5",
+            "text": "Apply the concept of powers of numbers (product of prime) to find Highest Common Factor (HCF)."
+          },
+          "learningGoal": "Learners use prime factorisation to find the Highest Common Factor of two or more numbers.",
+          "vocabulary": [
+            "prime factor",
+            "prime factorisation",
+            "highest common factor",
+            "HCF",
+            "common factor",
+            "product of primes",
+            "index form",
+            "Venn"
+          ],
+          "priorLessons": [
+            13
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l17",
+          "number": 17,
+          "week": 9,
+          "unitId": "fractions",
+          "title": "Benchmark Fractions, Decimals and Percentages",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Fractions",
+          "contentStandard": {
+            "code": "B7.1.3.1",
+            "text": "Simplify, compare and order a mixture of positive fractions (i.e. common, percent and decimal) by changing all to equivalent (i) fractions, (ii) decimals, or (iii) percentages."
+          },
+          "indicator": {
+            "code": "B7.1.3.1.1",
+            "text": "Determine and recall the percentages and decimals of given benchmark fractions (i.e. tenths, fifths, fourths, thirds and halves) and use these to compare quantities."
+          },
+          "learningGoal": "Learners recall the decimal and percentage equivalents of benchmark fractions and use them to compare quantities.",
+          "vocabulary": [
+            "benchmark fraction",
+            "equivalent",
+            "common fraction",
+            "decimal fraction",
+            "percentage",
+            "tenth",
+            "fifth",
+            "quarter",
+            "third",
+            "half",
+            "convert"
+          ],
+          "priorLessons": [
+            4
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": "fractions",
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l18",
+          "number": 18,
+          "week": 9,
+          "unitId": "fractions",
+          "title": "Comparing and Ordering Fractions",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Fractions",
+          "contentStandard": {
+            "code": "B7.1.3.1",
+            "text": "Simplify, compare and order a mixture of positive fractions (i.e. common, percent and decimal) by changing all to equivalent (i) fractions, (ii) decimals, or (iii) percentages."
+          },
+          "indicator": {
+            "code": "B7.1.3.1.2",
+            "text": "Compare and order fractions (i.e. common, percent and decimal fractions up to thousandths) limit to the benchmark fractions."
+          },
+          "learningGoal": "Learners compare and order common, decimal and percentage fractions, limited to the benchmarks, by converting them all to the same form.",
+          "vocabulary": [
+            "compare",
+            "order",
+            "ascending",
+            "descending",
+            "common denominator",
+            "equivalent",
+            "benchmark",
+            "convert",
+            "thousandth"
+          ],
+          "priorLessons": [
+            17
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l19",
+          "number": 19,
+          "week": 10,
+          "unitId": "fractions",
+          "title": "Adding and Subtracting Unlike and Mixed Fractions",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Fractions",
+          "contentStandard": {
+            "code": "B7.1.3.2",
+            "text": "Demonstrate an understanding of the process of addition and/or subtraction of fractions and apply this in solving problems."
+          },
+          "indicator": {
+            "code": "B7.1.3.2.1",
+            "text": "Explain the process of addition and subtraction of two or three unlike and mixed fractions."
+          },
+          "learningGoal": "Learners explain and carry out addition and subtraction of two or three unlike and mixed fractions.",
+          "vocabulary": [
+            "unlike fraction",
+            "mixed number",
+            "improper fraction",
+            "common denominator",
+            "lowest common multiple",
+            "equivalent",
+            "simplify",
+            "rename"
+          ],
+          "priorLessons": [
+            17,
+            18
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l20",
+          "number": 20,
+          "week": 10,
+          "unitId": "fractions",
+          "title": "Solving Problems with Fraction Addition and Subtraction",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Fractions",
+          "contentStandard": {
+            "code": "B7.1.3.2",
+            "text": "Demonstrate an understanding of the process of addition and/or subtraction of fractions and apply this in solving problems."
+          },
+          "indicator": {
+            "code": "B7.1.3.2.2",
+            "text": "Solve problems involving addition or subtraction of fractions."
+          },
+          "learningGoal": "Learners solve word problems involving the addition and subtraction of fractions.",
+          "vocabulary": [
+            "word problem",
+            "operation",
+            "remaining",
+            "altogether",
+            "difference",
+            "estimate",
+            "check",
+            "unit"
+          ],
+          "priorLessons": [
+            19
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l21",
+          "number": 21,
+          "week": 11,
+          "unitId": "fractions",
+          "title": "Multiplying Fractions",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Fractions",
+          "contentStandard": {
+            "code": "B7.1.3.3",
+            "text": "Demonstrate an understanding of the process of multiplying and dividing positive fractions and apply this in solving problems."
+          },
+          "indicator": {
+            "code": "B7.1.3.3.1",
+            "text": "Explain the process of multiplying a fraction (i.e. common, percent and decimal fractions up to thousandths) by a whole number and by a fraction."
+          },
+          "learningGoal": "Learners explain and carry out multiplication of a fraction by a whole number and by another fraction.",
+          "vocabulary": [
+            "multiply",
+            "numerator",
+            "denominator",
+            "of",
+            "product",
+            "simplify",
+            "cancel",
+            "area model",
+            "improper fraction"
+          ],
+          "priorLessons": [
+            10,
+            19
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l22",
+          "number": 22,
+          "week": 11,
+          "unitId": "fractions",
+          "title": "Finding a Fraction of a Quantity",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Fractions",
+          "contentStandard": {
+            "code": "B7.1.3.3",
+            "text": "Demonstrate an understanding of the process of multiplying and dividing positive fractions and apply this in solving problems."
+          },
+          "indicator": {
+            "code": "B7.1.3.3.2",
+            "text": "Find a fraction of given quantity (i.e. money or given quantity of objects)."
+          },
+          "learningGoal": "Learners find a fraction of a given quantity of money or objects.",
+          "vocabulary": [
+            "fraction of",
+            "quantity",
+            "share",
+            "denominator",
+            "numerator",
+            "unit fraction",
+            "divide then multiply",
+            "remainder"
+          ],
+          "priorLessons": [
+            21
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l23",
+          "number": 23,
+          "week": 12,
+          "unitId": "fractions",
+          "title": "Dividing Fractions",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Fractions",
+          "contentStandard": {
+            "code": "B7.1.3.3",
+            "text": "Demonstrate an understanding of the process of multiplying and dividing positive fractions and apply this in solving problems."
+          },
+          "indicator": {
+            "code": "B7.1.3.3.3",
+            "text": "Explain the process of dividing a fraction (i.e. common, percent and decimal fractions up to thousandths) by a 1-digit whole number and by a fraction."
+          },
+          "learningGoal": "Learners explain and carry out division of a fraction by a one-digit whole number and by another fraction.",
+          "vocabulary": [
+            "divide",
+            "reciprocal",
+            "invert",
+            "divisor",
+            "dividend",
+            "quotient",
+            "how many times",
+            "numerator",
+            "denominator"
+          ],
+          "priorLessons": [
+            21,
+            22
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-math-t1-l24",
+          "number": 24,
+          "week": 12,
+          "unitId": "fractions",
+          "title": "Dividing Quantities and Fractions by Fractions",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Fractions",
+          "contentStandard": {
+            "code": "B7.1.3.3",
+            "text": "Demonstrate an understanding of the process of multiplying and dividing positive fractions and apply this in solving problems."
+          },
+          "indicator": {
+            "code": "B7.1.3.3.4",
+            "text": "Determine the result of dividing a quantity (i.e. money or objects) or a fraction by a fraction."
+          },
+          "learningGoal": "Learners determine the result of dividing a quantity of money or objects, or a fraction, by a fraction.",
+          "vocabulary": [
+            "divide",
+            "quantity",
+            "reciprocal",
+            "quotient",
+            "share",
+            "portion",
+            "unit",
+            "context",
+            "interpret"
+          ],
+          "priorLessons": [
+            23
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        }
+      ]
     },
     {
-      "id": "operations",
-      "name": "Number Operations",
-      "colour": "teal"
+      "id": "b7-science-t1",
+      "level": "Basic 7",
+      "subject": "Science",
+      "term": 1,
+      "source": {
+        "curriculum": "NaCCA Science Common Core Programme (B7–B9), September 2020",
+        "lessonPlan": "Basic_7_Science_Term1_Lesson_Plan_and_Teaching_Guide.docx",
+        "notice": "Learner-safe overview only; full lessons and assessments remain under review."
+      },
+      "units": [
+        {
+          "id": "unit-01",
+          "name": "Materials",
+          "colour": "blue"
+        },
+        {
+          "id": "unit-02",
+          "name": "Living Cells",
+          "colour": "teal"
+        },
+        {
+          "id": "unit-03",
+          "name": "The Solar System",
+          "colour": "violet"
+        },
+        {
+          "id": "unit-04",
+          "name": "Earth Science",
+          "colour": "orange"
+        },
+        {
+          "id": "unit-05",
+          "name": "Life Cycle of Organisms",
+          "colour": "green"
+        },
+        {
+          "id": "unit-06",
+          "name": "Crop Production",
+          "colour": "blue"
+        },
+        {
+          "id": "unit-07",
+          "name": "Connected cycles",
+          "colour": "teal"
+        },
+        {
+          "id": "unit-08",
+          "name": "Energy",
+          "colour": "violet"
+        }
+      ],
+      "lessons": [
+        {
+          "id": "b7-science-t1-l01",
+          "number": 1,
+          "week": 1,
+          "unitId": "unit-01",
+          "title": "States of Matter — Sorting the Material World",
+          "durationMin": 60,
+          "strand": "Diversity of Matter",
+          "subStrand": "Materials",
+          "contentStandard": {
+            "code": "B7.1.1.1",
+            "text": "Recognize materials as important resources for providing human needs."
+          },
+          "indicator": {
+            "code": "B7.1.1.1.1",
+            "text": "Classify materials into liquids, solids and gases."
+          },
+          "learningGoal": "Learners can group materials in the environment into liquids, solids and gases.",
+          "vocabulary": [
+            "matter",
+            "material",
+            "solid",
+            "liquid",
+            "gas",
+            "state",
+            "particle",
+            "property",
+            "classify"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l02",
+          "number": 2,
+          "week": 1,
+          "unitId": "unit-01",
+          "title": "Why Liquids Matter — Water, Oil, Blood and Sap",
+          "durationMin": 60,
+          "strand": "Diversity of Matter",
+          "subStrand": "Materials",
+          "contentStandard": {
+            "code": "B7.1.1.1",
+            "text": "Recognize materials as important resources for providing human needs."
+          },
+          "indicator": {
+            "code": "B7.1.1.1.2",
+            "text": "Discuss the importance of liquids in the life of humans."
+          },
+          "learningGoal": "Learners can explain why liquids are essential to human life and identify liquids used in their community.",
+          "vocabulary": [
+            "liquid",
+            "solvent",
+            "dissolve",
+            "beverage",
+            "sap",
+            "preserve",
+            "dehydration",
+            "essential"
+          ],
+          "priorLessons": [
+            1
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l03",
+          "number": 3,
+          "week": 2,
+          "unitId": "unit-01",
+          "title": "Solids That Keep Us Alive — And Why We Must Preserve Them",
+          "durationMin": 60,
+          "strand": "Diversity of Matter",
+          "subStrand": "Materials",
+          "contentStandard": {
+            "code": "B7.1.1.1",
+            "text": "Recognize materials as important resources for providing human needs."
+          },
+          "indicator": {
+            "code": "B7.1.1.1.3",
+            "text": "Discuss the importance of specific solids to life."
+          },
+          "learningGoal": "Learners can identify solids in the environment that support the survival of humans and other life forms.",
+          "vocabulary": [
+            "solid",
+            "rigid",
+            "preserve",
+            "reuse",
+            "recycle",
+            "resource",
+            "structure",
+            "texture"
+          ],
+          "priorLessons": [
+            1
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l04",
+          "number": 4,
+          "week": 2,
+          "unitId": "unit-01",
+          "title": "The Periodic Table — Twenty Elements in Their Place",
+          "durationMin": 60,
+          "strand": "Diversity of Matter",
+          "subStrand": "Materials",
+          "contentStandard": {
+            "code": "B7.1.1.2",
+            "text": "Understand the periodic table as different elements made up of metals and non-metals and noble gases arranged in an order."
+          },
+          "indicator": {
+            "code": "B7.1.1.2.1",
+            "text": "Demonstrate the knowledge of the orderly arrangement of metals, non-metals and noble gases in the periodic table."
+          },
+          "learningGoal": "Learners can identify the first twenty elements in the periodic table and say which are metals, non-metals and noble gases.",
+          "vocabulary": [
+            "element",
+            "atom",
+            "atomic number",
+            "chemical symbol",
+            "metal",
+            "non-metal",
+            "noble gas",
+            "group",
+            "period",
+            "periodic table"
+          ],
+          "priorLessons": [
+            1,
+            2,
+            3
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l05",
+          "number": 5,
+          "week": 3,
+          "unitId": "unit-02",
+          "title": "Inside an Animal Cell",
+          "durationMin": 60,
+          "strand": "Diversity of Matter",
+          "subStrand": "Living Cells",
+          "contentStandard": {
+            "code": "B7.1.2.1",
+            "text": "Demonstrate understanding of the structure of organisms and functions of cells in living systems."
+          },
+          "indicator": {
+            "code": "B7.1.2.1.1",
+            "text": "Describe the structure and function of living cells of an animal."
+          },
+          "learningGoal": "Learners can identify, draw and label an animal cell and state the function of each organelle.",
+          "vocabulary": [
+            "cell",
+            "organism",
+            "organelle",
+            "cell membrane",
+            "cytoplasm",
+            "nucleus",
+            "mitochondrion",
+            "vacuole",
+            "function",
+            "magnify"
+          ],
+          "priorLessons": [
+            4
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l06",
+          "number": 6,
+          "week": 3,
+          "unitId": "unit-02",
+          "title": "Inside a Plant Cell, and How the Two Differ",
+          "durationMin": 60,
+          "strand": "Diversity of Matter",
+          "subStrand": "Living Cells",
+          "contentStandard": {
+            "code": "B7.1.2.1",
+            "text": "Demonstrate understanding of the structure of organisms and functions of cells in living systems."
+          },
+          "indicator": {
+            "code": "B7.1.2.1.2",
+            "text": "State the functions of each organelle in a plant cell."
+          },
+          "learningGoal": "Learners can identify, draw, label and model a plant cell, state the function of each organelle, and compare it with an animal cell.",
+          "vocabulary": [
+            "cell wall",
+            "cellulose",
+            "chloroplast",
+            "chlorophyll",
+            "photosynthesis",
+            "large central vacuole",
+            "turgid",
+            "organelle",
+            "sap"
+          ],
+          "priorLessons": [
+            5
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l07",
+          "number": 7,
+          "week": 4,
+          "unitId": "unit-03",
+          "title": "The Inner Planets — Four Worlds Close to the Sun",
+          "durationMin": 60,
+          "strand": "Systems",
+          "subStrand": "The Solar System",
+          "contentStandard": {
+            "code": "B7.3.2.1",
+            "text": "Demonstrate knowledge of the inner planets of the solar system and understand their movement in the system."
+          },
+          "indicator": {
+            "code": "B7.3.2.1.1",
+            "text": "Identify the inner planets of the solar system and describe their properties."
+          },
+          "learningGoal": "Learners can identify the inner planets of the solar system and describe their properties.",
+          "vocabulary": [
+            "solar system",
+            "Sun",
+            "planet",
+            "orbit",
+            "elliptical",
+            "inner planet",
+            "terrestrial",
+            "Mercury",
+            "Venus",
+            "Earth",
+            "Mars",
+            "galaxy",
+            "Milky Way",
+            "rotate",
+            "revolve"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l08",
+          "number": 8,
+          "week": 4,
+          "unitId": "unit-03",
+          "title": "Building the Solar System — The Model Task",
+          "durationMin": 60,
+          "strand": "Systems",
+          "subStrand": "The Solar System",
+          "contentStandard": {
+            "code": "B7.3.2.1",
+            "text": "Demonstrate knowledge of the inner planets of the solar system and understand their movement in the system."
+          },
+          "indicator": {
+            "code": "B7.3.2.1.1",
+            "text": "Identify the inner planets of the solar system and describe their properties."
+          },
+          "learningGoal": "Learners can design and construct a model of the solar system and explain what it shows.",
+          "vocabulary": [
+            "model",
+            "scale",
+            "orbit",
+            "ellipse",
+            "axis",
+            "tilt",
+            "relative distance",
+            "represent"
+          ],
+          "priorLessons": [
+            7
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l09",
+          "number": 9,
+          "week": 5,
+          "unitId": "unit-03",
+          "title": "Mercury and Venus — Properties and Relative Motion",
+          "durationMin": 60,
+          "strand": "Systems",
+          "subStrand": "The Solar System",
+          "contentStandard": {
+            "code": "B7.3.2.1",
+            "text": "Demonstrate knowledge of the inner planets of the solar system and understand their movement in the system."
+          },
+          "indicator": {
+            "code": "B7.3.2.1.2",
+            "text": "Discuss the properties and the relative motions of the planets Mercury and Venus."
+          },
+          "learningGoal": "Learners can outline the properties of Mercury and Venus and describe their movement around the Sun.",
+          "vocabulary": [
+            "Mercury",
+            "Venus",
+            "atmosphere",
+            "carbon dioxide",
+            "retrograde",
+            "relative motion",
+            "orbit",
+            "revolution",
+            "rotation",
+            "greenhouse effect",
+            "orbit period"
+          ],
+          "priorLessons": [
+            7
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l10",
+          "number": 10,
+          "week": 5,
+          "unitId": "unit-03",
+          "title": "Day, Night and the Year — Consolidation",
+          "durationMin": 60,
+          "strand": "Systems",
+          "subStrand": "The Solar System",
+          "contentStandard": {
+            "code": "B7.3.2.1",
+            "text": "Demonstrate knowledge of the inner planets of the solar system and understand their movement in the system."
+          },
+          "indicator": {
+            "code": null,
+            "text": "The source indicator concerns Mercury and Venus; alignment to this topic needs review."
+          },
+          "learningGoal": "Learners can explain day and night and the year in terms of rotation and revolution, and demonstrate their understanding with a model.",
+          "vocabulary": [
+            "rotation",
+            "revolution",
+            "axis",
+            "day",
+            "year",
+            "orbit",
+            "elliptical",
+            "shadow",
+            "seasons"
+          ],
+          "priorLessons": [
+            7,
+            8,
+            9
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": {
+            "status": "editorial-review",
+            "message": "This recap covers Earth's rotation and revolution, but the source indicator addresses Mercury and Venus. Editorial alignment pending."
+          }
+        },
+        {
+          "id": "b7-science-t1-l11",
+          "number": 11,
+          "week": 6,
+          "unitId": "unit-04",
+          "title": "The Water Cycle — How It Happens",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Earth Science",
+          "contentStandard": {
+            "code": "B7.2.1.1",
+            "text": "Recognise that the water cycle is an example of repeated patterns of change in nature and understand how it occurs."
+          },
+          "indicator": {
+            "code": "B7.2.1.1.1",
+            "text": "Explain how the water cycle occurs as a repeated pattern in nature."
+          },
+          "learningGoal": "Learners can identify the stages of the water cycle, explain how they are linked, and demonstrate the process of transpiration and cloud formation.",
+          "vocabulary": [
+            "water cycle",
+            "evaporation",
+            "condensation",
+            "precipitation",
+            "transpiration",
+            "collection",
+            "run-off",
+            "water vapour",
+            "cloud",
+            "repeated pattern"
+          ],
+          "priorLessons": [
+            2
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": "water-cycle",
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l12",
+          "number": 12,
+          "week": 6,
+          "unitId": "unit-04",
+          "title": "Why the Water Cycle Matters",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Earth Science",
+          "contentStandard": {
+            "code": "B7.2.1.1",
+            "text": "Recognise that the water cycle is an example of repeated patterns of change in nature and understand how it occurs."
+          },
+          "indicator": {
+            "code": "B7.2.1.1.2",
+            "text": "Describe the importance of the water cycle in nature."
+          },
+          "learningGoal": "Learners can describe the importance of the water cycle in terms of energy, nutrients, the water table, weather and clean water.",
+          "vocabulary": [
+            "water table",
+            "groundwater",
+            "nutrient",
+            "weather pattern",
+            "drought",
+            "flood",
+            "reservoir",
+            "filtration",
+            "purification"
+          ],
+          "priorLessons": [
+            11
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l13",
+          "number": 13,
+          "week": 7,
+          "unitId": "unit-05",
+          "title": "The Life Cycle of the Housefly",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Life Cycle of Organisms",
+          "contentStandard": {
+            "code": "B7.2.2.1",
+            "text": "Demonstrate the skills of carrying out activities to show the stages of the life cycle of a housefly, the effects of its activities on humans and how to reduce them."
+          },
+          "indicator": {
+            "code": "B7.2.2.1.1",
+            "text": "Describe the life cycle of the housefly."
+          },
+          "learningGoal": "Learners can identify and describe the stages of the life cycle of the housefly and arrange them in the correct order.",
+          "vocabulary": [
+            "life cycle",
+            "egg",
+            "larva",
+            "maggot",
+            "pupa",
+            "adult",
+            "metamorphosis",
+            "breed",
+            "stage",
+            "moult"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l14",
+          "number": 14,
+          "week": 7,
+          "unitId": "unit-05",
+          "title": "Rearing and Recording — The Housefly Diary",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Life Cycle of Organisms",
+          "contentStandard": {
+            "code": "B7.2.2.1",
+            "text": "Demonstrate the skills of carrying out activities to show the stages of the life cycle of a housefly, the effects of its activities on humans and how to reduce them."
+          },
+          "indicator": {
+            "code": "B7.2.2.1.1",
+            "text": "Describe the life cycle of the housefly."
+          },
+          "learningGoal": "Learners can observe, record and interpret the stages of the housefly life cycle over time.",
+          "vocabulary": [
+            "observe",
+            "record",
+            "diary",
+            "data",
+            "duration",
+            "evidence",
+            "variable",
+            "change"
+          ],
+          "priorLessons": [
+            13
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l15",
+          "number": 15,
+          "week": 8,
+          "unitId": "unit-05",
+          "title": "The Housefly as a Menace",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Life Cycle of Organisms",
+          "contentStandard": {
+            "code": "B7.2.2.1",
+            "text": "Demonstrate the skills of carrying out activities to show the stages of the life cycle of a housefly, the effects of its activities on humans and how to reduce them."
+          },
+          "indicator": {
+            "code": "B7.2.2.1.2",
+            "text": "Discuss the activities of the housefly as a menace to humans and show how to reduce the effects of those activities."
+          },
+          "learningGoal": "Learners can describe how the housefly's feeding habits and activities affect humans, and identify the diseases it can transfer.",
+          "vocabulary": [
+            "menace",
+            "pathogen",
+            "dysentery",
+            "diarrhoea",
+            "cholera",
+            "typhoid",
+            "food poisoning",
+            "contaminate",
+            "sanitation",
+            "nuisance",
+            "vomit",
+            "faeces"
+          ],
+          "priorLessons": [
+            13
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l16",
+          "number": 16,
+          "week": 8,
+          "unitId": "unit-05",
+          "title": "Designing the Intervention — Breaking the Cycle",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Life Cycle of Organisms",
+          "contentStandard": {
+            "code": "B7.2.2.1",
+            "text": "Demonstrate the skills of carrying out activities to show the stages of the life cycle of a housefly, the effects of its activities on humans and how to reduce them."
+          },
+          "indicator": {
+            "code": "B7.2.2.1.2",
+            "text": "Discuss the activities of the housefly as a menace to humans and show how to reduce the effects of those activities."
+          },
+          "learningGoal": "Learners can design an intervention that reduces the effects of the housefly's activities on humans, and educate their community about it.",
+          "vocabulary": [
+            "intervention",
+            "control",
+            "prevent",
+            "breeding site",
+            "cover",
+            "drain",
+            "bin",
+            "larvicide",
+            "evaluate",
+            "target audience"
+          ],
+          "priorLessons": [
+            13,
+            14,
+            15
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l17",
+          "number": 17,
+          "week": 9,
+          "unitId": "unit-06",
+          "title": "Plant Nutrient Sources — Organic and Inorganic",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Crop Production",
+          "contentStandard": {
+            "code": "B7.2.3.1",
+            "text": "Demonstrate understanding of the different plant nutrients (organic and inorganic fertilizers) and their application in school farming (school gardening)."
+          },
+          "indicator": {
+            "code": "B7.2.3.1.1",
+            "text": "Observe and list all plant nutrient sources available in a community and categorise them into organic and inorganic nutrient sources."
+          },
+          "learningGoal": "Learners can observe and list plant nutrient sources in the community, categorise them as organic or inorganic, and explain the difference.",
+          "vocabulary": [
+            "nutrient",
+            "fertiliser",
+            "organic",
+            "inorganic",
+            "compost",
+            "manure",
+            "NPK",
+            "urea",
+            "nitrogen",
+            "phosphorus",
+            "potassium",
+            "crop residue",
+            "green manure"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l18",
+          "number": 18,
+          "week": 9,
+          "unitId": "unit-06",
+          "title": "How Each Nutrient Is Applied in the Field",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Crop Production",
+          "contentStandard": {
+            "code": "B7.2.3.1",
+            "text": "Demonstrate understanding of the different plant nutrients (organic and inorganic fertilizers) and their application in school farming (school gardening)."
+          },
+          "indicator": {
+            "code": "B7.2.3.1.2",
+            "text": "Describe the physical characteristics of different plant nutrients (organic and inorganic) and how each is applied to plants in the field."
+          },
+          "learningGoal": "Learners can describe the physical characteristics of organic and inorganic nutrients and how each is applied to plants in the field.",
+          "vocabulary": [
+            "broadcasting",
+            "side-dressing",
+            "ring application",
+            "top-dressing",
+            "basal application",
+            "composting",
+            "mulch",
+            "granule",
+            "powder",
+            "dilute",
+            "scorch"
+          ],
+          "priorLessons": [
+            17
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l19",
+          "number": 19,
+          "week": 10,
+          "unitId": "unit-06",
+          "title": "School Garden Practical — Applying What We Learned",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Crop Production",
+          "contentStandard": {
+            "code": "B7.2.3.1",
+            "text": "Demonstrate understanding of the different plant nutrients (organic and inorganic fertilizers) and their application in school farming (school gardening)."
+          },
+          "indicator": {
+            "code": "B7.2.3.1.2",
+            "text": "Describe the physical characteristics of different plant nutrients (organic and inorganic) and how each is applied to plants in the field."
+          },
+          "learningGoal": "Learners can demonstrate the practical application of each type of plant nutrient to plants in the field, and run a fair test of their effects.",
+          "vocabulary": [
+            "fair test",
+            "control",
+            "variable",
+            "observation",
+            "measurement",
+            "record",
+            "conclusion",
+            "germination",
+            "height",
+            "yield"
+          ],
+          "priorLessons": [
+            17
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l20",
+          "number": 20,
+          "week": 10,
+          "unitId": "unit-07",
+          "title": "Cycles in Review — Connections Across Systems",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Earth Science; Life Cycle of Organisms; Crop Production",
+          "contentStandard": {
+            "code": null,
+            "text": "Integrates several cycle standards; exact mapping needs editorial review."
+          },
+          "indicator": {
+            "code": null,
+            "text": "Cross-topic recap; exact indicator mapping needs editorial review."
+          },
+          "learningGoal": "Compare patterns across the water cycle, housefly life cycle and crop production.",
+          "vocabulary": [
+            "cycle",
+            "pattern",
+            "repeated",
+            "transfer",
+            "synthesis",
+            "compare",
+            "evidence",
+            "conclusion"
+          ],
+          "priorLessons": [
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": {
+            "status": "editorial-review",
+            "message": "This lesson combines several cycle topics and source indicators. Exact alignment needs editorial review."
+          }
+        },
+        {
+          "id": "b7-science-t1-l21",
+          "number": 21,
+          "week": 11,
+          "unitId": "unit-08",
+          "title": "Forms of Energy and How They Are Related",
+          "durationMin": 60,
+          "strand": "Forces and Energy",
+          "subStrand": "Energy",
+          "contentStandard": {
+            "code": "B7.4.1.1",
+            "text": "Demonstrate an understanding of forms of energy and their daily applications."
+          },
+          "indicator": {
+            "code": "B7.4.1.1.1",
+            "text": "Identify the various forms of energy and show how they are related."
+          },
+          "learningGoal": "Learners can list the forms of energy and demonstrate, with diagrams, how potential energy and kinetic energy are related.",
+          "vocabulary": [
+            "energy",
+            "work",
+            "joule",
+            "potential energy",
+            "kinetic energy",
+            "mechanical energy",
+            "heat",
+            "sound",
+            "solar",
+            "electrical",
+            "nuclear",
+            "chemical",
+            "light",
+            "conversion"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l22",
+          "number": 22,
+          "week": 11,
+          "unitId": "unit-08",
+          "title": "Energy in Daily Life, and Calculating PE and KE",
+          "durationMin": 60,
+          "strand": "Forces and Energy",
+          "subStrand": "Energy",
+          "contentStandard": {
+            "code": "B7.4.1.1",
+            "text": "Demonstrate an understanding of forms of energy and their daily applications."
+          },
+          "indicator": {
+            "code": "B7.4.1.1.2",
+            "text": "Explain daily applications of forms of energy."
+          },
+          "learningGoal": "Learners can match forms of energy to appliances used at school, at home and in the community, and use PE = mgh and KE = ½mv² to solve simple problems.",
+          "vocabulary": [
+            "appliance",
+            "mass",
+            "height",
+            "velocity",
+            "gravity",
+            "joule",
+            "calculate",
+            "audit",
+            "efficiency",
+            "waste"
+          ],
+          "priorLessons": [
+            21
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l23",
+          "number": 23,
+          "week": 12,
+          "unitId": "unit-08",
+          "title": "Light — Straight Lines, Reflection and Refraction",
+          "durationMin": 60,
+          "strand": "Forces and Energy",
+          "subStrand": "Energy",
+          "contentStandard": {
+            "code": "B7.4.1.3",
+            "text": "Demonstrate understanding of characteristics of light, such as travelling in a straight line, reflection, refraction and dispersion."
+          },
+          "indicator": {
+            "code": "B7.4.1.3.1",
+            "text": "Demonstrate how light travels in a straight line."
+          },
+          "learningGoal": "Learners can perform experiments showing that light travels in a straight line and can be reflected and refracted, and produce reports, posters or diagrams.",
+          "vocabulary": [
+            "light",
+            "straight line",
+            "ray",
+            "beam",
+            "reflection",
+            "refraction",
+            "dispersion",
+            "mirror",
+            "incident ray",
+            "reflected ray",
+            "normal",
+            "angle of incidence",
+            "angle of reflection",
+            "medium"
+          ],
+          "priorLessons": [
+            21
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b7-science-t1-l24",
+          "number": 24,
+          "week": 12,
+          "unitId": "unit-08",
+          "title": "Dispersion — Splitting White Light",
+          "durationMin": 60,
+          "strand": "Forces and Energy",
+          "subStrand": "Energy",
+          "contentStandard": {
+            "code": "B7.4.1.3",
+            "text": "Demonstrate understanding of characteristics of light, such as travelling in a straight line, reflection, refraction and dispersion."
+          },
+          "indicator": {
+            "code": null,
+            "text": "The source indicator concerns straight-line light travel; alignment to dispersion needs review."
+          },
+          "learningGoal": "Learners can perform an experiment to show the dispersion of light into colours, and report on all four characteristics of light studied this term.",
+          "vocabulary": [
+            "dispersion",
+            "spectrum",
+            "prism",
+            "white light",
+            "rainbow",
+            "ROYGBIV",
+            "wavelength",
+            "refract",
+            "bend"
+          ],
+          "priorLessons": [
+            23
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 18,
+            "explain": 12,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": {
+            "status": "editorial-review",
+            "message": "The lesson covers dispersion, while its source indicator names straight-line light travel. Editorial alignment pending."
+          }
+        }
+      ]
     },
     {
-      "id": "powers",
-      "name": "Powers",
-      "colour": "violet"
+      "id": "b8-math-t1",
+      "level": "Basic 8",
+      "subject": "Mathematics",
+      "term": 1,
+      "source": {
+        "curriculum": "NaCCA Mathematics Common Core Programme (B7–B9), September 2020",
+        "lessonPlan": "Basic_8_Mathematics_Term1_Lesson_Plan_and_Teaching_Guide.docx",
+        "notice": "Learner-safe overview only; full lessons and assessments remain under review."
+      },
+      "units": [
+        {
+          "id": "unit-01",
+          "name": "Numeration and Place Value",
+          "colour": "blue"
+        },
+        {
+          "id": "unit-02",
+          "name": "Sets and Square Roots",
+          "colour": "teal"
+        },
+        {
+          "id": "unit-03",
+          "name": "Mental Mathematics",
+          "colour": "violet"
+        },
+        {
+          "id": "unit-04",
+          "name": "Operations on Decimals",
+          "colour": "orange"
+        },
+        {
+          "id": "unit-05",
+          "name": "Indices and Powers",
+          "colour": "green"
+        },
+        {
+          "id": "unit-06",
+          "name": "Linear Relations and Gradient",
+          "colour": "blue"
+        }
+      ],
+      "lessons": [
+        {
+          "id": "b8-math-t1-l01",
+          "number": 1,
+          "week": 1,
+          "unitId": "unit-01",
+          "title": "Reading and Writing Quantities Over One Billion",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Numeration and Place Value",
+          "contentStandard": {
+            "code": "B8.1.1.1",
+            "text": "Demonstrate understanding and the use of place value for expressing quantities in standard form and rounding numbers and decimals to significant figures and a given number of decimal places"
+          },
+          "indicator": {
+            "code": "B8.1.1.1.1",
+            "text": "Apply the understanding of place value to read and write in number quantities over 1,000,000,000."
+          },
+          "learningGoal": "Learners read and write in number quantities over 1,000,000,000.",
+          "vocabulary": [
+            "billion",
+            "period",
+            "place value",
+            "digit",
+            "numeral",
+            "words",
+            "expanded form",
+            "trillion"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": "place-value",
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l02",
+          "number": 2,
+          "week": 1,
+          "unitId": "unit-01",
+          "title": "Skip Counting in Large Steps",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Numeration and Place Value",
+          "contentStandard": {
+            "code": "B8.1.1.1",
+            "text": "Demonstrate understanding and the use of place value for expressing quantities in standard form and rounding numbers and decimals to significant figures and a given number of decimal places"
+          },
+          "indicator": {
+            "code": "B8.1.1.1.2",
+            "text": "Skip count forwards and backwards in 10,000s, 100,000s, 500,000s, etc"
+          },
+          "learningGoal": "Learners skip count forwards and backwards in 10,000s, 100,000s, 500,000s, etc.",
+          "vocabulary": [
+            "skip count",
+            "sequence",
+            "forwards",
+            "backwards",
+            "interval",
+            "step",
+            "pattern",
+            "term"
+          ],
+          "priorLessons": [
+            1
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l03",
+          "number": 3,
+          "week": 2,
+          "unitId": "unit-01",
+          "title": "Comparing and Ordering Whole Numbers",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Numeration and Place Value",
+          "contentStandard": {
+            "code": "B8.1.1.1",
+            "text": "Demonstrate understanding and the use of place value for expressing quantities in standard form and rounding numbers and decimals to significant figures and a given number of decimal places"
+          },
+          "indicator": {
+            "code": "B8.1.1.1.3",
+            "text": "Compare and order whole numbers using \">, <, and =\""
+          },
+          "learningGoal": "Learners compare and order whole numbers using >, < and =.",
+          "vocabulary": [
+            "compare",
+            "order",
+            "ascending",
+            "descending",
+            "greater than",
+            "less than",
+            "equal to",
+            "place value"
+          ],
+          "priorLessons": [
+            1,
+            2
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l04",
+          "number": 4,
+          "week": 2,
+          "unitId": "unit-01",
+          "title": "Writing Numbers in Standard Form",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Numeration and Place Value",
+          "contentStandard": {
+            "code": "B8.1.1.1",
+            "text": "Demonstrate understanding and the use of place value for expressing quantities in standard form and rounding numbers and decimals to significant figures and a given number of decimal places"
+          },
+          "indicator": {
+            "code": "B8.1.1.1.4",
+            "text": "Express integers of any size into standard form"
+          },
+          "learningGoal": "Learners express integers of any size in standard form.",
+          "vocabulary": [
+            "standard form",
+            "scientific notation",
+            "power of ten",
+            "index",
+            "coefficient",
+            "mantissa",
+            "decimal point"
+          ],
+          "priorLessons": [
+            1,
+            2,
+            3
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l05",
+          "number": 5,
+          "week": 3,
+          "unitId": "unit-01",
+          "title": "Rounding to Significant Figures",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Numeration and Place Value",
+          "contentStandard": {
+            "code": "B8.1.1.1",
+            "text": "Demonstrate understanding and the use of place value for expressing quantities in standard form and rounding numbers and decimals to significant figures and a given number of decimal places"
+          },
+          "indicator": {
+            "code": "B8.1.1.1.5",
+            "text": "Express integers in a given number of significant and decimal places"
+          },
+          "learningGoal": "Learners express integers to a given number of significant figures.",
+          "vocabulary": [
+            "significant figure",
+            "round",
+            "rounding",
+            "leading digit",
+            "trailing zero",
+            "approximation",
+            "degree of accuracy"
+          ],
+          "priorLessons": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l06",
+          "number": 6,
+          "week": 3,
+          "unitId": "unit-01",
+          "title": "Rounding to Decimal Places",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Numeration and Place Value",
+          "contentStandard": {
+            "code": "B8.1.1.1",
+            "text": "Demonstrate understanding and the use of place value for expressing quantities in standard form and rounding numbers and decimals to significant figures and a given number of decimal places"
+          },
+          "indicator": {
+            "code": "B8.1.1.1.5",
+            "text": "Express integers in a given number of significant and decimal places"
+          },
+          "learningGoal": "Learners express decimals to a given number of decimal places, and distinguish this from significant figures.",
+          "vocabulary": [
+            "decimal place",
+            "decimal point",
+            "round",
+            "trailing zero",
+            "significant figure",
+            "precision",
+            "tenth",
+            "hundredth",
+            "thousandth"
+          ],
+          "priorLessons": [
+            5
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l07",
+          "number": 7,
+          "week": 4,
+          "unitId": "unit-01",
+          "title": "Word Problems on Place Value",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Numeration and Place Value",
+          "contentStandard": {
+            "code": "B8.1.1.1",
+            "text": "Demonstrate understanding and the use of place value for expressing quantities in standard form and rounding numbers and decimals to significant figures and a given number of decimal places"
+          },
+          "indicator": {
+            "code": "B8.1.1.1.6",
+            "text": "Create and solve word or real-life problems on place values"
+          },
+          "learningGoal": "Learners create and solve word or real-life problems on place values.",
+          "vocabulary": [
+            "word problem",
+            "digit",
+            "value",
+            "place",
+            "sum of digits",
+            "difference",
+            "represent",
+            "context"
+          ],
+          "priorLessons": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l08",
+          "number": 8,
+          "week": 4,
+          "unitId": "unit-02",
+          "title": "Perfect Squares and Square Roots Through Sets of Factors",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Sets and Square Roots",
+          "contentStandard": {
+            "code": "B8.1.1.2",
+            "text": "Apply the concepts and vocabulary of sets on sets of factors of numbers to identify perfect squares, determine their square root and solve real life problems involving union and intersection of two sets"
+          },
+          "indicator": {
+            "code": "B8.1.1.2.1",
+            "text": "Use the concept of sets to identify perfect squares and determine the square roots. Use the knowledge on sets and sets of factors of numbers to solve problems"
+          },
+          "learningGoal": "Learners use the concept of sets to identify perfect squares and determine their square roots, using sets of factors of numbers.",
+          "vocabulary": [
+            "set",
+            "element",
+            "subset",
+            "factor",
+            "factor pair",
+            "perfect square",
+            "square root",
+            "index",
+            "notation"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l09",
+          "number": 9,
+          "week": 5,
+          "unitId": "unit-02",
+          "title": "Union and Intersection of Sets",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Sets and Square Roots",
+          "contentStandard": {
+            "code": "B8.1.1.2",
+            "text": "Apply the concepts and vocabulary of sets on sets of factors of numbers to identify perfect squares, determine their square root and solve real life problems involving union and intersection of two sets"
+          },
+          "indicator": {
+            "code": "B8.1.1.2.2",
+            "text": "Use the knowledge on sets and sets of factors of numbers to solve real life problems involving union and intersection"
+          },
+          "learningGoal": "Learners use knowledge of sets and sets of factors of numbers to solve real life problems involving union and intersection.",
+          "vocabulary": [
+            "union",
+            "intersection",
+            "element",
+            "member",
+            "braces",
+            "Venn diagram",
+            "or",
+            "and",
+            "empty set"
+          ],
+          "priorLessons": [
+            8
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l10",
+          "number": 10,
+          "week": 5,
+          "unitId": "unit-03",
+          "title": "Multiplying and Dividing by Powers of Ten",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Mental Mathematics",
+          "contentStandard": {
+            "code": "B8.1.2.1",
+            "text": "Apply mental mathematics strategies and number properties used to solve problems"
+          },
+          "indicator": {
+            "code": "B8.1.2.1.1",
+            "text": "Multiply and divide by power of 10 including decimals and the benchmark fractions"
+          },
+          "learningGoal": "Learners multiply and divide by powers of 10, including decimals and benchmark fractions.",
+          "vocabulary": [
+            "power of ten",
+            "index",
+            "decimal point",
+            "place value",
+            "benchmark fraction",
+            "half",
+            "quarter",
+            "three-quarters",
+            "digit"
+          ],
+          "priorLessons": [
+            4
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l11",
+          "number": 11,
+          "week": 6,
+          "unitId": "unit-03",
+          "title": "Mental Mathematics Strategies",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Mental Mathematics",
+          "contentStandard": {
+            "code": "B8.1.2.1",
+            "text": "Apply mental mathematics strategies and number properties used to solve problems"
+          },
+          "indicator": {
+            "code": "B8.1.2.1.2",
+            "text": "Apply mental mathematics strategies and number properties to do calculation"
+          },
+          "learningGoal": "Learners apply mental mathematics strategies and number properties to do calculation.",
+          "vocabulary": [
+            "strategy",
+            "compensate",
+            "compatible numbers",
+            "distributive",
+            "partition",
+            "doubling",
+            "halving",
+            "commutative",
+            "associative"
+          ],
+          "priorLessons": [
+            10
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l12",
+          "number": 12,
+          "week": 6,
+          "unitId": "unit-03",
+          "title": "Solving Word Problems Mentally",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Mental Mathematics",
+          "contentStandard": {
+            "code": "B8.1.2.1",
+            "text": "Apply mental mathematics strategies and number properties used to solve problems"
+          },
+          "indicator": {
+            "code": "B8.1.2.1.3",
+            "text": "Apply mental mathematics strategies to solve word problems"
+          },
+          "learningGoal": "Learners apply mental mathematics strategies to solve word problems.",
+          "vocabulary": [
+            "word problem",
+            "estimate",
+            "reasonable",
+            "operation",
+            "context",
+            "check",
+            "strategy",
+            "interpret"
+          ],
+          "priorLessons": [
+            11
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l13",
+          "number": 13,
+          "week": 7,
+          "unitId": "unit-04",
+          "title": "Adding and Subtracting Large Numbers",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Operations on Decimals",
+          "contentStandard": {
+            "code": "B8.1.2.2",
+            "text": "Apply the understanding of the addition, subtraction, multiplication and division of (i) whole numbers within 10,000, and (ii) decimals up to 1/1000, to solve problems and round answers to given decimal places"
+          },
+          "indicator": {
+            "code": "B8.1.2.2.1",
+            "text": "Add and subtract more than four-digit numbers."
+          },
+          "learningGoal": "Learners add and subtract more than four-digit numbers.",
+          "vocabulary": [
+            "addend",
+            "sum",
+            "subtrahend",
+            "difference",
+            "column",
+            "carry",
+            "borrow",
+            "exchange",
+            "estimate"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l14",
+          "number": 14,
+          "week": 7,
+          "unitId": "unit-04",
+          "title": "Multiplying and Dividing by Two- and Three-Digit Numbers",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Operations on Decimals",
+          "contentStandard": {
+            "code": "B8.1.2.2",
+            "text": "Apply the understanding of the addition, subtraction, multiplication and division of (i) whole numbers within 10,000, and (ii) decimals up to 1/1000, to solve problems and round answers to given decimal places"
+          },
+          "indicator": {
+            "code": "B8.1.2.2.2",
+            "text": "Multiply or divide multi-digit numbers by 2- and 3-digit numbers."
+          },
+          "learningGoal": "Learners multiply or divide multi-digit numbers by 2- and 3-digit numbers.",
+          "vocabulary": [
+            "multiplicand",
+            "multiplier",
+            "product",
+            "partial product",
+            "dividend",
+            "divisor",
+            "quotient",
+            "remainder",
+            "long division"
+          ],
+          "priorLessons": [
+            13
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l15",
+          "number": 15,
+          "week": 8,
+          "unitId": "unit-04",
+          "title": "Story Problems Involving Decimals",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Operations on Decimals",
+          "contentStandard": {
+            "code": "B8.1.2.2",
+            "text": "Apply the understanding of the addition, subtraction, multiplication and division of (i) whole numbers within 10,000, and (ii) decimals up to 1/1000, to solve problems and round answers to given decimal places"
+          },
+          "indicator": {
+            "code": "B8.1.2.2.3",
+            "text": "Create and solve story problems involving decimals on the four basic operations"
+          },
+          "learningGoal": "Learners create and solve story problems involving decimals on the four basic operations.",
+          "vocabulary": [
+            "decimal",
+            "operation",
+            "estimate",
+            "reasonable",
+            "context",
+            "round",
+            "check",
+            "unit"
+          ],
+          "priorLessons": [
+            5,
+            6,
+            13,
+            14
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l16",
+          "number": 16,
+          "week": 8,
+          "unitId": "unit-05",
+          "title": "The Laws of Indices",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Indices and Powers",
+          "contentStandard": {
+            "code": "B8.1.2.3",
+            "text": "Demonstrate understanding and the use of the laws of indices in solving problems (including real life problems) involving powers of natural numbers"
+          },
+          "indicator": {
+            "code": "B8.1.2.3.1",
+            "text": "Identify and explain the laws of indices"
+          },
+          "learningGoal": "Learners identify and explain the laws of indices.",
+          "vocabulary": [
+            "index",
+            "indices",
+            "base",
+            "power",
+            "exponent",
+            "multiplication law",
+            "division law",
+            "power of a power",
+            "zero index",
+            "squared",
+            "cubed"
+          ],
+          "priorLessons": [
+            4
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l17",
+          "number": 17,
+          "week": 9,
+          "unitId": "unit-05",
+          "title": "Applying the Laws of Indices and the Order of Operations",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Indices and Powers",
+          "contentStandard": {
+            "code": "B8.1.2.3",
+            "text": "Demonstrate understanding and the use of the laws of indices in solving problems (including real life problems) involving powers of natural numbers"
+          },
+          "indicator": {
+            "code": "B8.1.2.3.2",
+            "text": "Apply the laws of indices to simplify and evaluate numbers involving powers of numbers. (PEDMAS)"
+          },
+          "learningGoal": "Learners apply the laws of indices to simplify and evaluate numbers involving powers, using the order of operations.",
+          "vocabulary": [
+            "order of operations",
+            "PEDMAS",
+            "brackets",
+            "simplify",
+            "evaluate",
+            "term",
+            "like terms",
+            "coefficient"
+          ],
+          "priorLessons": [
+            16
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l18",
+          "number": 18,
+          "week": 9,
+          "unitId": "unit-05",
+          "title": "Solving Exponential Equations",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Indices and Powers",
+          "contentStandard": {
+            "code": "B8.1.2.3",
+            "text": "Demonstrate understanding and the use of the laws of indices in solving problems (including real life problems) involving powers of natural numbers"
+          },
+          "indicator": {
+            "code": "B8.1.2.3.3",
+            "text": "Solve exponential equations"
+          },
+          "learningGoal": "Learners solve exponential equations.",
+          "vocabulary": [
+            "exponential equation",
+            "unknown",
+            "index",
+            "base",
+            "same base",
+            "solution",
+            "substitute",
+            "check"
+          ],
+          "priorLessons": [
+            16,
+            17
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l19",
+          "number": 19,
+          "week": 10,
+          "unitId": "unit-05",
+          "title": "Real-Life Problems Involving Powers",
+          "durationMin": 60,
+          "strand": "Number",
+          "subStrand": "Number: Indices and Powers",
+          "contentStandard": {
+            "code": "B8.1.2.3",
+            "text": "Demonstrate understanding and the use of the laws of indices in solving problems (including real life problems) involving powers of natural numbers"
+          },
+          "indicator": {
+            "code": "B8.1.2.3.4",
+            "text": "Solve real life problems involving powers of natural numbers"
+          },
+          "learningGoal": "Learners solve real life problems involving powers of natural numbers.",
+          "vocabulary": [
+            "power",
+            "exponent",
+            "growth",
+            "doubling",
+            "repeated multiplication",
+            "model",
+            "compound",
+            "estimate"
+          ],
+          "priorLessons": [
+            16,
+            17,
+            18
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l20",
+          "number": 20,
+          "week": 10,
+          "unitId": "unit-06",
+          "title": "The Gradient of a Line and y = mx + c",
+          "durationMin": 60,
+          "strand": "Algebra",
+          "subStrand": "Algebra: Linear Relations and Gradient",
+          "contentStandard": {
+            "code": "B8.2.1.1",
+            "text": "Demonstrate the ability to draw table of values for a linear relation, graph the relation in a number plane, determine the gradient of the line and use it to write equation of a line of the form y = mx + c"
+          },
+          "indicator": {
+            "code": "B8.2.1.1.1",
+            "text": "Calculate the gradient of a line and use it to write equation of a line of the form y = mx + c."
+          },
+          "learningGoal": "Learners calculate the gradient of a line and use it to write the equation of a line of the form y = mx + c.",
+          "vocabulary": [
+            "gradient",
+            "slope",
+            "rise",
+            "run",
+            "intercept",
+            "coefficient",
+            "linear",
+            "equation of a line",
+            "axes",
+            "origin"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": "line-graph",
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l21",
+          "number": 21,
+          "week": 11,
+          "unitId": "unit-06",
+          "title": "Reading Missing Values from a Linear Graph",
+          "durationMin": 60,
+          "strand": "Algebra",
+          "subStrand": "Algebra: Linear Relations and Gradient",
+          "contentStandard": {
+            "code": "B8.2.1.1",
+            "text": "Demonstrate the ability to draw table of values for a linear relation, graph the relation in a number plane, determine the gradient of the line and use it to write equation of a line of the form y = mx + c"
+          },
+          "indicator": {
+            "code": "B8.2.1.1.2",
+            "text": "Use graph of a linear relation to determine subsequent missing elements in the ordered pairs of the relation."
+          },
+          "learningGoal": "Learners use the graph of a linear relation to determine subsequent missing elements in the ordered pairs of the relation.",
+          "vocabulary": [
+            "ordered pair",
+            "coordinate",
+            "table of values",
+            "interpolate",
+            "extrapolate",
+            "plot",
+            "axis",
+            "relation",
+            "pattern"
+          ],
+          "priorLessons": [
+            20
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l22",
+          "number": 22,
+          "week": 11,
+          "unitId": "unit-06",
+          "title": "Extending Linear Relations: Interpolation, Extrapolation and Limits",
+          "durationMin": 60,
+          "strand": "Algebra",
+          "subStrand": "Algebra: Linear Relations and Gradient",
+          "contentStandard": {
+            "code": "B8.2.1.1",
+            "text": "Demonstrate the ability to draw table of values for a linear relation, graph the relation in a number plane, determine the gradient of the line and use it to write equation of a line of the form y = mx + c"
+          },
+          "indicator": {
+            "code": "B8.2.1.1.2",
+            "text": "Use graph of a linear relation to determine subsequent missing elements in the ordered pairs of the relation."
+          },
+          "learningGoal": "Learners extend their use of graphs of linear relations to determine missing elements, including beyond the plotted range, and judge when a graph can be trusted.",
+          "vocabulary": [
+            "interpolate",
+            "extrapolate",
+            "scale",
+            "axis",
+            "break in axis",
+            "trend",
+            "limit",
+            "assumption",
+            "model"
+          ],
+          "priorLessons": [
+            21
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-math-t1-l23",
+          "number": 23,
+          "week": 12,
+          "unitId": "unit-06",
+          "title": "Solving Real-Life Problems with Linear Graphs",
+          "durationMin": 60,
+          "strand": "Algebra",
+          "subStrand": "Algebra: Linear Relations and Gradient",
+          "contentStandard": {
+            "code": "B8.2.1.1",
+            "text": "Demonstrate the ability to draw table of values for a linear relation, graph the relation in a number plane, determine the gradient of the line and use it to write equation of a line of the form y = mx + c"
+          },
+          "indicator": {
+            "code": "B8.2.1.1.3",
+            "text": "Use graphs of linear relations to solve real life problems"
+          },
+          "learningGoal": "Learners use graphs of linear relations to solve real life problems.",
+          "vocabulary": [
+            "linear relation",
+            "model",
+            "rate",
+            "intercept",
+            "fixed cost",
+            "variable cost",
+            "unit rate",
+            "interpret",
+            "assumption"
+          ],
+          "priorLessons": [
+            20,
+            21,
+            22
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": {
+            "status": "editorial-review",
+            "message": "Provisional plan sequence: linear graphs here, but the corrected B8 scheme assigns angles to Week 12. Curriculum decision pending."
+          }
+        },
+        {
+          "id": "b8-math-t1-l24",
+          "number": 24,
+          "week": 12,
+          "unitId": "unit-06",
+          "title": "Comparing Linear Graphs and Interpreting Claims",
+          "durationMin": 60,
+          "strand": "Algebra",
+          "subStrand": "Algebra: Linear Relations and Gradient",
+          "contentStandard": {
+            "code": "B8.2.1.1",
+            "text": "Demonstrate the ability to draw table of values for a linear relation, graph the relation in a number plane, determine the gradient of the line and use it to write equation of a line of the form y = mx + c"
+          },
+          "indicator": {
+            "code": "B8.2.1.1.3",
+            "text": "Use graphs of linear relations to solve real life problems"
+          },
+          "learningGoal": "Learners extend their use of graphs of linear relations to compare situations and interpret real-life claims critically.",
+          "vocabulary": [
+            "compare",
+            "steeper",
+            "intercept",
+            "rate",
+            "crossing point",
+            "break-even",
+            "claim",
+            "evidence",
+            "assumption",
+            "model"
+          ],
+          "priorLessons": [
+            23
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": {
+            "status": "editorial-review",
+            "message": "Provisional plan sequence: linear graphs here, but the corrected B8 scheme assigns angles to Week 12. Curriculum decision pending."
+          }
+        }
+      ]
     },
     {
-      "id": "fractions",
-      "name": "Fractions",
-      "colour": "orange"
-    }
-  ],
-  "lessons": [
-    {
-      "id": "b7-math-t1-l01",
-      "number": 1,
-      "week": 1,
-      "unitId": "numeration",
-      "title": "Modelling Numbers Beyond One Billion",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Numeration Systems",
-      "contentStandard": {
-        "code": "B7.1.1.1",
-        "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
+      "id": "b8-science-t1",
+      "level": "Basic 8",
+      "subject": "Science",
+      "term": 1,
+      "source": {
+        "curriculum": "NaCCA Science Common Core Programme (B7–B9), September 2020",
+        "lessonPlan": "Basic_8_Science_Term1_Lesson_Plan_and_Teaching_Guide.docx",
+        "notice": "Learner-safe overview only; full lessons and assessments remain under review."
       },
-      "indicator": {
-        "code": "B7.1.1.1.1",
-        "text": "Model number quantities more than 1,000,000,000 using graph sheets, isometric papers and multi-base blocks."
-      },
-      "learningGoal": "Learners model and read whole numbers greater than one billion using multi-base blocks, graph sheets and place-value charts.",
-      "vocabulary": [
-        "billion",
-        "million",
-        "place value",
-        "period",
-        "digit",
-        "multi-base block",
-        "numeral",
-        "expanded form",
-        "model"
+      "units": [
+        {
+          "id": "unit-01",
+          "name": "Mixtures",
+          "colour": "blue"
+        },
+        {
+          "id": "unit-02",
+          "name": "Separation of Mixtures",
+          "colour": "teal"
+        },
+        {
+          "id": "unit-03",
+          "name": "The Carbon Cycle",
+          "colour": "violet"
+        },
+        {
+          "id": "unit-04",
+          "name": "Life Cycle of the Anopheles Mosquito",
+          "colour": "orange"
+        },
+        {
+          "id": "unit-05",
+          "name": "Mammalian Tooth",
+          "colour": "green"
+        },
+        {
+          "id": "unit-06",
+          "name": "Tooth and Gum Decay",
+          "colour": "blue"
+        },
+        {
+          "id": "unit-07",
+          "name": "Energy Conversion",
+          "colour": "teal"
+        },
+        {
+          "id": "unit-08",
+          "name": "Renewable and Non-Renewable Energy",
+          "colour": "violet"
+        },
+        {
+          "id": "unit-09",
+          "name": "Heat and Temperature",
+          "colour": "orange"
+        },
+        {
+          "id": "unit-10",
+          "name": "Waste Management Practices",
+          "colour": "green"
+        },
+        {
+          "id": "unit-11",
+          "name": "Communicable Diseases",
+          "colour": "blue"
+        },
+        {
+          "id": "unit-12",
+          "name": "Crop Production",
+          "colour": "teal"
+        },
+        {
+          "id": "unit-13",
+          "name": "Animal Production",
+          "colour": "violet"
+        }
       ],
-      "priorLessons": [],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": "place-value"
-    },
-    {
-      "id": "b7-math-t1-l02",
-      "number": 2,
-      "week": 1,
-      "unitId": "numeration",
-      "title": "Comparing and Ordering Huge Numbers",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Numeration Systems",
-      "contentStandard": {
-        "code": "B7.1.1.1",
-        "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
-      },
-      "indicator": {
-        "code": "B7.1.1.1.2",
-        "text": "Compare and order whole numbers more than 1,000,000,000 and represent the comparison using “>, <, or =”."
-      },
-      "learningGoal": "Learners compare and order whole numbers greater than one billion and record the comparison using >, < or =.",
-      "vocabulary": [
-        "compare",
-        "order",
-        "greater than",
-        "less than",
-        "equal to",
-        "ascending",
-        "descending",
-        "digit",
-        "most significant"
-      ],
-      "priorLessons": [
-        1
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l03",
-      "number": 3,
-      "week": 2,
-      "unitId": "numeration",
-      "title": "Rounding Whole Numbers",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Numeration Systems",
-      "contentStandard": {
-        "code": "B7.1.1.1",
-        "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
-      },
-      "indicator": {
-        "code": "B7.1.1.1.3",
-        "text": "Round (off, up, down) whole numbers more than 1,000,000,000 to the nearest hundred-thousand, ten-thousands, thousands, hundreds and tens."
-      },
-      "learningGoal": "Learners round whole numbers greater than one billion to the nearest ten, hundred, thousand, ten-thousand and hundred-thousand.",
-      "vocabulary": [
-        "round",
-        "round off",
-        "round up",
-        "round down",
-        "nearest",
-        "estimate",
-        "halfway",
-        "boundary",
-        "approximate"
-      ],
-      "priorLessons": [
-        1,
-        2
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l04",
-      "number": 4,
-      "week": 2,
-      "unitId": "numeration",
-      "title": "Rounding Decimals",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Numeration Systems",
-      "contentStandard": {
-        "code": "B7.1.1.1",
-        "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
-      },
-      "indicator": {
-        "code": "B7.1.1.1.4",
-        "text": "Round decimals to the nearest tenth, hundredth, thousandths, etc."
-      },
-      "learningGoal": "Learners round decimal numbers to the nearest tenth, hundredth and thousandth.",
-      "vocabulary": [
-        "decimal",
-        "decimal place",
-        "tenth",
-        "hundredth",
-        "thousandth",
-        "round",
-        "truncate",
-        "recurring",
-        "terminating"
-      ],
-      "priorLessons": [
-        3
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l05",
-      "number": 5,
-      "week": 3,
-      "unitId": "numeration",
-      "title": "Decimal Places and Significant Figures",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Numeration Systems",
-      "contentStandard": {
-        "code": "B7.1.1.1",
-        "text": "Demonstrate understanding and the use of place value for expressing quantities recorded as base ten numerals as well as rounding these to given decimal places and significant figures."
-      },
-      "indicator": {
-        "code": "B7.1.1.1.5",
-        "text": "Express decimal numerals to given significant and decimal places."
-      },
-      "learningGoal": "Learners express decimal numbers to a given number of decimal places and to a given number of significant figures.",
-      "vocabulary": [
-        "decimal place",
-        "significant figure",
-        "leading zero",
-        "non-zero digit",
-        "precision",
-        "round",
-        "estimate"
-      ],
-      "priorLessons": [
-        3,
-        4
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l06",
-      "number": 6,
-      "week": 3,
-      "unitId": "operations",
-      "title": "Multiplying and Dividing by Powers of Ten",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Number Operations",
-      "contentStandard": {
-        "code": "B7.1.2.1",
-        "text": "Apply mental mathematics strategies and number properties used to solve problems."
-      },
-      "indicator": {
-        "code": "B7.1.2.1.1",
-        "text": "Multiply and divide given numbers by powers of 10 including decimals and benchmark fractions."
-      },
-      "learningGoal": "Learners multiply and divide whole numbers, decimals and benchmark fractions by 10, 100, 1000 and other powers of ten.",
-      "vocabulary": [
-        "power of ten",
-        "index",
-        "exponent",
-        "digit shift",
-        "placeholder",
-        "decimal point",
-        "benchmark fraction",
-        "product",
-        "quotient"
-      ],
-      "priorLessons": [
-        1,
-        4
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l07",
-      "number": 7,
-      "week": 4,
-      "unitId": "operations",
-      "title": "Mental Mathematics Strategies",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Number Operations",
-      "contentStandard": {
-        "code": "B7.1.2.1",
-        "text": "Apply mental mathematics strategies and number properties used to solve problems."
-      },
-      "indicator": {
-        "code": "B7.1.2.1.2",
-        "text": "Apply mental mathematics strategies and number properties used to perform calculations."
-      },
-      "learningGoal": "Learners apply mental mathematics strategies and number properties to perform calculations without written methods.",
-      "vocabulary": [
-        "mental strategy",
-        "partition",
-        "compensate",
-        "compatible numbers",
-        "doubling",
-        "halving",
-        "distributive",
-        "commutative",
-        "associative"
-      ],
-      "priorLessons": [
-        6
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l08",
-      "number": 8,
-      "week": 4,
-      "unitId": "operations",
-      "title": "Mental Strategies for Word Problems",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Number Operations",
-      "contentStandard": {
-        "code": "B7.1.2.1",
-        "text": "Apply mental mathematics strategies and number properties used to solve problems."
-      },
-      "indicator": {
-        "code": "B7.1.2.1.3",
-        "text": "Apply mental mathematics strategies to solve word problems."
-      },
-      "learningGoal": "Learners apply mental mathematics strategies to solve word problems.",
-      "vocabulary": [
-        "word problem",
-        "operation",
-        "estimate",
-        "reasonable",
-        "context",
-        "round",
-        "check",
-        "unknown"
-      ],
-      "priorLessons": [
-        7
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l09",
-      "number": 9,
-      "week": 5,
-      "unitId": "operations",
-      "title": "Adding and Subtracting Four-Digit Numbers",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Number Operations",
-      "contentStandard": {
-        "code": "B7.1.2.2",
-        "text": "Demonstrate an understanding of addition, subtraction, multiplication and division of (i) whole numbers, and (ii) decimal numbers, to solve problems."
-      },
-      "indicator": {
-        "code": "B7.1.2.2.1",
-        "text": "Add and subtract up to four-digit numbers."
-      },
-      "learningGoal": "Learners add and subtract numbers up to four digits, including decimals, using partitioning and place value.",
-      "vocabulary": [
-        "partition",
-        "expanded form",
-        "place value",
-        "carry",
-        "borrow",
-        "exchange",
-        "regroup",
-        "column method",
-        "estimate"
-      ],
-      "priorLessons": [
-        1,
-        2,
-        3,
-        4,
-        5
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l10",
-      "number": 10,
-      "week": 5,
-      "unitId": "operations",
-      "title": "Multiplying and Dividing Multi-Digit Numbers",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Number Operations",
-      "contentStandard": {
-        "code": "B7.1.2.2",
-        "text": "Demonstrate an understanding of addition, subtraction, multiplication and division of (i) whole numbers, and (ii) decimal numbers, to solve problems."
-      },
-      "indicator": {
-        "code": "B7.1.2.2.2",
-        "text": "Multiply or divide multi-digit numbers by 1- and 2-digit numbers."
-      },
-      "learningGoal": "Learners multiply and divide multi-digit numbers by one- and two-digit numbers using partitioning, place value and the distributive property.",
-      "vocabulary": [
-        "multi-digit",
-        "partition",
-        "distributive property",
-        "partial product",
-        "lattice method",
-        "divisibility test",
-        "quotient",
-        "remainder",
-        "estimate"
-      ],
-      "priorLessons": [
-        9
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l11",
-      "number": 11,
-      "week": 6,
-      "unitId": "operations",
-      "title": "Story Problems with Decimals",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Number Operations",
-      "contentStandard": {
-        "code": "B7.1.2.2",
-        "text": "Demonstrate an understanding of addition, subtraction, multiplication and division of (i) whole numbers, and (ii) decimal numbers, to solve problems."
-      },
-      "indicator": {
-        "code": "B7.1.2.2.3",
-        "text": "Create and solve story problems involving decimals on the four basic operations."
-      },
-      "learningGoal": "Learners create and solve story problems involving decimals using all four operations.",
-      "vocabulary": [
-        "story problem",
-        "operation",
-        "decimal",
-        "context",
-        "reasonable",
-        "estimate",
-        "check",
-        "two-step"
-      ],
-      "priorLessons": [
-        8,
-        9,
-        10
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l12",
-      "number": 12,
-      "week": 6,
-      "unitId": "powers",
-      "title": "Repeated Factors — The Idea of Powers",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Number Operations",
-      "contentStandard": {
-        "code": "B7.1.2.3",
-        "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
-      },
-      "indicator": {
-        "code": "B7.1.2.3.1",
-        "text": "Illustrate with examples the meaning of repeated factors using counting objects such as bottle tops or bundle sticks."
-      },
-      "learningGoal": "Learners illustrate the meaning of repeated factors using concrete objects and write the shorthand index form.",
-      "vocabulary": [
-        "factor",
-        "repeated factor",
-        "power",
-        "index",
-        "exponent",
-        "base",
-        "squared",
-        "cubed",
-        "product"
-      ],
-      "priorLessons": [
-        10
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": "index-explorer"
-    },
-    {
-      "id": "b7-math-t1-l13",
-      "number": 13,
-      "week": 7,
-      "unitId": "powers",
-      "title": "Writing Numbers as Products and Powers",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Number Operations",
-      "contentStandard": {
-        "code": "B7.1.2.3",
-        "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
-      },
-      "indicator": {
-        "code": "B7.1.2.3.2",
-        "text": "Express a given number as a product of a given number or numbers, as well as, in the form of a power or two such numbers as product of powers."
-      },
-      "learningGoal": "Learners express a number as a product of factors, and write that product in index form including as a product of powers.",
-      "vocabulary": [
-        "factor",
-        "product",
-        "prime",
-        "composite",
-        "factor pair",
-        "index form",
-        "base",
-        "power",
-        "product of powers"
-      ],
-      "priorLessons": [
-        12
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l14",
-      "number": 14,
-      "week": 7,
-      "unitId": "powers",
-      "title": "The Zero Index",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Number Operations",
-      "contentStandard": {
-        "code": "B7.1.2.3",
-        "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
-      },
-      "indicator": {
-        "code": "B7.1.2.3.3",
-        "text": "Show that the value of any natural number with zero as its exponent or index is 1 and use it to solve problems."
-      },
-      "learningGoal": "Learners show that any natural number raised to the power zero equals 1, and use this to solve problems.",
-      "vocabulary": [
-        "zero index",
-        "exponent",
-        "power",
-        "pattern",
-        "divide by the base",
-        "consistent",
-        "convention"
-      ],
-      "priorLessons": [
-        6,
-        12,
-        13
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": "zero-index"
-    },
-    {
-      "id": "b7-math-t1-l15",
-      "number": 15,
-      "week": 8,
-      "unitId": "powers",
-      "title": "Evaluating Numbers in Index Form",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Number Operations",
-      "contentStandard": {
-        "code": "B7.1.2.3",
-        "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
-      },
-      "indicator": {
-        "code": "B7.1.2.3.4",
-        "text": "Find the value of a number written in index form."
-      },
-      "learningGoal": "Learners find the value of a number written in index form, including products of powers and zero indices.",
-      "vocabulary": [
-        "index form",
-        "evaluate",
-        "base",
-        "index",
-        "exponent",
-        "product of powers",
-        "order of operations",
-        "square",
-        "cube"
-      ],
-      "priorLessons": [
-        12,
-        13,
-        14
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l16",
-      "number": 16,
-      "week": 8,
-      "unitId": "powers",
-      "title": "Prime Factors and the Highest Common Factor",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Number Operations",
-      "contentStandard": {
-        "code": "B7.1.2.3",
-        "text": "Demonstrate understanding and the use of powers of natural numbers in solving problems."
-      },
-      "indicator": {
-        "code": "B7.1.2.3.5",
-        "text": "Apply the concept of powers of numbers (product of prime) to find Highest Common Factor (HCF)."
-      },
-      "learningGoal": "Learners use prime factorisation to find the Highest Common Factor of two or more numbers.",
-      "vocabulary": [
-        "prime factor",
-        "prime factorisation",
-        "highest common factor",
-        "HCF",
-        "common factor",
-        "product of primes",
-        "index form",
-        "Venn"
-      ],
-      "priorLessons": [
-        13
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l17",
-      "number": 17,
-      "week": 9,
-      "unitId": "fractions",
-      "title": "Benchmark Fractions, Decimals and Percentages",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Fractions",
-      "contentStandard": {
-        "code": "B7.1.3.1",
-        "text": "Simplify, compare and order a mixture of positive fractions (i.e. common, percent and decimal) by changing all to equivalent (i) fractions, (ii) decimals, or (iii) percentages."
-      },
-      "indicator": {
-        "code": "B7.1.3.1.1",
-        "text": "Determine and recall the percentages and decimals of given benchmark fractions (i.e. tenths, fifths, fourths, thirds and halves) and use these to compare quantities."
-      },
-      "learningGoal": "Learners recall the decimal and percentage equivalents of benchmark fractions and use them to compare quantities.",
-      "vocabulary": [
-        "benchmark fraction",
-        "equivalent",
-        "common fraction",
-        "decimal fraction",
-        "percentage",
-        "tenth",
-        "fifth",
-        "quarter",
-        "third",
-        "half",
-        "convert"
-      ],
-      "priorLessons": [
-        4
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": "fractions"
-    },
-    {
-      "id": "b7-math-t1-l18",
-      "number": 18,
-      "week": 9,
-      "unitId": "fractions",
-      "title": "Comparing and Ordering Fractions",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Fractions",
-      "contentStandard": {
-        "code": "B7.1.3.1",
-        "text": "Simplify, compare and order a mixture of positive fractions (i.e. common, percent and decimal) by changing all to equivalent (i) fractions, (ii) decimals, or (iii) percentages."
-      },
-      "indicator": {
-        "code": "B7.1.3.1.2",
-        "text": "Compare and order fractions (i.e. common, percent and decimal fractions up to thousandths) limit to the benchmark fractions."
-      },
-      "learningGoal": "Learners compare and order common, decimal and percentage fractions, limited to the benchmarks, by converting them all to the same form.",
-      "vocabulary": [
-        "compare",
-        "order",
-        "ascending",
-        "descending",
-        "common denominator",
-        "equivalent",
-        "benchmark",
-        "convert",
-        "thousandth"
-      ],
-      "priorLessons": [
-        17
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l19",
-      "number": 19,
-      "week": 10,
-      "unitId": "fractions",
-      "title": "Adding and Subtracting Unlike and Mixed Fractions",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Fractions",
-      "contentStandard": {
-        "code": "B7.1.3.2",
-        "text": "Demonstrate an understanding of the process of addition and/or subtraction of fractions and apply this in solving problems."
-      },
-      "indicator": {
-        "code": "B7.1.3.2.1",
-        "text": "Explain the process of addition and subtraction of two or three unlike and mixed fractions."
-      },
-      "learningGoal": "Learners explain and carry out addition and subtraction of two or three unlike and mixed fractions.",
-      "vocabulary": [
-        "unlike fraction",
-        "mixed number",
-        "improper fraction",
-        "common denominator",
-        "lowest common multiple",
-        "equivalent",
-        "simplify",
-        "rename"
-      ],
-      "priorLessons": [
-        17,
-        18
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l20",
-      "number": 20,
-      "week": 10,
-      "unitId": "fractions",
-      "title": "Solving Problems with Fraction Addition and Subtraction",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Fractions",
-      "contentStandard": {
-        "code": "B7.1.3.2",
-        "text": "Demonstrate an understanding of the process of addition and/or subtraction of fractions and apply this in solving problems."
-      },
-      "indicator": {
-        "code": "B7.1.3.2.2",
-        "text": "Solve problems involving addition or subtraction of fractions."
-      },
-      "learningGoal": "Learners solve word problems involving the addition and subtraction of fractions.",
-      "vocabulary": [
-        "word problem",
-        "operation",
-        "remaining",
-        "altogether",
-        "difference",
-        "estimate",
-        "check",
-        "unit"
-      ],
-      "priorLessons": [
-        19
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l21",
-      "number": 21,
-      "week": 11,
-      "unitId": "fractions",
-      "title": "Multiplying Fractions",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Fractions",
-      "contentStandard": {
-        "code": "B7.1.3.3",
-        "text": "Demonstrate an understanding of the process of multiplying and dividing positive fractions and apply this in solving problems."
-      },
-      "indicator": {
-        "code": "B7.1.3.3.1",
-        "text": "Explain the process of multiplying a fraction (i.e. common, percent and decimal fractions up to thousandths) by a whole number and by a fraction."
-      },
-      "learningGoal": "Learners explain and carry out multiplication of a fraction by a whole number and by another fraction.",
-      "vocabulary": [
-        "multiply",
-        "numerator",
-        "denominator",
-        "of",
-        "product",
-        "simplify",
-        "cancel",
-        "area model",
-        "improper fraction"
-      ],
-      "priorLessons": [
-        10,
-        19
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l22",
-      "number": 22,
-      "week": 11,
-      "unitId": "fractions",
-      "title": "Finding a Fraction of a Quantity",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Fractions",
-      "contentStandard": {
-        "code": "B7.1.3.3",
-        "text": "Demonstrate an understanding of the process of multiplying and dividing positive fractions and apply this in solving problems."
-      },
-      "indicator": {
-        "code": "B7.1.3.3.2",
-        "text": "Find a fraction of given quantity (i.e. money or given quantity of objects)."
-      },
-      "learningGoal": "Learners find a fraction of a given quantity of money or objects.",
-      "vocabulary": [
-        "fraction of",
-        "quantity",
-        "share",
-        "denominator",
-        "numerator",
-        "unit fraction",
-        "divide then multiply",
-        "remainder"
-      ],
-      "priorLessons": [
-        21
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l23",
-      "number": 23,
-      "week": 12,
-      "unitId": "fractions",
-      "title": "Dividing Fractions",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Fractions",
-      "contentStandard": {
-        "code": "B7.1.3.3",
-        "text": "Demonstrate an understanding of the process of multiplying and dividing positive fractions and apply this in solving problems."
-      },
-      "indicator": {
-        "code": "B7.1.3.3.3",
-        "text": "Explain the process of dividing a fraction (i.e. common, percent and decimal fractions up to thousandths) by a 1-digit whole number and by a fraction."
-      },
-      "learningGoal": "Learners explain and carry out division of a fraction by a one-digit whole number and by another fraction.",
-      "vocabulary": [
-        "divide",
-        "reciprocal",
-        "invert",
-        "divisor",
-        "dividend",
-        "quotient",
-        "how many times",
-        "numerator",
-        "denominator"
-      ],
-      "priorLessons": [
-        21,
-        22
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
-    },
-    {
-      "id": "b7-math-t1-l24",
-      "number": 24,
-      "week": 12,
-      "unitId": "fractions",
-      "title": "Dividing Quantities and Fractions by Fractions",
-      "durationMin": 60,
-      "strand": "Number",
-      "subStrand": "Fractions",
-      "contentStandard": {
-        "code": "B7.1.3.3",
-        "text": "Demonstrate an understanding of the process of multiplying and dividing positive fractions and apply this in solving problems."
-      },
-      "indicator": {
-        "code": "B7.1.3.3.4",
-        "text": "Determine the result of dividing a quantity (i.e. money or objects) or a fraction by a fraction."
-      },
-      "learningGoal": "Learners determine the result of dividing a quantity of money or objects, or a fraction, by a fraction.",
-      "vocabulary": [
-        "divide",
-        "quantity",
-        "reciprocal",
-        "quotient",
-        "share",
-        "portion",
-        "unit",
-        "context",
-        "interpret"
-      ],
-      "priorLessons": [
-        23
-      ],
-      "phaseMinutes": {
-        "engage": 8,
-        "explore": 16,
-        "explain": 14,
-        "elaborate": 12,
-        "evaluate": 10
-      },
-      "widgetId": null
+      "lessons": [
+        {
+          "id": "b8-science-t1-l01",
+          "number": 1,
+          "week": 1,
+          "unitId": "unit-01",
+          "title": "Types of Mixtures",
+          "durationMin": 60,
+          "strand": "Diversity of Matter",
+          "subStrand": "Mixtures",
+          "contentStandard": {
+            "code": "B8.1.1.1",
+            "text": "Demonstrate knowledge of types of mixtures, and understanding of the processes of scientific ways of separating the components of mixtures"
+          },
+          "indicator": {
+            "code": "B8.1.1.1.1",
+            "text": "Identify types of mixtures by name and characteristics"
+          },
+          "learningGoal": "Learners identify types of mixtures by name and characteristics.",
+          "vocabulary": [
+            "mixture",
+            "solution",
+            "solute",
+            "solvent",
+            "suspension",
+            "colloid",
+            "homogeneous",
+            "heterogeneous",
+            "alloy",
+            "emulsion"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": "mixtures",
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l02",
+          "number": 2,
+          "week": 1,
+          "unitId": "unit-01",
+          "title": "Investigating Mixtures Practically",
+          "durationMin": 60,
+          "strand": "Diversity of Matter",
+          "subStrand": "Mixtures",
+          "contentStandard": {
+            "code": "B8.1.1.1",
+            "text": "Demonstrate knowledge of types of mixtures, and understanding of the processes of scientific ways of separating the components of mixtures"
+          },
+          "indicator": {
+            "code": "B8.1.1.1.1",
+            "text": "Identify types of mixtures by name and characteristics"
+          },
+          "learningGoal": "Learners investigate the characteristics of mixtures and classify unfamiliar samples.",
+          "vocabulary": [
+            "mixture",
+            "solution",
+            "suspension",
+            "colloid",
+            "particle",
+            "scatter",
+            "transparent",
+            "residue",
+            "filter",
+            "dissolve"
+          ],
+          "priorLessons": [
+            1
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": "mixtures",
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l03",
+          "number": 3,
+          "week": 2,
+          "unitId": "unit-02",
+          "title": "Separating Mixtures — The Methods",
+          "durationMin": 60,
+          "strand": "Diversity of Matter",
+          "subStrand": "Separation of Mixtures",
+          "contentStandard": {
+            "code": "B8.1.1.1",
+            "text": "Demonstrate knowledge of types of mixtures, and understanding of the processes of scientific ways of separating the components of mixtures"
+          },
+          "indicator": {
+            "code": "B8.1.1.1.2",
+            "text": "Design and perform processes for separating kinds of mixtures"
+          },
+          "learningGoal": "Learners design and perform processes for separating kinds of mixtures.",
+          "vocabulary": [
+            "separate",
+            "filtration",
+            "evaporation",
+            "decanting",
+            "distillation",
+            "magnetic separation",
+            "sieving",
+            "residue",
+            "filtrate",
+            "solvent"
+          ],
+          "priorLessons": [
+            1,
+            2
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l04",
+          "number": 4,
+          "week": 2,
+          "unitId": "unit-02",
+          "title": "Separation Practical — Recover the Salt",
+          "durationMin": 60,
+          "strand": "Diversity of Matter",
+          "subStrand": "Separation of Mixtures",
+          "contentStandard": {
+            "code": "B8.1.1.1",
+            "text": "Demonstrate knowledge of types of mixtures, and understanding of the processes of scientific ways of separating the components of mixtures"
+          },
+          "indicator": {
+            "code": "B8.1.1.1.2",
+            "text": "Design and perform processes for separating kinds of mixtures"
+          },
+          "learningGoal": "Learners design and perform a sequence to separate a three-component mixture and recover each part.",
+          "vocabulary": [
+            "dissolve",
+            "filter",
+            "residue",
+            "filtrate",
+            "evaporate",
+            "crystallise",
+            "recover",
+            "sequence",
+            "yield"
+          ],
+          "priorLessons": [
+            3
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l05",
+          "number": 5,
+          "week": 3,
+          "unitId": "unit-03",
+          "title": "The Carbon Cycle",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "The Carbon Cycle",
+          "contentStandard": {
+            "code": "B8.2.1.1",
+            "text": "Demonstrate understanding of the process of Carbon cycle as an example of repeated pattern of change in nature and how it relates to the environment"
+          },
+          "indicator": {
+            "code": "B8.2.1.1.1",
+            "text": "Explain the process of the carbon cycle"
+          },
+          "learningGoal": "Learners explain the process of the carbon cycle.",
+          "vocabulary": [
+            "carbon cycle",
+            "photosynthesis",
+            "respiration",
+            "decomposition",
+            "combustion",
+            "carbon dioxide",
+            "fossil fuel",
+            "carbon sink",
+            "atmosphere",
+            "glucose"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l06",
+          "number": 6,
+          "week": 3,
+          "unitId": "unit-03",
+          "title": "Why the Carbon Cycle Matters",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "The Carbon Cycle",
+          "contentStandard": {
+            "code": "B8.2.1.1",
+            "text": "Demonstrate understanding of the process of Carbon cycle as an example of repeated pattern of change in nature and how it relates to the environment"
+          },
+          "indicator": {
+            "code": "B8.2.1.1.2",
+            "text": "Describe the role of the carbon cycle to the environment"
+          },
+          "learningGoal": "Learners describe the role of the carbon cycle to the environment.",
+          "vocabulary": [
+            "climate change",
+            "greenhouse gas",
+            "deforestation",
+            "carbon sink",
+            "fossil fuel",
+            "sustainable",
+            "balance",
+            "concentration"
+          ],
+          "priorLessons": [
+            5
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l07",
+          "number": 7,
+          "week": 4,
+          "unitId": "unit-04",
+          "title": "The Life Cycle of the Anopheles Mosquito",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Life Cycle of the Anopheles Mosquito",
+          "contentStandard": {
+            "code": "B8.2.2.1",
+            "text": "Demonstrate an activity to show the life cycle of the Anopheles mosquito and show how the effects of the mosquito on humans can be managed"
+          },
+          "indicator": {
+            "code": "B8.2.2.1.1",
+            "text": "Describe the life cycle and economic importance of the Anopheles mosquito"
+          },
+          "learningGoal": "Learners describe the life cycle and economic importance of the Anopheles mosquito.",
+          "vocabulary": [
+            "life cycle",
+            "egg",
+            "larva",
+            "pupa",
+            "adult",
+            "metamorphosis",
+            "breeding site",
+            "stagnant water",
+            "Anopheles",
+            "vector"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l08",
+          "number": 8,
+          "week": 4,
+          "unitId": "unit-04",
+          "title": "Controlling the Malaria Mosquito",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Life Cycle of the Anopheles Mosquito",
+          "contentStandard": {
+            "code": "B8.2.2.1",
+            "text": "Demonstrate an activity to show the life cycle of the Anopheles mosquito and show how the effects of the mosquito on humans can be managed"
+          },
+          "indicator": {
+            "code": "B8.2.2.1.2",
+            "text": "Discuss the impact of the Anopheles mosquito on humans and how it can be controlled"
+          },
+          "learningGoal": "Learners discuss the impact of the Anopheles mosquito on humans and how it can be controlled.",
+          "vocabulary": [
+            "malaria",
+            "vector",
+            "control",
+            "larvicide",
+            "insecticide-treated net",
+            "drainage",
+            "breeding site",
+            "prevention",
+            "parasite",
+            "Plasmodium"
+          ],
+          "priorLessons": [
+            7
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l09",
+          "number": 9,
+          "week": 5,
+          "unitId": "unit-05",
+          "title": "Parts of a Mammalian Tooth",
+          "durationMin": 60,
+          "strand": "Systems",
+          "subStrand": "Mammalian Tooth",
+          "contentStandard": {
+            "code": "B8.3.1.1",
+            "text": "Demonstrate knowledge of parts of mammalian tooth and the functions of the different types of teeth in relation to feeding in man"
+          },
+          "indicator": {
+            "code": "B8.3.1.1.1",
+            "text": "Identify parts of a mammalian tooth"
+          },
+          "learningGoal": "Learners identify the parts of a mammalian tooth.",
+          "vocabulary": [
+            "enamel",
+            "dentin",
+            "pulp",
+            "cementum",
+            "crown",
+            "root",
+            "gum",
+            "nerve",
+            "blood vessel",
+            "jawbone"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l10",
+          "number": 10,
+          "week": 5,
+          "unitId": "unit-05",
+          "title": "Types of Teeth and What They Do",
+          "durationMin": 60,
+          "strand": "Systems",
+          "subStrand": "Mammalian Tooth",
+          "contentStandard": {
+            "code": "B8.3.1.1",
+            "text": "Demonstrate knowledge of parts of mammalian tooth and the functions of the different types of teeth in relation to feeding in man"
+          },
+          "indicator": {
+            "code": "B8.3.1.1.2",
+            "text": "Discuss the functions of the different types of teeth such as incisors, canines, premolars, and molars"
+          },
+          "learningGoal": "Learners discuss the functions of the different types of teeth — incisors, canines, premolars and molars.",
+          "vocabulary": [
+            "incisor",
+            "canine",
+            "premolar",
+            "molar",
+            "bite",
+            "tear",
+            "crush",
+            "grind",
+            "milk teeth",
+            "permanent teeth"
+          ],
+          "priorLessons": [
+            9
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l11",
+          "number": 11,
+          "week": 6,
+          "unitId": "unit-06",
+          "title": "Tooth Decay — Causes",
+          "durationMin": 60,
+          "strand": "Systems",
+          "subStrand": "Tooth and Gum Decay",
+          "contentStandard": {
+            "code": "B8.3.1.1",
+            "text": "Demonstrate knowledge of parts of mammalian tooth and the functions of the different types of teeth in relation to feeding in man"
+          },
+          "indicator": {
+            "code": "B8.3.1.1.3",
+            "text": "Explain the causes and prevention of tooth and gum decay"
+          },
+          "learningGoal": "Learners explain the causes of tooth and gum decay.",
+          "vocabulary": [
+            "decay",
+            "plaque",
+            "bacteria",
+            "acid",
+            "enamel",
+            "sugar",
+            "gum disease",
+            "gingivitis",
+            "tartar",
+            "ferment"
+          ],
+          "priorLessons": [
+            9,
+            10
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l12",
+          "number": 12,
+          "week": 6,
+          "unitId": "unit-06",
+          "title": "Preventing Tooth and Gum Decay",
+          "durationMin": 60,
+          "strand": "Systems",
+          "subStrand": "Tooth and Gum Decay",
+          "contentStandard": {
+            "code": "B8.3.1.1",
+            "text": "Demonstrate knowledge of parts of mammalian tooth and the functions of the different types of teeth in relation to feeding in man"
+          },
+          "indicator": {
+            "code": "B8.3.1.1.3",
+            "text": "Explain the causes and prevention of tooth and gum decay"
+          },
+          "learningGoal": "Learners explain how tooth and gum decay is prevented and plan a dental health campaign.",
+          "vocabulary": [
+            "fluoride",
+            "brushing",
+            "flossing",
+            "plaque",
+            "diet",
+            "check-up",
+            "prevention",
+            "hygiene",
+            "campaign"
+          ],
+          "priorLessons": [
+            11
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l13",
+          "number": 13,
+          "week": 7,
+          "unitId": "unit-07",
+          "title": "Energy Conversion",
+          "durationMin": 60,
+          "strand": "Forces and Energy",
+          "subStrand": "Energy Conversion",
+          "contentStandard": {
+            "code": "B8.4.1.1",
+            "text": "Demonstrate the skill to evaluate the conversion of energy from one form to another"
+          },
+          "indicator": {
+            "code": "B8.4.1.1.1",
+            "text": "Describe energy conversion"
+          },
+          "learningGoal": "Learners describe energy conversion.",
+          "vocabulary": [
+            "energy",
+            "conversion",
+            "transformation",
+            "chemical",
+            "electrical",
+            "heat",
+            "light",
+            "sound",
+            "kinetic",
+            "potential"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l14",
+          "number": 14,
+          "week": 7,
+          "unitId": "unit-07",
+          "title": "Why Energy Conversion Matters",
+          "durationMin": 60,
+          "strand": "Forces and Energy",
+          "subStrand": "Energy Conversion",
+          "contentStandard": {
+            "code": "B8.4.1.1",
+            "text": "Demonstrate the skill to evaluate the conversion of energy from one form to another"
+          },
+          "indicator": {
+            "code": "B8.4.1.1.2",
+            "text": "Discuss the importance of conversion of energy"
+          },
+          "learningGoal": "Learners discuss the importance of conversion of energy.",
+          "vocabulary": [
+            "conversion",
+            "efficiency",
+            "wasted energy",
+            "useful energy",
+            "fuel",
+            "cost",
+            "conservation",
+            "device"
+          ],
+          "priorLessons": [
+            13
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l15",
+          "number": 15,
+          "week": 8,
+          "unitId": "unit-08",
+          "title": "Renewable and Non-Renewable Energy",
+          "durationMin": 60,
+          "strand": "Forces and Energy",
+          "subStrand": "Renewable and Non-Renewable Energy",
+          "contentStandard": {
+            "code": "B8.4.1.2",
+            "text": "Show an understanding of the sources of renewable energy and how to manage these sources in a sustainable manner"
+          },
+          "indicator": {
+            "code": "B8.4.1.2.1",
+            "text": "Describe renewable and non-renewable forms of energy"
+          },
+          "learningGoal": "Learners describe renewable and non-renewable forms of energy.",
+          "vocabulary": [
+            "renewable",
+            "non-renewable",
+            "solar",
+            "wind",
+            "hydro",
+            "biomass",
+            "geothermal",
+            "fossil fuel",
+            "charcoal",
+            "finite"
+          ],
+          "priorLessons": [
+            13,
+            14
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l16",
+          "number": 16,
+          "week": 8,
+          "unitId": "unit-08",
+          "title": "Managing Renewable Energy Sustainably",
+          "durationMin": 60,
+          "strand": "Forces and Energy",
+          "subStrand": "Renewable and Non-Renewable Energy",
+          "contentStandard": {
+            "code": "B8.4.1.2",
+            "text": "Show an understanding of the sources of renewable energy and how to manage these sources in a sustainable manner"
+          },
+          "indicator": {
+            "code": "B8.4.1.2.2",
+            "text": "Demonstrate how to manage sources of renewable energy sustainably"
+          },
+          "learningGoal": "Learners demonstrate how to manage sources of renewable energy sustainably.",
+          "vocabulary": [
+            "sustainable",
+            "manage",
+            "replant",
+            "efficient stove",
+            "maintenance",
+            "solar",
+            "biogas",
+            "woodlot",
+            "agroforestry",
+            "conservation"
+          ],
+          "priorLessons": [
+            15
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l17",
+          "number": 17,
+          "week": 9,
+          "unitId": "unit-09",
+          "title": "Heat and Temperature",
+          "durationMin": 60,
+          "strand": "Forces and Energy",
+          "subStrand": "Heat and Temperature",
+          "contentStandard": {
+            "code": "B8.4.1.3",
+            "text": "Demonstrate an understanding of the relationship between heat and temperature"
+          },
+          "indicator": {
+            "code": "B8.4.1.3.1",
+            "text": "Discuss the differences and the relationship between heat and temperature in the environment"
+          },
+          "learningGoal": "Learners discuss the differences and the relationship between heat and temperature in the environment.",
+          "vocabulary": [
+            "heat",
+            "temperature",
+            "thermal energy",
+            "degrees Celsius",
+            "thermometer",
+            "conduction",
+            "convection",
+            "radiation",
+            "absorb",
+            "transfer"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l18",
+          "number": 18,
+          "week": 9,
+          "unitId": "unit-09",
+          "title": "Measuring Heat Transfer",
+          "durationMin": 60,
+          "strand": "Forces and Energy",
+          "subStrand": "Heat and Temperature",
+          "contentStandard": {
+            "code": "B8.4.1.3",
+            "text": "Demonstrate an understanding of the relationship between heat and temperature"
+          },
+          "indicator": {
+            "code": "B8.4.1.3.1",
+            "text": "Discuss the differences and the relationship between heat and temperature in the environment"
+          },
+          "learningGoal": "Learners investigate how heat moves and relate their findings to the environment.",
+          "vocabulary": [
+            "conduction",
+            "convection",
+            "radiation",
+            "conductor",
+            "insulator",
+            "sea breeze",
+            "greenhouse",
+            "absorb",
+            "emit"
+          ],
+          "priorLessons": [
+            17
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l19",
+          "number": 19,
+          "week": 10,
+          "unitId": "unit-10",
+          "title": "Sustainable Waste Management",
+          "durationMin": 60,
+          "strand": "Humans and the Environment",
+          "subStrand": "Waste Management Practices",
+          "contentStandard": {
+            "code": "B8.5.1.1",
+            "text": "Demonstrate knowledge of waste management systems and apply it in an environment"
+          },
+          "indicator": {
+            "code": "B8.5.1.1.1",
+            "text": "Explain sustainable waste management practices"
+          },
+          "learningGoal": "Learners explain sustainable waste management practices.",
+          "vocabulary": [
+            "waste",
+            "biodegradable",
+            "non-biodegradable",
+            "recycle",
+            "reuse",
+            "reduce",
+            "compost",
+            "landfill",
+            "leachate",
+            "sustainable"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l20",
+          "number": 20,
+          "week": 10,
+          "unitId": "unit-10",
+          "title": "Managing Waste in the Community",
+          "durationMin": 60,
+          "strand": "Humans and the Environment",
+          "subStrand": "Waste Management Practices",
+          "contentStandard": {
+            "code": "B8.5.1.1",
+            "text": "Demonstrate knowledge of waste management systems and apply it in an environment"
+          },
+          "indicator": {
+            "code": "B8.5.1.1.2",
+            "text": "Apply knowledge of waste management practices to manage waste in a community"
+          },
+          "learningGoal": "Learners apply knowledge of waste management practices to manage waste in a community.",
+          "vocabulary": [
+            "community",
+            "collection",
+            "segregation",
+            "compost",
+            "recycling",
+            "dump site",
+            "drainage",
+            "sanitation",
+            "stakeholder",
+            "campaign"
+          ],
+          "priorLessons": [
+            19
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l21",
+          "number": 21,
+          "week": 11,
+          "unitId": "unit-11",
+          "title": "Communicable Diseases — Symptoms and Prevention",
+          "durationMin": 60,
+          "strand": "Humans and the Environment",
+          "subStrand": "Communicable Diseases",
+          "contentStandard": {
+            "code": "B8.5.2.1",
+            "text": "Demonstrate knowledge of common communicable diseases, such as Hepatitis, of humans, causes, symptoms, effects and their prevention"
+          },
+          "indicator": {
+            "code": "B8.5.2.1.1",
+            "text": "Explain the symptoms, effects and prevention of common communicable diseases"
+          },
+          "learningGoal": "Learners explain the symptoms, effects and prevention of common communicable diseases.",
+          "vocabulary": [
+            "communicable",
+            "pathogen",
+            "transmission",
+            "symptom",
+            "incubation",
+            "vaccine",
+            "hygiene",
+            "cholera",
+            "typhoid",
+            "hepatitis",
+            "tuberculosis",
+            "HIV"
+          ],
+          "priorLessons": [
+            7,
+            8,
+            19,
+            20
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l22",
+          "number": 22,
+          "week": 11,
+          "unitId": "unit-11",
+          "title": "Risk Factors for Communicable Disease",
+          "durationMin": 60,
+          "strand": "Humans and the Environment",
+          "subStrand": "Communicable Diseases",
+          "contentStandard": {
+            "code": "B8.5.2.1",
+            "text": "Demonstrate knowledge of common communicable diseases, such as Hepatitis, of humans, causes, symptoms, effects and their prevention"
+          },
+          "indicator": {
+            "code": "B8.5.2.1.2",
+            "text": "Analyse the risk factors of communicable diseases"
+          },
+          "learningGoal": "Learners analyse the risk factors of communicable diseases.",
+          "vocabulary": [
+            "risk factor",
+            "sanitation",
+            "overcrowding",
+            "malnutrition",
+            "safe water",
+            "vaccination",
+            "vector",
+            "immunity",
+            "outbreak",
+            "vulnerable"
+          ],
+          "priorLessons": [
+            21
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l23",
+          "number": 23,
+          "week": 12,
+          "unitId": "unit-12",
+          "title": "Seed Beds for Planting Crops",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Crop Production",
+          "contentStandard": {
+            "code": "B8.2.3.1",
+            "text": "Demonstrate knowledge and skills in planting crops on different seed beds"
+          },
+          "indicator": {
+            "code": "B8.2.3.1.1",
+            "text": "Explore the different seed beds for planting crops in your community"
+          },
+          "learningGoal": "Learners explore the different seed beds for planting crops in their community.",
+          "vocabulary": [
+            "seed bed",
+            "flat bed",
+            "raised bed",
+            "sunken bed",
+            "mound",
+            "ridge",
+            "drainage",
+            "aeration",
+            "topsoil",
+            "spacing"
+          ],
+          "priorLessons": [],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l24",
+          "number": 24,
+          "week": 12,
+          "unitId": "unit-12",
+          "title": "Comparing Crop Growth in Different Seed Beds",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Crop Production",
+          "contentStandard": {
+            "code": "B8.2.3.2",
+            "text": "Demonstrate understanding of the differences in height, size, and flowering of crops grown in different seed beds"
+          },
+          "indicator": {
+            "code": "B8.2.3.2.1",
+            "text": "Compare and contrast the differences in height, size, and flowering of crops grown in different seed beds"
+          },
+          "learningGoal": "Learners compare and contrast the differences in height, size, and flowering of crops grown in different seed beds.",
+          "vocabulary": [
+            "height",
+            "size",
+            "flowering",
+            "yield",
+            "variable",
+            "control",
+            "fair test",
+            "measure",
+            "compare",
+            "record"
+          ],
+          "priorLessons": [
+            23
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l25",
+          "number": 25,
+          "week": 13,
+          "unitId": "unit-13",
+          "title": "Types of Animal Feed",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Animal Production",
+          "contentStandard": {
+            "code": "B8.2.4.1",
+            "text": "Recognise the different types of feed for different types of animals"
+          },
+          "indicator": {
+            "code": "B8.2.4.1.1",
+            "text": "Compare and contrast the different types of feed for different types of animals"
+          },
+          "learningGoal": "Learners compare and contrast the different types of feed for different types of animals.",
+          "vocabulary": [
+            "feed",
+            "forage",
+            "concentrate",
+            "roughage",
+            "supplement",
+            "ruminant",
+            "monogastric",
+            "poultry",
+            "protein",
+            "energy"
+          ],
+          "priorLessons": [
+            23,
+            24
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        },
+        {
+          "id": "b8-science-t1-l26",
+          "number": 26,
+          "week": 13,
+          "unitId": "unit-13",
+          "title": "Water and Feed for Animal Growth",
+          "durationMin": 60,
+          "strand": "Cycles",
+          "subStrand": "Animal Production",
+          "contentStandard": {
+            "code": "B8.2.4.2",
+            "text": "Demonstrate understanding of the importance of water and animal feed to the growth of animals"
+          },
+          "indicator": {
+            "code": "B8.2.4.2.1",
+            "text": "Explain the importance of water and animal feed to the growth of animals"
+          },
+          "learningGoal": "Learners explain the importance of water and animal feed to the growth of animals.",
+          "vocabulary": [
+            "growth",
+            "water",
+            "dehydration",
+            "metabolism",
+            "digestion",
+            "nutrient",
+            "ration",
+            "weight gain",
+            "maintenance",
+            "production"
+          ],
+          "priorLessons": [
+            25
+          ],
+          "phaseMinutes": {
+            "engage": 8,
+            "explore": 16,
+            "explain": 14,
+            "elaborate": 12,
+            "evaluate": 10
+          },
+          "widgetId": null,
+          "review": null
+        }
+      ]
     }
   ]
 }

@@ -20,12 +20,15 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-      - name: Install and test the public app
+      - name: Install, regenerate and test the public app
         run: |
           npm ci
+          npm run catalog
+          git diff --exit-code -- src/data/public-catalog.json
           npm run format:check
           npm test
           npm run build
+          python tools/check_public_build.py
       # Raw audit --check verifies only a documented known-bad baseline.
       # The public catalogue tests enforce a narrower content allowlist.
       # Neither check approves full lessons, assessments or school data.

@@ -20,11 +20,7 @@ import {
   Target,
   X,
 } from "lucide-react";
-import catalog from "../data/public-catalog.json";
 
-const byNumber = new Map(
-  catalog.lessons.map((lesson) => [lesson.number, lesson]),
-);
 const TYPES = {
   indicator: {
     icon: Target,
@@ -47,7 +43,8 @@ function shortLabel(label, max = 5) {
   return words.length > max ? `${words.slice(0, max).join(" ")}…` : label;
 }
 
-function buildDiagram(lesson) {
+function buildDiagram(lesson, lessons) {
+  const byNumber = new Map(lessons.map((item) => [item.number, item]));
   const nodes = [];
   const edges = [];
   const add = (id, kind, label, detail, x, y, extra = {}) => {
@@ -72,7 +69,7 @@ function buildDiagram(lesson) {
     });
   };
   add("root", "indicator", lesson.title, lesson.indicator.text, 390, 220, {
-    code: lesson.indicator.code,
+    code: lesson.indicator.code || "Mapping under review",
   });
   const prior = lesson.priorLessons.slice(-3);
   if (prior.length) {
@@ -95,7 +92,7 @@ function buildDiagram(lesson) {
       "prior-general",
       "prerequisite",
       "What you already know",
-      "Start with your experience of numbers and counting.",
+      `Start with what you already know about ${lesson.strand.toLowerCase()}.`,
       20,
       184,
     );
@@ -134,7 +131,7 @@ function buildDiagram(lesson) {
     );
     connect("e-model", "root", "model");
   }
-  if (lesson.number < 24) {
+  if (lesson.number < lessons.length) {
     const next = byNumber.get(lesson.number + 1);
     add(
       "next",
@@ -175,8 +172,11 @@ function MapCard({ data, selected }) {
 
 const nodeTypes = { mapCard: MapCard };
 
-export function ConceptMap({ lesson, onOpenLesson, onOpenWidget }) {
-  const diagram = useMemo(() => buildDiagram(lesson), [lesson]);
+export function ConceptMap({ lesson, lessons, onOpenLesson, onOpenWidget }) {
+  const diagram = useMemo(
+    () => buildDiagram(lesson, lessons),
+    [lesson, lessons],
+  );
   const [nodes, setNodes, onNodesChange] = useNodesState(diagram.nodes);
   const [selected, setSelected] = useState(diagram.nodes[0].data);
   const [outline, setOutline] = useState(
@@ -313,8 +313,9 @@ export function ConceptMap({ lesson, onOpenLesson, onOpenWidget }) {
         </aside>
       </div>
       <p className="map-source-note">
-        <BookOpen size={15} /> Seeded from the public lesson overview. This
-        preview does not include teacher notes, exam questions or marking keys.
+        <BookOpen size={15} /> Seeded from this course’s public lesson overview.
+        {lesson.review ? " This source mapping needs editorial review." : ""} No
+        source assessments, teacher-only notes or marking keys are included.
       </p>
     </section>
   );
