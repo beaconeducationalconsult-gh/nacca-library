@@ -4,19 +4,21 @@
 
 | | |
 |---|---|
-| **Version** | 0.1 — draft for review |
+| **Version** | 0.2 — draft, updated after whole-repository source audit |
 | **Date** | 23 September 2026 |
-| **Status** | Discovery complete; design proposed; decisions listed in §19 |
+| **Status** | Future school product: full release blocked. A restricted, unauthenticated **public preview** of approved learner-safe B7 Maths excerpts is implemented; see [README](README.md). Source audits and open decisions remain in the [Phase-0 register](docs/phase0-decisions.md). |
 | **Stack (fixed by brief)** | React (JavaScript) · Tailwind CSS (latest) · lucide-react · Firebase · Vercel · PWA |
-| **Basis** | Four documents supplied: Basic 7 Mathematics Lesson Plan and Teaching Guide (.docx) · Basic 7 Mathematics Lesson Notes, GES format (.docx) · Basic 7 Mathematics Term 1 Assessment Tracker (.xlsx) · Basic 8 Science Term 1 Assessment Tracker (.xlsx) |
+| **Basis** | The **22 original files at discovery** (before the Phase-0 tools/docs were added): four Term 1 plan/notes/tracker sets, two curriculum PDFs, two annual-scheme PDFs, a corrected B4–B8 maths-scheme workbook, two supplementary DOCX files, two images, and this PDD. The first draft analyzed only four of these. |
 
-**How to read this document.** §1–3 explain what was found and why. §4–9 say what the product does. §10–14 say how it is built. §15–19 cover content, delivery, risk and open decisions. The appendices hold the term map, a sample lesson record, a security-rules sketch and the seed data for indicator analysis.
+**How to read this document.** This is the **longer-term school-product blueprint, not a list of features implemented today**. §1–3 explain what was found and why. §4–9 describe the future product; §10–14 its proposed architecture. §15–19 cover content, delivery, risk and open decisions. The appendices hold the term map, a sample lesson record, a security-policy checklist and indicator analysis. The [raw-source audit](docs/source-audit.json) is a known-bad baseline, not a content-approval certificate.
+
+**September 2026 launch carve-out.** The user authorized publication of learner-safe lesson/NaCCA excerpts **with attribution**, excluding tests, keys and staff notes, and directed us to **omit authentication for now**. The built public preview implements only a 24-lesson B7 Maths scheme, indicator/vocabulary/prerequisite maps, four curated ungraded models, and a 5E timing display. It has no Firebase, accounts, marks, private content, GES exports, authoring, school release controls or secure role model. See [TODO-Benched-For-Later.md](TODO-Benched-For-Later.md) before treating this PDD as a school deployment plan.
 
 **Assumptions made (please correct any that are wrong).**
 
 - **A1.** "Each component … will feature an interactive concept map" means **each lesson**, with roll-up maps at week, unit and term level.
 - **A2.** "PDD" means Product Design Document covering product, UX, data and technical design.
-- **A3.** Basic 7 Mathematics Term 1 is the only subject with full lesson content. Basic 8 Science exists only as an assessment tracker. The platform is therefore designed multi-subject, multi-class and multi-term from day one, and proven first on Mathematics.
+- **A3 (revised).** Full Term 1 lesson plans, GES notes and trackers exist for Basic 7 Mathematics (24 lessons/24 tracker indicators), Basic 7 Science (24/17), Basic 8 Mathematics (24/21), and Basic 8 Science (26/22). Their quality varies; **available does not mean approved**. No Term 2 lesson pack is present. The platform remains multi-subject/multi-class/multi-term by design, with the first approved vertical slice on Mathematics.
 - **A4.** Users are Ghanaian JHS teachers and learners (about 11–15 years old) on mostly low-to-mid-range Android phones, with unreliable connectivity, and sometimes one shared projector per classroom.
 
 ---
@@ -32,14 +34,14 @@
 
 **Four findings from the source documents that shape the design.**
 
-1. **The content is highly structured and can be modelled without loss.** A five-part indicator code (`B7.1.2.3.4`) encodes level, strand, sub-strand, content standard and indicator. Every lesson carries the same 20-odd fields across both Word documents (§2.3).
-2. **Weeks, lessons and units are not a clean hierarchy.** Unit boundaries fall *inside* Weeks 3 and 6. The scheme must therefore store the week↔lesson schedule and the unit↔lesson grouping independently (§2.2).
-3. **The source pack has data errors that would ship to learners if imported blindly.** These are ten answer keys that disagree with their printed questions, three mark totals that do not add up, and a conflict between the lesson plan and the tracker about what each unit test covers (§2.6). A **content-validation pipeline is a Phase-0 deliverable**, not an extra.
-4. **Marking schemes and exam answers cannot live in a public bundle.** Learners are the audience, so teacher-only content needs gated delivery (§10.3, §13).
+1. **The content is structured but not uniform.** A five-part indicator code (`B7.1.2.3.4`) encodes level, strand, sub-strand, content standard and indicator. Basic 7 Mathematics is 24 indicators/24 lessons; other packs legitimately repeat indicators across lessons and Basic 8 Science has 26 lessons (§2.3).
+2. **Weeks, lessons and units are independent.** Mathematics Unit boundaries fall *inside* Weeks 3 and 6, while Basic 8 Science has a 13th teaching week. A scheme stores scheduling and grouping separately (§2.2).
+3. **Raw source errors extend beyond the original four-document sample.** Eleven of 16 unit tests have question-mark sums different from their stated maxima; *all four* exams have item totals different from the trackers' 100-mark setting. Covers, weekly records and a corrected scheme also disagree (§2.6; [audit](docs/source-audit.json)). A **strict validator for approved normalized content** is a Phase-0 gate; a passing *raw-source baseline check* is not an approval.
+4. **Marking schemes and exam answers cannot live in a public bundle.** Teacher-only content needs gated delivery, including protection on shared offline devices (§10.3, §13).
 
-**Recommended MVP ("Teach Kit", Phase 1).** Sign-in and class setup → scheme of work → lesson workspace → concept map for all 24 lessons → Teach mode with 5E phase timer → offline term pack → teaching log and reflection → GES lesson-note PDF. Assessment & records follow in Phase 2, the Learner Portal in Phase 3, and Science and the authoring CMS in Phase 4. Planning estimate: about 32–40 weeks for a team of 3–4 (§17).
+**Recommended MVP ("Teach Kit", Phase 1).** Sign-in and class setup → scheme of work → lesson workspace → concept map for 24 **approved** Basic 7 Mathematics lessons → Teach mode with data-driven 5E phase timer → offline term pack → teaching log, reflection, weekly record and coverage matrix → GES lesson-note PDF. The class assessment engine follows in Phase 2; learner accounts in Phase 3; the other **existing but unapproved** subject packs and the in-app authoring CMS are Phase 4. The original 32–40 week estimate is provisional pending source corrections and scope re-estimation (§17).
 
-**Decisions needed soonest (full list in §19):** which unit-test scope is canonical (plan or tracker); author confirmation of the corrected answer keys; who owns and licenses the content; learner-account consent model; and which Vercel plan applies, since the free tier is personal and non-commercial only.
+**Decisions still needed for the full school product (full list in §19):** canonical test scope and item/section/total marks across packs; disputed schedules; author-confirmed keys; broader rights; learner data and release semantics; and hosting cost. Do not publish **full source packs, assessments, staff material or learner records** until the [decision register](docs/phase0-decisions.md) and security gates are resolved. The separately authorized *restricted public preview* follows the narrower allowlist above.
 
 ---
 
@@ -47,14 +49,16 @@
 
 ### 2.1 Inventory
 
-| # | Document | What it is | Shape | What it drives |
-|---|---|---|---|---|
-| 1 | **Lesson Plan and Teaching Guide** (Maths B7 T1) | Four parts. **A** teaching guide (curriculum alignment, philosophies, methods, inclusion, assessment plan, resources, 12 misconceptions, 30-term glossary). **B** 24 lesson plans in 4 units. **C** annexes (4 unit tests, exam, 3 rubrics, 24 observation checklists). **D** coverage matrix, weekly record, class record | 24 lessons, 13 figures | Curriculum, scheme, lesson workspace, concept maps, question banks, checklists |
-| 2 | **Lesson Notes, GES format** (same 24 lessons) | The lessons re-cut into the layout GES expects teachers to keep and submit: admin block, essential questions, per-phase competencies and DoK, closure, reflection and sign-off | 24 notes, 13 figures | Lesson-note export, teaching log, sign-off workflow |
-| 3 | **Assessment Tracker, Maths B7** (.xlsx) | Class Record (45 rows, live formulas), Indicator Analysis (24 indicators), Distribution (with chart), Settings | 4 sheets | Assessment engine, analytics |
-| 4 | **Assessment Tracker, Science B8** (.xlsx) | Same template; 22 indicators; different test maxima | 4 sheets | Proof the engine must be subject-agnostic |
+| Source group | What is present | Shape / role |
+|---|---|---|
+| **B7 Mathematics Term 1** | Lesson Plan and Teaching Guide (A teaching guide, B lessons, C tests/exam/rubrics/checklists, D records), GES Lesson Notes, Assessment Tracker | 24 lessons, 24 indicators, 13 figures; the original detailed worked example for this design |
+| **B7 Science Term 1** | The same three document types, with a different annex structure | 24 lessons, **17** tracker indicators, 16 embedded images in the plan; 5E timings 8/18/12/12/10; tracker classwork maximum 170 |
+| **B8 Mathematics Term 1** | Plan, notes and tracker | 24 lessons, **21** tracker indicators; curriculum and corrected-scheme conflicts require review |
+| **B8 Science Term 1** | Plan, notes and tracker (not just a tracker) | **26** lessons, **22** tracker indicators, **13** teaching weeks; significant marks and copied-header issues |
+| **Curriculum and schemes** | `MATHEMATICS.pdf`, `SCIENCE.pdf`; Basic 7 and Basic 8 annual-scheme PDFs; corrected B4–B8 Mathematics schemes (all three terms) workbook | Use official curriculum statements for provenance; arbitrate differences between corrected schemes, plans and trackers before import |
+| **Supporting artefacts** | Basic 7 Mathematics first-term outline, Little Gems timetable, `mind-map.png`, `plant-slide.png` | Scheduling context and static imagery; neither image is an implemented interactive map |
 
-Extracted text is roughly 170–195 K characters per Word document, so a whole subject-term is on the order of 150–200 KB of text before compression. **The entire term can be pre-downloaded for offline use.**
+The first draft studied only B7 Mathematics plan/notes/tracker and the B8 Science tracker. §§2.2–2.6 below retain that Maths worked example but must now be read alongside [the complete raw-source audit](docs/source-audit.json). Extracted lesson text is relatively small, so a validated term *may* be suitable for offline download; the ≤5 MB and performance targets must still be measured against an actual built pack.
 
 ### 2.2 Curriculum spine and code grammar
 
@@ -83,7 +87,7 @@ Content standards are three-to-four-part codes (`B7.1.1.1`), so parents can be d
 | 1.3 Fractions | B7.1.3.2 | 2 | 10 | L19–L20 | Unit 4 |
 | 1.3 Fractions | B7.1.3.3 | 4 | 11–12 | L21–L24 | Unit 4 |
 
-That is 1 strand, 3 sub-strands, 7 content standards, 24 indicators and 24 lessons: **one indicator per lesson**, two lessons per week for 12 teaching weeks, then Week 13 revision, Week 14 examination and Week 15 vacation.
+That is 1 strand, 3 sub-strands, 7 content standards, 24 indicators and 24 lessons: **one indicator per lesson for this pack**, two lessons per week for 12 teaching weeks. Its *plan* calls Week 13 revision, Week 14 examination and Week 15 vacation; the corrected scheme and PDF instead mark Week 15 as examination (S-11). The pilot calendar is **unresolved**, not hard-coded.
 
 **Design consequences.**
 
@@ -92,11 +96,11 @@ That is 1 strand, 3 sub-strands, 7 content standards, 24 indicators and 24 lesso
 - **Sequence lives in the scheme, not in the code.** In the Science tracker, Unit Test 4 covers strand 5 (waste, communicable diseases) *and* strand 2 (seed beds, animal feed), so code order is not teaching order.
 - **"Varied number of weeks per term" is data, not code.** Week count, week types (teaching, revision, assessment, vacation) and lessons per week are all configuration.
 
-**Basic 8 Science Term 1 (from the tracker only).** 22 indicators across strands 1–5, with strand and sub-strand names still to be imported from the curriculum. Assessments: UT1 (20) mixtures, carbon cycle, *Anopheles*; UT2 (20) mammalian tooth; UT3 (30) energy, heat and temperature; UT4 (30) waste, communicable disease, seed beds, animal feed. No lesson content was supplied.
+**Basic 8 Science Term 1 (tracker and lesson documents).** 22 distinct tracker indicators across strands 1–5; the supplied plan teaches these in **26 lessons over 13 teaching weeks**, sometimes two lessons per indicator. UT1 (20) covers mixtures, carbon cycle and *Anopheles*; UT2 (20) the mammalian tooth; UT3 (30) energy, heat and temperature; UT4 (30) waste, communicable disease, seed beds and animal feed. The tests' printed question marks do **not** add up to those maxima (§2.6). The strand and sub-strand names need verification against `SCIENCE.pdf` and the scheme before import.
 
 ### 2.3 Anatomy of a lesson (union of both Word documents)
 
-Every one of the 24 lessons carries the same fields. The Notes document adds the fields marked ★.
+The following describes **the 24 B7 Mathematics lessons** studied in the first draft. Its Notes document adds the fields marked ★. The other three packs have similar templates, but no importer may assume 24 lessons, one indicator per lesson, identical annexes or identical phase minutes: B7 Science uses 8/18/12/12/10; B8 Science has 26 lessons; and multi-lesson indicators occur in all three additional packs.
 
 | Group | Fields | App treatment |
 |---|---|---|
@@ -105,7 +109,7 @@ Every one of the 24 lessons carries the same fields. The Notes document adds the
 | Outcomes | Performance indicator; objectives typed **K** (knowledge), **S** (skill), **A/V** (attitude/value); core competencies (CP, CC, PL, CI seen) | Overview panel; learner-language "You will be able to…" |
 | Language | Key vocabulary; **two essential questions** ★ | Concept nodes; word wall; map roots |
 | Preparation | Prior knowledge (names earlier lessons *and* earlier grades); TLM/resources; pedagogical exemplars ★ | Prerequisite edges; prep checklist |
-| The lesson | Five **5E phases** (Engage 8 · Explore 16 · Explain 14 · Elaborate 12 · Evaluate 10 = 60 min), each with teacher activity and learner activity; per phase: core competency ★, assessment mode ★, **DoK** level ★ (DoK 1, 2, 2–3) | Teach-mode timeline; DoK analytics |
+| The lesson | Five **5E phases** (B7 Maths: Engage 8 · Explore 16 · Explain 14 · Elaborate 12 · Evaluate 10 = 60 min; **minutes are lesson data**), each with teacher activity and learner activity; per phase: core competency ★, assessment mode ★, **DoK** level ★ | Teach-mode timeline; DoK analytics |
 | Differentiation | Support (AP), Core (P), Extension (HP) | Three tabs; drives grouping suggestions |
 | Assessment | Success criteria, exit ticket, checklist code (C7.1–C7.24) | Exit-ticket capture; observation checklist |
 | Extension | Homework/project; cross-curricular links and values; lesson closure ★ | Learner homework; links panel |
@@ -132,13 +136,14 @@ Every one of the 24 lessons carries the same fields. The Notes document adds the
 
 ### 2.5 The assessment model in the trackers
 
-| Component | Code | Maths B7 max | Science B8 max | Group |
-|---|---|---:|---:|---|
-| Unit tests | UT1 / UT2 / UT3 / UT4 | 20 / 30 / 20 / 30 | 20 / 20 / 30 / 30 | Classwork |
-| Rubrics | R1 / R2 / R3 | 10 / 10 / 20 | 10 / 10 / 20 | Classwork |
-| End-of-term exam | Exam | 100 | 100 | Exam |
+| Pack | Unit-test maxima UT1/UT2/UT3/UT4 **in tracker** | Tracked rubric maxima | Classwork total | Tracker exam max |
+|---|---|---|---:|---:|
+| B7 Mathematics | 20 / 30 / 20 / 30 | R1/R2/R3 = 10 / 10 / 20 | 140 | 100 |
+| B7 Science | 20 / 20 / 30 / 20 | R1/R3/R4/R6/R7 = 10 / 20 / 10 / 20 / 20 | **170** | 100 |
+| B8 Mathematics | 20 / 20 / 30 / 30 | R1/R2/R3 = 10 / 10 / 20 | 140 | 100 |
+| B8 Science | 20 / 20 / 30 / 30 | R1/R2/R3 = 10 / 10 / 20 | 140 | 100 |
 
-Classwork maxima total 140 in both subjects. The calculation logic recovered from the spreadsheet formulas:
+These are *spreadsheet settings*, **not approved exam or test totals**. In particular B8 Mathematics Part C declares UT2/UT3 as 30/20, versus 20/30 in its tracker. The following calculation logic was recovered from the B7 Mathematics spreadsheet; the other trackers use the same approach with their own maxima:
 
 - `Classwork % = (UT1+UT2+UT3+UT4+R1+R2+R3) / 140 × 100`
 - `Exam % = Exam / 100 × 100`
@@ -151,7 +156,7 @@ Classwork maxima total 140 in both subjects. The calculation logic recovered fro
 
 Two behaviours the app should **improve rather than copy**:
 
-1. The classwork denominator is fixed at 140, so a learner with only UT1 entered shows a misleadingly low classwork %. The app will show **provisional** vs **final** marks (§8.2).
+1. The classwork denominator is fixed at the pack's configured maximum (**140 or 170 here**), so a learner with only UT1 entered shows a misleadingly low classwork %. The app will show **provisional** vs **final** marks (§8.2).
 2. The "below 40%" follow-up count is hard-coded while the pass mark is configurable. The app makes every threshold a setting.
 
 ### 2.6 Source-data issues to resolve before import
@@ -169,6 +174,22 @@ I re-computed every answer in the four unit tests and the exam, and checked mark
 | **S-07** | Low | Plan A2 labels all four units "Unit 1". D1's key says checklists are "C6" (they are in C4). D2 mentions **R4** (only R1–R3 exist). Four unit products exist but only three rubrics, and the product↔rubric mapping is not stated | A2, D1, D2, C3 |
 | **S-08** | Low | **Figure 1.1 mis-groups digits.** The rendered figure shows 2 486 309 175 as 248 · 630 · 917 · 5, grouping from the left instead of periods from the right. A static figure is teaching the wrong periods | Figure image 1 |
 | **S-09** | Info | Week 12 was duplicated in the circulated scheme; the authors corrected it. Keep it as a permanent validator rule | Plan A1.3 |
+| **S-10** | **Blocker** | Across all four packs, **11 of 16 unit tests** have printed question marks inconsistent with their stated totals. Every exam's question marks differ from the tracker's 100-mark expectation. B8 Maths UT2/UT3 maxima additionally disagree between its plan and tracker | [Raw-source audit](docs/source-audit.json), all plans Part C and trackers `Class Record` row 4 |
+| **S-11** | High | B8 Mathematics Week 12 teaches gradient in its plan and tracker, but angles in `B8 CORRECTED` (Mismatch Register M26). B7 Mathematics Week 15 is vacation in its plan, examination in `B7 CORRECTED` and the scheme PDF | Plans A1.1/D2; corrected workbook rows 13/16 |
+| **S-12** | High | B8 plan covers and weekly records retain B7/Mathematics text. B8 Science notes have L25 and L26 labelled “of 24”; several notes have wrong class or subject headers. B7 Science D1.1 says 14 indicators while its matrix and tracker list 17 | Plans covers/A6/D2/D1; Notes covers and lesson headings |
+| **S-13** | Medium | Lesson/indicator cardinality and 5E splits vary legitimately by pack. The Maths-specific “exactly once” rule would reject 24 B7 Science lessons/17 indicators, 24 B8 Mathematics lessons/21 indicators, and 26 B8 Science lessons/22 indicators | All plans D1 and Part B; §15 rule V2 must be scoped |
+| **S-14** | Medium | Several documents cite a February 2020, B7–10 curriculum even though the supplied Maths and Science PDFs' covers identify September 2020, B7–B9 | Plan/notes citations; curriculum PDF covers |
+
+**Additional mark-total evidence (all figures sum the marks printed on the actual questions):**
+
+| Pack | UT1 / UT2 / UT3 / UT4 item sums | Exam item sum | Tracker exam maximum |
+|---|---|---:|---:|
+| B7 Mathematics | 20 / **29** / 20 / **37** | **50** | 100 |
+| B7 Science | **24** / 20 / 30 / **24** | **70** (paper claims 50) | 100 |
+| B8 Mathematics | 20 / **34** / **22** / **31** | **79** | 100 |
+| B8 Science | **28** / **29** / **32** / **43** | **78** | 100 |
+
+These counts do not themselves decide whether the questions, their marks, or the spreadsheet settings should change. A subject author must approve each correction before import. `tools/source_audit.py` reproduces the inventory from the original, unchanged DOCX/XLSX; CI only guards against unreviewed changes to that **known-bad raw-source baseline**, not against publication of bad normalized content.
 
 **S-02 detail** (each key fits ¾ or the corrected value, which suggests a typing/substitution fault rather than a marking fault):
 
@@ -185,7 +206,7 @@ I re-computed every answer in the four unit tests and the exam, and checked mark
 | Exam Q7 | ⅔ of GH₵ 240 | A (GH₵ 180) | GH₵ 160, which is option D (key is for ¾) |
 | Exam Q8 | 6 ÷ ¼ | D (8) | 24, which is option C (key is for 6 ÷ ¾) |
 
-The good news: a **math linter** that parses fractions and re-evaluates every keyed question and worked example would have caught all ten automatically. It is a core deliverable (§15).
+An **exact-arithmetic math linter** can catch structured fraction and calculation errors, but “write a number in words”, visual models and open-ended explanations are not automatically verified by a fraction parser. Use typed item data and independent human review for those. Math-lint and item-total checks remain core deliverables (§15).
 
 ---
 
@@ -267,11 +288,11 @@ Roles are enforced in three places: Firebase Auth custom claims, Firestore secur
 
 | Phase | Theme | Must | Should | Could |
 |---|---|---|---|---|
-| **0** | Discovery and content foundations | Resolved S-01–S-04; validated JSON for Maths B7 T1; schema; design system; spikes | Concept-map prototype on 3 lessons | — |
-| **1 — MVP "Teach Kit"** | Teacher can plan, teach and record | Auth and school/class setup; curriculum + scheme; lesson workspace; concept maps for 24 lessons; Teach mode; offline pack; teaching log + reflection; GES lesson-note PDF; 4 core widgets | DOCX export; prep checklist; glossary | Personal overlays |
-| **2** | Assessment and records | Class record; settings; grade/distribution; summary; indicator analysis (manual + item-level); weekly record; coverage matrix | Rubrics; XLSX import/export; HoD sign-off | Item statistics |
-| **3** | Learner Portal | Learner login; released lessons; learner concept-map lens; "I can" ticks; exit-ticket quizzes; offline | All 13 widgets; homework; word wall; per-indicator progress | Parent view; revision mode |
-| **4** | Scale | Science B8 T1 content; second subject proven | Authoring CMS; term and unit maps; usage dashboard | Home-language glossary; district roll-ups |
+| **0** | Discovery and content foundations | Audit all four existing packs; resolve the **B7 Maths** item/answer/schedule blockers with the author; validate normalized B7 Maths JSON; schema and design spikes; decisions C1–C4 logged | Map prototype on 3 approved lessons; reconciliation plan for other packs | — |
+| **1 — MVP "Teach Kit"** | Teacher can plan, teach and record | Auth and school/class setup; curriculum + scheme; lesson workspace; maps for **24 approved Maths lessons**; Teach mode; offline pack; teaching log + reflection; **weekly record and coverage matrix**; GES lesson-note PDF; 4 widgets | DOCX export; prep checklist; glossary | Personal overlays |
+| **2** | Assessment and expanded records | Class record; settings; grade/distribution; summary; indicator analysis (manual + item-level); XLSX record export/import; HoD sign-off | Rubrics; term-end pack | Item statistics |
+| **3** | Learner Portal | Learner login; lessons released for display (CDN pack is not secret); learner map lens; "I can" ticks; practice/exit-ticket quizzes; offline | All 13 Maths widgets; homework; word wall; per-indicator progress | Parent view; revision mode |
+| **4** | Scale | **Reconcile, validate and import the existing B7 Science, B8 Mathematics and B8 Science Term 1 sources**; ship a second approved subject without engine/schema changes | In-app authoring CMS; week/unit/term maps; usage dashboard | Home-language glossary; district roll-ups |
 
 ### 5.2 Explicitly out of MVP
 
@@ -281,7 +302,7 @@ Learner-facing digital tests and exams (integrity and device-parity risks), phot
 
 ## 6. Functional requirements
 
-Priority: **P0** = MVP · **P1** = next release after MVP · **P2** = later. The concept map (MAP-*) and assessment engine (ASM-*) are specified in full in §7 and §8.
+Priority is **relative to each module's release phase**, not a claim that every P0 feature ships in Phase 1: **P0** = required in its phase, **P1** = next increment, **P2** = later. §5 gives the ship phase (e.g., P0 ASM-* is Phase 2; P0 LRN-* is Phase 3). The concept map (MAP-*) and assessment engine (ASM-*) are specified in full in §7 and §8.
 
 ### 6.1 Curriculum and Scheme of Work (CUR)
 
@@ -290,7 +311,7 @@ Priority: **P0** = MVP · **P1** = next release after MVP · **P2** = later. The
 | CUR-1 | P0 | Store the curriculum spine (strand → sub-strand → content standard → indicator) with codes parsed from the grammar in §2.2. Browse and search by code or keyword |
 | CUR-2 | P0 | A **Scheme** belongs to one class + subject + term. It has *N* weeks, each typed *teaching / revision / assessment / vacation / holiday*, each with *k* lesson slots (Maths default k = 2). Week count, types and *k* are configuration |
 | CUR-3 | P0 | Week view lists each lesson with title, **strand, sub-strand, content standard, indicator(s)**, unit, and any assessment due that week |
-| CUR-4 | P0 | **Coverage validator**: flag indicators taught 0× or more than once, and content standards only partly covered. This prevents the Week 12 duplication class of error |
+| CUR-4 | P0 | **Coverage validator**: compare planned lesson↔indicator links to the approved scheme. Flag missing, unexpected or duplicated *slots* and partly covered standards. Several approved lessons may intentionally teach one indicator (e.g., B8 Science L1–L2); never enforce “one lesson per indicator” across subjects |
 | CUR-5 | P0 | **Unit** is a first-class grouping (objectives, assessed product, unit test) independent of weeks |
 | CUR-6 | P1 | Move, swap or skip a lesson; scheme re-flows; reason logged; catch-up suggestions when weeks are lost |
 | CUR-7 | P1 | Term calendar with dates and holidays; "week ending" dates derived automatically |
@@ -316,7 +337,7 @@ Priority: **P0** = MVP · **P1** = next release after MVP · **P2** = later. The
 
 | ID | Pri | Requirement |
 |---|---|---|
-| TCH-1 | P0 | Full-screen presenter view with large type. Phases are steps; the current phase shows a timer counting down its minutes (8/16/14/12/10). Visual and optional audio cue at phase end. Pause and skip. Screen wake-lock |
+| TCH-1 | P0 | Full-screen presenter view with large type. Five phase steps use **their lesson's stored minutes** (B7 Maths 8/16/14/12/10; B7 Science 8/18/12/12/10). Visual and optional audio cue at phase end. Pause, skip and screen wake-lock |
 | TCH-2 | P0 | Projector-safe by default: no answers, marking schemes or private notes on screen. Teacher notes shown on the teacher's device only, or behind a toggle |
 | TCH-3 | P0 | Launch the lesson's concept map and interactive widget inline during Engage or Explain |
 | TCH-4 | P0 | **Exit-ticket capture**: a roster grid where the teacher taps each learner into *Got it / Nearly / Not yet* (the "three piles" in the pack). Optionally tick the named success criteria |
@@ -346,7 +367,7 @@ Priority: **P0** = MVP · **P1** = next release after MVP · **P2** = later. The
 | DOC-1 | P0 | **Teaching log** per lesson slot: status (*planned / taught / moved / skipped*), date, day, period, week ending, class size boys/girls/total (from roster), notes |
 | DOC-2 | P0 | Reflection with the three prompts; "learners needing follow-up" picks from the roster and feeds the next lesson |
 | DOC-3 | P0 | **Weekly Record of Work** (Weeks 1–15) auto-generated from scheme + log: week, date, lessons, indicators taught, assessment/homework set, notes |
-| DOC-4 | P0 | **Coverage matrix** (D1) with *date taught* auto-filled; export to PDF and XLSX |
+| DOC-4 | P0 | **Coverage matrix** (D1) with *date taught* auto-filled; export to PDF in Phase 1, XLSX in Phase 2 |
 | DOC-5 | P1 | HoD review queue: remarks and e-signature; Head teacher signs the weekly record; **immutable audit trail** (who, what, when) |
 | DOC-6 | P1 | One-tap **term-end pack** for the HoD: lesson notes + weekly record + coverage matrix + class record |
 | DOC-7 | P1 | Printable scheme of learning |
@@ -368,7 +389,7 @@ Priority: **P0** = MVP · **P1** = next release after MVP · **P2** = later. The
 |---|---|---|
 | CMS-1 | P0 | Content-as-code: one JSON/YAML file per lesson in Git, schema-validated in CI, changed by pull request |
 | CMS-2 | P0 | One-off importer from the supplied DOCX/XLSX to normalised JSON, with a human-readable diff report |
-| CMS-3 | P0 | Validation suite (rules V1–V13, §15.2) blocking merge on failure |
+| CMS-3 | P0 | Strict normalized-pack validation suite (V1–V14, §15.2) blocking **content-publishing merges** on failure. Raw-source baselines only detect unreviewed changes |
 | CMS-4 | P1 | Versioned publish: learner pack to CDN, teacher pack to Firestore; teacher-visible changelog ("Lesson 18 corrected") |
 | CMS-5 | P2 | In-app editor with review workflow and concept-map editor |
 | CMS-6 | P2 | AI-assisted drafting of maps and practice items, always human-approved |
@@ -383,7 +404,7 @@ A concept map turns a lesson from a document into a structure a teacher can plan
 
 | Level | What it shows | Source of nodes | Primary user |
 |---|---|---|---|
-| **Lesson map** (24 for Maths B7 T1) | One indicator and everything around it | The lesson's own fields | Teacher (planning, projecting), learner (exploring, revising) |
+| **Lesson map** (24 for Maths B7 T1; pack-specific elsewhere) | One or more indicators and the concepts around them | The lesson's own fields | Teacher (planning, projecting), learner (exploring, revising) |
 | **Week map** | Two connected lesson maps | Lesson maps + shared nodes | Teacher |
 | **Unit map** | Sub-topic dependencies inside a unit | Lesson maps rolled up | Teacher, learner |
 | **Term map** | All 24 lessons as nodes, with prerequisite edges | Each lesson's "Prior knowledge" field | Teacher (coverage), HoD, learner (revision) |
@@ -394,7 +415,8 @@ A concept map turns a lesson from a document into a structure a teacher can plan
 
 | Node type | Meaning | Comes from | Icon (lucide-react; verify names against the installed version) | Audience |
 |---|---|---|---|---|
-| `indicator` (root) | The learning indicator, with code | Indicator field | `Target` | both |
+| `indicator` (root for a single-indicator lesson) | A learning indicator, with code | Indicator field(s) | `Target` | both |
+| `lesson` (root only for multi-indicator lessons) | A lesson theme linking all its indicators, without inventing a curriculum code | Lesson title | `BookOpen` | both |
 | `concept` | Key idea or vocabulary term with glossary definition | Key vocabulary + A9 glossary | `Lightbulb` | both |
 | `prerequisite` | Earlier lesson, earlier grade or skill | Prior knowledge | `ArrowLeftToLine` | both |
 | `question` | Essential question | Essential questions (Notes) | `CircleHelp` | both |
@@ -420,9 +442,9 @@ A concept map turns a lesson from a document into a structure a teacher can plan
 
 ### 7.3 How maps are produced
 
-1. **Seed automatically** from lesson fields: root from the indicator; concepts from vocabulary (with glossary text); prerequisites from Prior knowledge, resolving "Lesson N" references to real lesson IDs; questions from the essential questions; rules and examples from EXPLAIN-phase statements; misconceptions from A8 matched to lessons through an authored mapping table; model nodes from figure references; assessment nodes from the exit ticket and checklist; `next` from the Evaluate preview line.
+1. **Seed automatically** from lesson fields: the sole indicator is the root for a one-indicator lesson; a lesson-theme root connects every indicator in a multi-indicator lesson. Concepts come from vocabulary (with glossary text); prerequisites from Prior knowledge, resolving "Lesson N" references to IDs; questions from essential questions; rules and examples from EXPLAIN; misconceptions from an authored mapping; model nodes from figures; assessment nodes from exit tickets/checklists; `next` from the Evaluate preview.
 2. **Curate by hand.** A content editor tidies labels (≤ 8 words on the node face), removes noise, adds the connections a teacher would draw, and pins layout. Automatic seeding gives a strong first draft, not a finished map.
-3. **Lint.** Every map must pass: has one root; every non-root node is connected; all lesson references resolve; ≥ 1 prerequisite (except L1); a misconception node wherever the lesson names an error; every `model` node resolves to a widget or asset; labels within length limits.
+3. **Lint.** Every map must pass: exactly one root; all taught indicators represented; every non-root node connected; lesson references resolve; prerequisites match the approved lesson record (L1 may have prior-grade skills but no preceding pack lesson); named misconceptions represented; each `model` resolves to a widget or licensed asset; labels within length limits.
 4. **Overlay, never overwrite.** Teachers and classes can hide, add or annotate nodes in a personal overlay stored in Firestore; the canonical map stays untouched and a reset restores it.
 
 ### 7.4 Lenses and interactions
@@ -559,7 +581,7 @@ Everything the Settings sheet controls is a setting, plus the two hard-coded val
 
 | Output | Rule |
 |---|---|
-| Classwork % | `Σ scores ÷ Σ max × 100`. **Fixed mode** divides by the total of *all* classwork maxima (140), matching the spreadsheet. **Entered mode** divides by the maxima of components actually entered and marks the result **provisional** until all are in |
+| Classwork % | `Σ scores ÷ Σ max × 100`. **Fixed mode** divides by the total of *all* configured classwork maxima (**140 for B7 Maths, 170 for B7 Science**). **Entered mode** divides by maxima of components actually entered and marks the result **provisional** until all are in |
 | Exam % | `exam ÷ examMax × 100` |
 | Term % | `classwork% × wC/100 + exam% × wE/100`; **final** only when classwork is complete *and* the exam is entered |
 | Grade | Highest band whose lower bound ≤ Term %. Lookup uses the unrounded value; if display rounding would cross a boundary (49.96 shows as 50.0), the UI shows two decimals and a hint |
@@ -705,7 +727,7 @@ erDiagram
   TEACHING_LOG ||--o{ SIGNATURE : receives
 ```
 
-**Scheme sketch.** `weeks: [{ n, type: 'teaching'|'revision'|'assessment'|'vacation'|'holiday', dateStart, slots: [{ slotId, lessonId }] }]`. Twelve teaching weeks with two slots each, then revision, exam and vacation weeks, reproduces the pack. Any other length or lessons-per-week is the same structure.
+**Scheme sketch.** `{ classId, subjectId, packId, packVersion, weeks: [{ n, type: 'teaching'|'revision'|'assessment'|'vacation'|'holiday', dateStart, slots: [{ slotId, lessonId }] }] }`. B7 Mathematics has twelve teaching weeks with two slots each; B8 Science has thirteen teaching weeks. Class membership and assigned teacher/HoD must be resolvable from the scheme or its class document for every protected read and write. The expected lesson↔indicator links are pack data, not inferred from code order.
 
 ### 10.3 Storage layout and content delivery
 
@@ -714,26 +736,28 @@ erDiagram
 ```
 /users/{uid}                                        role, schoolId, displayName, locale
 /schools/{sid}                                      name, district, defaults
-/schools/{sid}/classes/{cid}                        level, name, year, teachers[], joinCodeHash
+/schools/{sid}/classes/{cid}                        level, name, year, subjectAssignments[], hodUids[]
 /schools/{sid}/classes/{cid}/learners/{lid}         name, indexNo, active, uid?   (gender optional; see §13.5)
-/schools/{sid}/schemes/{id}                         packId, packVersion, weeks[], assessment{}, status
+/schools/{sid}/schemes/{id}                         classId, subjectId, packId, packVersion, weeks[], assessment{}, status
 /schools/{sid}/schemes/{id}/log/{slotId}            status, date, period, classSize, reflection, hod{}
-/schools/{sid}/schemes/{id}/records/main            { learners: { L12: { UT1: 15, UT2: null, … } } }
-/schools/{sid}/schemes/{id}/marks/{assessmentCode}  item-level marks per learner
+/schools/{sid}/schemes/{id}/records/main            { learners: { L12: { UT1: 15, UT2: null, … } } }  (staff only)
+/schools/{sid}/schemes/{id}/marks/{assessmentCode}  item-level marks per learner (staff only)
 /schools/{sid}/schemes/{id}/checklists/{lessonId}   observation ticks
 /schools/{sid}/schemes/{id}/exitTickets/{lessonId}  { L12: 'got' | 'nearly' | 'not-yet' }
+/schools/{sid}/classes/{cid}/releases/{packId}      UI release schedule/status (not a confidentiality gate)
 /schools/{sid}/overlays/{teacherUid}/…              personal lesson and map overlays
-/learnerData/{uid}/progress/{indicatorId}           status, evidence
+/learnerData/{uid}/reportCards/{schemeId}           own-score projection (server-written, learner read-only)
+/learnerData/{uid}/progress/{indicatorId}           self-assessment status, evidence
 /learnerData/{uid}/nodeState/{mapId}                visited, ticks, notes
 /content_private/{packId}/lessons/{lessonId}        teacher-only blocks (role-gated)
-/server/learnerAuth/{lid}                           pin hash — no client access at all
-/audit/{id}                                         append-only
+/server/learnerAuth/{lid}                           PIN hash / class-code verification — no client access
+/audit/{id}                                         server-written, append-only; client access denied
 ```
 
 **Cost-aware design.** Firestore bills per document read, and Blaze has no hard spending cap ([pricing](https://firebase.google.com/pricing)). So:
 
-- The **whole class's scores are one document** (`records/main`) updated with field-path writes, so opening a class record is 1 read, not 45.
-- The roster is one cached query; teacher-only lesson blocks are one document per lesson (about 24 reads for a whole term, then served from the local cache).
+- The **whole class's scores are one staff-only document** (`records/main`) updated with field-path writes, so opening a class record is 1 read, not 45. Validate document-size/concurrent-edit limits against large classes and item-level marks; never make it readable by learners. A separately generated per-learner report card provides the “own scores” view.
+- The roster is one cached query; teacher-only lesson blocks are one document per lesson (about 24 reads for the first Maths term, then served from the local cache). Offline caches on shared devices must be isolated or cleared on account switch; Firebase rules cannot erase previously cached content.
 - Curriculum and learner-safe lesson content are **not in Firestore at all**; they are static files on the CDN.
 - Budget alerts, App Check and quota-aware queries are mandatory (§13.4).
 
@@ -744,7 +768,7 @@ erDiagram
 | **Learner pack** | Curriculum spine; scheme template; learner-audience lesson blocks; learner maps; glossary; widget config; *practice* items with keys | Static, content-hashed JSON on Vercel CDN under `/packs/{id}/{version}/` | Service-worker precache; immutable |
 | **Teacher pack** | Teacher-audience blocks; marking schemes; question banks; exam; exit-ticket keys; teacher-only map nodes | Firestore `content_private`, readable only with a teacher-or-higher claim | Firestore persistent cache after first sync |
 
-**Practice vs assessed items.** Low-stakes *practice* items ship answer keys to the device so they work offline and give instant feedback. *Assessed* items (unit tests, the exam) are never in the learner pack. This is a deliberate trade-off: a determined learner could read the practice keys, and that is acceptable because practice carries no marks.
+**Practice vs assessed items.** Low-stakes *practice* items ship answer keys to the device so they work offline and give instant feedback. *Assessed* items (unit tests, the exam) are never in the learner pack. A determined learner can read the practice keys, which is acceptable because practice carries no marks. **Release semantics:** a public CDN pack exposes all its learner-safe lessons even before the teacher marks them “released”; release controls navigation and progress in the app, *not confidentiality*. If embargoing a lesson is required, it needs authenticated delivery and an explicit offline trade-off.
 
 **Versioning.** A scheme pins a `packVersion`. Upgrades are offered with a visible diff; a taught lesson is never silently rewritten mid-term. A "critical correction" flag (e.g., a wrong answer key) notifies teachers immediately and appears in the changelog.
 
@@ -870,7 +894,7 @@ flowchart LR
 
 - **"Download term pack"** shows its size, progress and a storage estimate, then an *Offline-ready* badge. Downloading is off by default on cellular in low-data mode.
 - A persistent **sync indicator** ("3 changes waiting to upload"); writes queue and flush on reconnect.
-- Teacher-only content is available offline **only after** the first authenticated sync; otherwise the UI says so plainly.
+- Teacher-only content is available offline **only after** the first authenticated sync; otherwise the UI says so plainly. Shared-device account switching must prevent the next user from opening a previous teacher's cached records or marking schemes; test sign-out, device eviction and cache isolation explicitly.
 - Request persistent storage (`navigator.storage.persist()`); handle eviction by offering a re-download.
 
 **Updates.** Prompt-based updates (`registerType: 'prompt'`); an update is **never applied during Teach mode**, only offered when the teacher leaves it.
@@ -892,13 +916,13 @@ Answer leakage; learner impersonation on shared devices; cross-school data acces
 ### 13.2 Authentication
 
 - **Teachers and staff:** Google sign-in and email link or password.
-- **Learners:** teacher-provisioned **class code → pick your name → PIN**, verified server-side; the function returns a Firebase custom token with `{ role: 'learner', schoolId, classId }`. PINs are hashed (a memory-hard algorithm), never stored client-side; attempts are rate-limited with lockout; teachers can reset. Sessions persist per device with a fast "switch learner" for shared phones. No email is needed, and **phone/SMS auth is avoided** (cost and exclusion).
+- **Learners:** teacher-provisioned **class code → pick your name → PIN**, verified server-side; the function returns a Firebase custom token with `{ role: 'learner', schoolId, classIds: [classId] }` (singular-to-array conversion happens server-side). PINs and class-code verifiers live in server-only storage, hashed with a memory-hard algorithm; attempts are rate-limited with lockout. No email or SMS is needed. **Switch learner** on a shared phone must isolate sessions and cached private data; do not assume sign-out automatically purges a Firestore persistent cache.
 
 ### 13.3 Authorization
 
-- Custom claims `{ role, schoolId, classIds[] }` are set only server-side; the client refreshes its token after a role change.
-- **Firestore rules default to deny.** Tenancy is by `schoolId` in the path; learners read only their own documents and never write scores; sign-offs and audit entries are create-only. A rules sketch is in Appendix C, tested with the Emulator Suite in CI.
-- UI guards mirror the rules for usability only.
+- Custom claims `{ role, schoolId, classIds[] }` are set only server-side; the client refreshes after role or assignment changes. Every scheme stores `classId`; teachers must be assigned to that class and subject, HoDs to that department, and head teachers to their school. Verify this **in rules/functions**, not only the UI.
+- **Firestore rules default to deny.** Learners cannot read whole-class records; they read only server-written own-score projections. Teacher-only pack access must respect subject and licensing policy. Sign-offs and audit entries are created by trusted server operations with server timestamps, not arbitrary client-supplied fields. Appendix C now records fail-closed policy and required emulator tests; it is **not** a production rules file.
+- UI guards mirror the rules for usability only. A CDN URL cannot enforce the “released lesson” UI state (§10.3).
 
 ### 13.4 Abuse and cost protection
 
@@ -914,7 +938,7 @@ Firebase **App Check** enforced on Firestore and Auth; per-user request limits o
 
 ### 13.6 Integrity and audit
 
-Server timestamps on all sign-offs; create-only audit collection; visible "edited by / at" on score cells; teachers cannot edit a signed weekly record without an amendment entry.
+Server timestamps on all sign-offs; **server-only append** to the audit collection; visible "edited by / at" on score cells. Teachers cannot edit a signed weekly record without a server-validated amendment entry. Client-created “immutable” audit documents are not trustworthy.
 
 ### 13.7 Application security
 
@@ -942,25 +966,28 @@ Sanitise all rendered teacher text (Markdown → sanitised HTML); strict Content
 
 ### 15.1 Flow
 
-Source DOCX/XLSX → **importer** (one-off, deterministic) → normalised JSON + import report → **validator and math-lint** → author and editor review → merge → CI builds learner and teacher packs → publish (CDN + Firestore) → changelog. After the initial import, **Git is the source of truth**; the Word files become exports, not sources.
+Source DOCX/XLSX/PDF → **raw-source audit** (reproducible discrepancy inventory, not a publish gate) → author resolves [Phase-0 decisions](docs/phase0-decisions.md) and signs corrections → importer (deterministic) → normalized, provenance-linked JSON + import diff → **strict normalized-content validator and math-lint** → author/editor approval → merge → CI builds *separately filtered* learner and teacher packs → publish only after security/rights gates → changelog. After approved import, **versioned JSON in Git** becomes the source of truth; Word files can become exports. The current `tools/source_audit.py` does not import or approve lessons.
 
 ### 15.2 Validation rules (CI blocks merge on failure)
 
 | ID | Rule | Would have caught |
 |---|---|---|
 | V1 | Indicator codes match the grammar; every parent (content standard, sub-strand, strand) exists | Typographical code errors in the curriculum text noted by the authors |
-| V2 | Each scheme indicator is taught exactly once; each content standard fully covered | S-09 (Week 12 duplication) |
-| V3 | Σ item marks = component max; exam sections sum to the exam max | S-03 |
-| V4 | Every indicator in a unit has ≥ 1 assessed item; plan, tracker and pack agree on which test covers which indicators | S-01 |
-| V5 | Phase minutes sum to lesson duration (8 + 16 + 14 + 12 + 10 = 60) | Timing drift |
+| V2 | Compare scheduled lessons and their indicators to the approved scheme; each required indicator is covered, and intended **multi-lesson** indicators are allowed. Flag unexpected duplicate *slots* and incomplete standards | S-09 without rejecting B7/B8 Science repeats |
+| V3 | Σ item marks = each test/component max; exam sections and all questions sum to the *same* exam max as the tracker | S-03 and S-10 across all four packs |
+| V4 | Every indicator in a unit has ≥ 1 assessed item; the approved plan, tracker and pack agree on which test measures which indicators | S-01; B8 Maths mismatched UT2/UT3 |
+| V5 | Read the actual five phase minutes for *each lesson* and require their sum = its duration; never mandate the Maths split for Science | Timing drift; S-13 |
 | V6 | All cross-references resolve: "Lesson N", "Figure 1.x", checklist and rubric codes | S-07 (R4) |
-| V7 | Subject, level, term and curriculum edition identical across all files of a pack | S-06 |
-| V8 | **Math lint:** parse every keyed question and worked example; recompute with exact arithmetic; compare to the stated answer | S-02, S-05 |
-| V9 | Multiple choice: exactly one option equals the computed answer; no two options numerically equal | S-04 |
+| V7 | Subject, level, term, lesson count, weekly record codes and curriculum edition agree **with the supplied official PDF** across all files of a pack | S-06, S-12, S-14 |
+| V8 | **Math lint:** recompute *structured* numeric items/examples with exact arithmetic; require separate author review for prose, diagrams and ambiguous semantics | Numerical subset of S-02, S-05 |
+| V9 | Multiple choice: exactly one option equals the computed answer where an item is machine-checkable; otherwise require an independent answer-key review | S-04 |
 | V10 | Required fields present (two essential questions, K/S/A-V objectives, ≥ 1 vocabulary term, exit ticket) | Completeness |
-| V11 | Every block has an audience; answer-bearing blocks are teacher-only | Leakage |
+| V11 | Every block has an audience; **assessed** answer keys and marking schemes are teacher-only, while explicitly low-stakes practice keys may ship in the learner pack (§10.3) | Leakage |
 | V12 | Concept-map lint (§7.3) | Broken maps |
 | V13 | Heuristic text-hygiene checks (e.g., a "⅔" next to "75%" is flagged for review) | S-05 |
+| V14 | Source-plan, corrected-scheme, tracker and exported weekly-record calendars and indicator mappings reconcile to an **approved decision** | S-01, S-11, S-12 |
+
+Only **approved normalized pack** changes must pass V1–V14 to publish. The initial raw-source check intentionally remains red in `--strict` mode until a subject author approves corrections; CI's baseline check merely detects new/unreviewed changes in the original files. Do not disable a publish validator because a legacy source has a known defect.
 
 ### 15.3 Human review and feedback
 
@@ -968,7 +995,7 @@ Two-person rule for content: a subject author and an editor. The app includes a 
 
 ### 15.4 Rights and attribution
 
-Curriculum statements are quoted from the NaCCA curricula cited in the documents (page numbers retained). Each lesson shows its source reference and links to the official document. **Confirm reuse terms with NaCCA, and confirm ownership and distribution rights for the teaching guide and lesson notes,** before any public release (D3).
+For the **future full lesson pack**, curriculum statements should carry page-level references and links to an official source. The user has authorized *only learner-safe excerpts from supplied lesson plans and NaCCA curriculum with attribution* for the restricted public preview (2026-09-23); tests, keys and teacher-only content are out of scope. Confirm broader reuse terms, page-level citations, guide ownership and distribution rights before any public **full-pack** release (D3).
 
 ---
 
@@ -994,15 +1021,15 @@ Dashboards: adoption by school and class; scheme coverage vs calendar; assessmen
 
 | Phase | Weeks | Deliverables | Exit criteria |
 |---|---:|---|---|
-| **0 Discovery and content foundations** | 3 | S-01–S-04 resolved with the author; importer, validator and math-lint v1; validated JSON for 24 lessons, 4 tests, exam, rubrics, checklists, glossary, misconceptions; schema v1; design tokens and wireframes for the 8 key screens; paper-prototype test with 3–5 teachers; **four spikes** (map renderer on low-end Android; PWA offline + Firestore persistence + update flow; learner login + rules; XLSX parity harness) | Decision log signed; all validators green on the Maths pack; spike results recorded |
-| **1 MVP "Teach Kit"** | 9–11 | Auth and class setup; curriculum and scheme; lesson workspace; concept maps for all 24 lessons; Teach mode with timer and exit-ticket capture; offline term pack; teaching log and reflection; GES lesson-note PDF; 4 widgets | MVP acceptance criteria (§17.4) pass; pilot-ready |
-| **2 Assessment and records** | 6–8 | Class record, settings, distribution, indicator analysis (manual then item-level); weekly record; coverage matrix; rubrics; XLSX import/export; HoD sign-off | Golden-file parity with the tracker; a HoD signs a real weekly record |
-| **3 Learner Portal** | 8–10 | Learner login; released lessons; learner lens; "I can…" ticks; practice and exit-ticket quizzes; the remaining 9 widgets; homework; word wall | Learners complete a lesson offline and sync; no answer-key leakage in penetration checks |
-| **4 Scale** | 6–8 | Science B8 T1 content and assessment; authoring CMS; week/unit/term maps; usage dashboard | A second subject ships with **no engine or schema change** |
+| **0 Discovery and content foundations** | Re-estimate after decisions | Audit four existing packs; resolve C1–C4 for the B7 Mathematics MVP; importer, **strict normalized-pack** validator and exact-arithmetic math-lint v1; approved JSON for its 24 lessons, tests, exam, rubrics, checklists, glossary and misconceptions; schema, wireframes, teacher review and four spikes (map renderer; offline/cache; learner login/rules; XLSX fixed-mode parity) | Curriculum/rights decision log signed for MVP content; validators green on **approved** Maths pack; raw audit baseline remains honest; spike results recorded |
+| **1 MVP "Teach Kit"** | Re-estimate | Auth and class setup; curriculum and scheme; lesson workspace; maps for all 24 approved Maths lessons; Teach mode and exit-ticket capture; offline term pack; teaching log, reflection, **weekly record and coverage matrix**; GES note PDF; 4 widgets | MVP acceptance criteria (§17.4) pass; pilot-ready |
+| **2 Assessment and records** | Re-estimate | Class record, settings, distribution, indicator analysis (manual then item-level), rubrics, XLSX import/export, HoD sign-off | Fixed-denominator golden-file parity with the **corrected** tracker; a HoD signs a real weekly record |
+| **3 Learner Portal** | Re-estimate | Learner login; UI-released lessons; learner lens; “I can…” ticks; practice/exit-ticket quizzes; remaining Maths widgets; homework; word wall | Learners complete a lesson offline and sync; no assessed-answer leakage; own-score isolation tests pass |
+| **4 Scale** | Re-estimate | Audit, reconcile and import *existing* B7 Science, B8 Mathematics and B8 Science term packs; authoring CMS; week/unit/term maps; usage dashboard | A second approved subject ships with **no engine/schema redesign**, using its own timings and indicator cardinality |
 
-**Total:** about 32–40 weeks.
+**Timing:** the original 32–40 week estimate (3 + 9–11 + 6–8 + 8–10 + 6–8) was based on only four studied documents and no source-approval backlog. Re-estimate Phase 0 and the total after C1–C7; do not treat the original sum as a delivery commitment.
 
-**Calendar caution.** If Phase 0 starts in October 2026, the MVP lands around the turn of the year, so the first *real-term* pilot is more likely Term 2 of 2026/27 (confirm against the GES calendar). Term 2 content is not in the supplied documents, so either author Term 2 Maths through the same importer template or run the pilot as a replay and revision of Term 1. Decision D9.
+**Calendar caution.** Pilot timing must be recalculated after the source-approval work. A later real-term pilot may need Term 2 lessons (confirm against the GES calendar); the B4–B8 workbook contains **Term 2 schemes but no Term 2 lesson plans/notes**. Either author approved Term 2 Mathematics lessons through the importer or explicitly pilot a Term 1 replay/revision. Decision D9.
 
 **Suggested team.** Product owner with curriculum authority (part-time) · tech lead, full-stack · front-end and interaction engineer (map and widgets) · full-stack engineer (Firebase, PWA, functions) · UX designer (0.5) · content editor and QA, ideally a serving teacher (0.5).
 
@@ -1010,8 +1037,9 @@ Dashboards: adoption by school and class; scheme coverage vs calendar; assessmen
 
 | Layer | Approach |
 |---|---|
-| **Engine** | Pure-function unit tests; **golden files**: run the real tracker `.xlsx` through headless LibreOffice recalculation and compare to the engine within ±0.01, in both denominator modes |
-| **Math-lint** | Fixture tests use the ten known-bad items from S-02 and the S-05 lesson examples: each must **fail** before correction and **pass** after |
+| **Engine** | Pure-function unit tests; for *approved corrected* spreadsheets, recalculate `.xlsx` in headless LibreOffice and compare within ±0.01 **only in fixed-denominator mode or for complete records**. Entered-denominator mode intentionally differs on partial records and needs independent expected fixtures |
+| **Source audit** | Standard-library DOCX/XLSX parser with a checked-in **known-bad raw-source baseline** and tests across all four packs (`tools/source_audit.py`). This is not a validated lesson importer or a green content publish gate |
+| **Math-lint** | Exact-arithmetic fixture tests for machine-checkable B7 errors and new-pack numeric items; manually review wording, diagrams and open-ended keyed answers. Known-bad fixtures must fail before authorized correction and pass afterward |
 | **Rules** | Emulator-backed tests for every role × collection, including learner isolation and answer-key exclusion |
 | **Components** | Vitest + React Testing Library for widgets (exact-arithmetic assertions) and the outline map |
 | **End-to-end** | Playwright, including offline scenarios (`setOffline`), update-during-Teach-mode, and sync-after-reconnect |
@@ -1030,7 +1058,7 @@ Passes lint and tests; validators green; rules tests pass; accessibility checks 
 2. **Given** any of the 24 lessons, **then** its map passes the lint rules and contains at least one prerequisite (except L1) and a misconception node wherever the pack names one.
 3. **Given** Teach mode on L3, **then** the timer runs 8/16/14/12/10 minutes, an app update is deferred until the teacher exits, and no marking scheme is ever displayed.
 4. **Given** a completed lesson, **when** the teacher saves an exit ticket and reflection, **then** the teaching log, the weekly record row and the coverage-matrix "date taught" update without retyping.
-5. **Given** the Maths pack, **then** every validator V1–V13 passes.
+5. **Given** the *author-approved, normalized* Maths pack (not the raw DOCX/XLSX), **then** every validator V1–V14 passes.
 6. **Given** a learner-role token, **then** no request can return teacher-only content (verified by rules tests).
 7. **Given** a lesson note export, **then** the PDF contains every GES-format field of §2.3, pre-filled from class and scheme data.
 
@@ -1049,7 +1077,7 @@ Passes lint and tests; validators green; rules tests pass; accessibility checks 
 | R7 | Teacher adoption and workload | Medium | High | Paper parity; import of existing trackers; five-minute prep target; co-design with teachers |
 | R8 | Curriculum revisions or licence limits | Medium | Medium | Versioned packs with source references; confirm NaCCA and author rights (D3) |
 | R9 | iOS PWA limitations | Medium | Low–Med | Graceful degradation; no reliance on background sync; clear install guidance |
-| R10 | Scope creep from multi-subject ambitions | High | Medium | Maths-first vertical slice; Science trackers as schema proof only until Phase 4 |
+| R10 | Scope creep from multi-subject ambitions | High | Medium | Maths-first vertical slice; the existing but unapproved Science/other Maths lesson packs inform schema tests, not public content, until reconciled in Phase 4 |
 | R11 | Answer-key leakage | Medium | High | Teacher-pack gating; practice/assessed split; rules tests |
 | R12 | Map complexity confuses users | Medium | Medium | Lenses, progressive reveal, curated maps, usability tests, outline mode |
 | R13 | JavaScript-only codebase drifts without types | Medium | Medium | JSDoc + `@ts-check` on core modules; zod runtime contracts; high test coverage on engine |
@@ -1060,8 +1088,8 @@ Passes lint and tests; validators green; rules tests pass; accessibility checks 
 
 | ID | Decision | Options | Recommendation | Needed by |
 |---|---|---|---|---|
-| D1 | **Canonical unit-test scope** (S-01) | Plan's Part C (UT3 = powers; UT4 = all fractions) vs tracker's (UT2 includes powers; UT3/UT4 split fractions) | Plan: it contains the actual tests, marks and timing. Regenerate the tracker mapping from it | Phase 0 |
-| D2 | **Corrected answer keys and mark totals** (S-02–S-05) | Author corrects vs we propose and author approves | We propose from §2.6; author approves each | Phase 0 |
+| D1 | **Canonical B7 Maths unit-test scope** (S-01) | Plan's Part C (UT3 = powers; UT4 = all fractions) vs tracker's (UT2 includes powers; UT3/UT4 split fractions) | Propose the plan because it contains the tests, but **await author approval** before regenerating mappings or scores | Phase 0 |
+| D2 | **Corrected answer keys and totals across all four packs** (S-02–S-05, S-10) | Author revises vs independent proposal plus author sign-off | Reconcile each printed item, section, paper and tracker; obtain author and editor approval. Do not scale flawed exams to 100 by fiat | Phase 0 for Maths MVP; before other packs publish |
 | D3 | **Content ownership and licensing** | Public with attribution vs restricted to registered schools | Confirm NaCCA reuse terms and author rights first | Before any pilot |
 | D4 | **Meaning of "each component"** (A1) | Lesson only vs lesson + week/unit/term | Lesson in MVP; roll-ups in P1 | Phase 0 |
 | D5 | **Product ↔ rubric mapping** (S-07) | Four unit products vs three rubrics | Clarify which product each of R1–R3 scores; drop "R4" | Phase 0 |
@@ -1072,6 +1100,8 @@ Passes lint and tests; validators green; rules tests pass; accessibility checks 
 | D10 | **Digital tests for learners** | Never vs later phase | Not in v1 | Phase 3 |
 | D11 | **Firestore region** | Nearest African region if available vs European | Choose the nearest confirmed region; offline mode absorbs latency | Phase 0 |
 | D12 | **Product name and brand** | "MapLearn" is a placeholder | Decide before public screens | Phase 1 |
+| D13 | **Canonical B8 Maths scheme and B7 Maths calendar** (S-11) | B8 W12: corrected workbook angles vs plan/tracker gradient; B7 W15: scheme examination vs plan vacation | Curriculum authority decides and signs an integrated lesson/assessment/schedule revision; never import both versions together | Before either pack is approved |
+| D14 | **Authorization/release/offline policy** | Class-assigned access vs broad same-school staff; public learner pack vs embargo; shared-device cache handling | Assignment-aware rules, per-learner score projection, server-only audit; treat CDN release as UI state unless restricted delivery is explicitly required | Before real users or scores |
 
 ---
 
@@ -1185,67 +1215,28 @@ Weeks 13, 14 and 15 are revision, examination and vacation. Unit 1 = Numeration 
 }
 ```
 
-## Appendix C — Firestore security-rules sketch (default deny)
+## Appendix C — Firestore authorization policy (fail closed until tested)
 
-This is a **sketch to fix intent**, not production rules. Rules are tested in the Emulator Suite. Custom claims are limited in size, so keep `classIds` short or resolve class membership by document lookup.
+**Not production rules.** The v0.1 sketch granted any same-school teacher access to all schemes/marks, let any signed-in user forge an audit entry, denied learners their own-score view, and used `classIds` even though its login example issued `classId`. It has been withdrawn rather than presenting unsafe, untested code as implementation guidance. A future `firebase/firestore.rules` must start with default deny and pass Emulator Suite tests before any real account or mark is stored.
 
-```
+| Resource | Required check | Write authority |
+|---|---|---|
+| Scheme, teaching log, whole-class record, item marks | School ID **and** class+subject assignment for teacher; department assignment for HoD; explicitly defined school-wide read for head teacher. Scheme document includes `classId` | Assigned teacher, with field-level controls; sign-off only through validated operation |
+| Learner roster / class release | Learner class membership via server-issued `classIds: [cid]`; no sibling's private fields; release is UI state because the CDN lesson pack is public | Assigned teacher/admin; class-code and PIN verifiers in `/server`, inaccessible to clients |
+| `/learnerData/{uid}/reportCards/*` | Only that learner's UID plus authorized assigned staff; no whole-class scores exposed | Trusted server projection only; learner read-only |
+| `/learnerData/{uid}/progress` and `nodeState` | Only that learner's UID, with validated field shapes; staff read access only when assigned | Learner for self-assessment; not authoritative marks |
+| Teacher-only content | Teacher/HoD/editor role **plus permitted pack/subject/licence**; never deliver assessed keys through the static learner pack | Reviewed content publishing service only |
+| `/audit/*` and PIN/class-code verifiers | No client access to server secrets; audit entries attributable to validated operation and server timestamp | Trusted server only, append-only; clients cannot choose actor or time |
+
+Rules/functions need tests for **every role × school × class × subject × resource × action**, including cross-school and sibling denial, unauthorised score updates, stale claims, head-teacher read, learner own-score read, answer-key exclusion and role changes. Admin SDK calls bypass Firestore rules, so serverless endpoints must perform the same checks themselves. Test shared-phone sign-out/account switch against persistent local caches separately: a rule cannot erase data already saved on a device. App Check and UI route guards are useful defence-in-depth, never substitutes for authorization.
+
+For an empty project the only safe deployable starting point is a default-deny rule, not the feature policy above. Add individual allows with emulator tests in the same change as each protected feature:
+
+```text
 rules_version = '2';
 service cloud.firestore {
   match /databases/{db}/documents {
-
-    function signedIn()  { return request.auth != null; }
-    function role()      { return request.auth.token.role; }
-    function inSchool(s) { return signedIn() && request.auth.token.schoolId == s; }
-    function isStaff()   { return role() in ['teacher', 'hod', 'head', 'admin']; }
-
-    // Teacher-only content: written by CI with admin credentials only.
-    match /content_private/{pack}/lessons/{lesson} {
-      allow read:  if signedIn() && role() in ['teacher', 'hod', 'editor', 'platform'];
-      allow write: if false;
-    }
-
-    match /schools/{sid} {
-      allow read: if inSchool(sid) && isStaff();
-
-      match /classes/{cid} {
-        allow read:  if inSchool(sid) && (isStaff() || (role() == 'learner' && cid in request.auth.token.classIds));
-        allow write: if inSchool(sid) && role() == 'admin';
-
-        match /learners/{lid} {
-          allow read:  if inSchool(sid) && isStaff();
-          allow write: if inSchool(sid) && role() in ['teacher', 'admin'];
-        }
-      }
-
-      match /schemes/{id} {
-        allow read:  if inSchool(sid) && isStaff();
-        allow write: if inSchool(sid) && role() in ['teacher', 'admin'];
-
-        match /records/{doc} {           // scores: learners never read or write here
-          allow read:  if inSchool(sid) && role() in ['teacher', 'hod'];
-          allow write: if inSchool(sid) && role() == 'teacher';
-        }
-        match /log/{slot} {
-          allow read:   if inSchool(sid) && isStaff();
-          allow create: if inSchool(sid) && role() == 'teacher';
-          allow update: if inSchool(sid) && role() in ['teacher', 'hod']
-                        && request.resource.data.diff(resource.data).affectedKeys()
-                             .hasOnly(role() == 'hod' ? ['hod'] : ['status', 'date', 'period', 'classSize', 'reflection']);
-        }
-      }
-    }
-
-    match /learnerData/{uid}/{doc=**} {
-      allow read, write: if signedIn() && request.auth.uid == uid;   // staff read via a scoped rule or function
-    }
-
-    match /audit/{id} {
-      allow create: if signedIn();
-      allow read, update, delete: if false;                          // read via admin tooling only
-    }
-
-    match /server/{doc=**} { allow read, write: if false; }          // PIN hashes: admin SDK only
+    match /{document=**} { allow read, write: if false; }
   }
 }
 ```
@@ -1268,7 +1259,7 @@ service cloud.firestore {
 
 Marks per indicator: .1 = 7 · .2 = 3 · .3 = 4 · .4 = 2 · .5 = 4, total **20**, matching the test maximum.
 
-## Appendix E — Basic 8 Science Term 1 assessment map (from the tracker)
+## Appendix E — Basic 8 Science Term 1 assessment map (from the tracker; plan now also available but unapproved)
 
 | Test | Max | Indicators | Topics |
 |---|--:|---|---|
